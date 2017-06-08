@@ -23,9 +23,9 @@ Full code sample:-
 `Cancel IOI java`_ `Cancel IOI py`_
 ================== ================ =================
 
-.. _Cancel IOI cpp: https://github.com/tkim/ioi_api_repository/C%2B%2B/CancelIOI/CancelIOI.cpp
+.. _Cancel IOI cpp: https://github.com/tkim/ioi_api_repository/C++/CancelIOI/CancelIOI.cpp
 
-.. _Cancel IOI cs: https://github.com/tkim/ioi_api_repository/C%23/CancelIOI/CancelIOI.cs
+.. _Cancel IOI cs: https://github.com/tkim/ioi_api_repository/C#/CancelIOI/CancelIOI.cs
 
 .. _Cancel IOI java: https://github.com/tkim/ioi_api_repository/Java/CancelIOI/src/com/bloomberg/ioi/samples/CancelIOI.java
 
