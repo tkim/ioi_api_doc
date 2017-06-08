@@ -5,13 +5,13 @@ Creating User Identities
 The steps involved in connecting to the EMSX API on the desktop are as follows:-
 
 
-.. image:: /image/userIdentity.png
+.. image:: /image/userIdentityioi.png
 
 
 In the server environment, the user identities must be created and cached prior to the making requests.  Therefore, the process would look as follows:-
 
 
-.. image:: /image/userIdentity2.png
+.. image:: /image/userIdentityioi2.png
 
 
 .. note::

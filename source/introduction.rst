@@ -3,9 +3,11 @@ Introduction
 ############
 
 
-The IOI API is available as programmable and with Excel using MS COM Object.  The EMSX API provides Bloomberg users with the ability to publish IOIs into Bloomberg and subscribe IOIs in Equities and Derivatives using Bloomberg API
+The IOI API Server provides Bloomberg users with the ability to publish IOIs into Bloomberg and 
+subscribe IOIs in Equities and Derivatives using Bloomberg API
 
-The IOI API for pulishing IOIs into Bloomberg and subscribing requires separate authorization by the publishing broker on top of the Bloomberg authorization.  
+The IOI API Server for subscribing requires separate authorization by the publishing broker on top of 
+the Bloomberg authorization.  
 
 
 .. note::
