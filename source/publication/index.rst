@@ -37,6 +37,10 @@ Full code sample:-
 .. hint:: 
 
 	Please right click on the top code sample link to open in a new tab.
+	
+	For complete VBA code sample please download from this `link`_.
+
+	.. _link: https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm
 
 
 .. code-block:: python
@@ -117,6 +121,11 @@ Full code sample:-
 
 	Please right click on the top code sample link to open in a new tab.
 
+	For complete VBA code sample please download from this `link`_.
+
+	.. _link: https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm
+	
+	
 .. code-block:: python
 	
 
@@ -229,6 +238,10 @@ Full code sample:-
 .. hint:: 
 
 	Please right click on the top code sample link to open in a new tab.
+
+	For complete VBA code sample please download from this `link`_.
+
+	.. _link: https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm
 
 
 .. code-block:: python
