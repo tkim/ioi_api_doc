@@ -5,7 +5,6 @@ FAQ
 General FAQ
 ===========
 
-<<<<<<< HEAD
 * What is a session?
 	Sessions are logical data stream connections and the EMSX API supports failover betweeen physical connections. During this failover, EMSX API will handle re-subscriptions for the end application.
 
@@ -15,5 +14,3 @@ General FAQ
 
 * Should I open and close sessions as needed?
 	No, typically opening and closing a session is expensive for both the client's application and for Bloomberg back-end and thus unnecessary for most application designs while using EMSX API. 
-=======
->>>>>>> origin/master
