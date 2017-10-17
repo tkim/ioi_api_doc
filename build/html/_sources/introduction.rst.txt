@@ -467,6 +467,6 @@ IOI API Code Samples
 
 			The latest IOI API Code samples can be found `here`_.
 
-			.. _here: https://github.com/tkim/ioi_api_repository
+			.. _here: https://github.com/tkim/ioi_api_repository_new
 
 

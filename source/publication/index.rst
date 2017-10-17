@@ -23,15 +23,15 @@ Full code sample:-
 `Cancel IOI java`_ `Cancel IOI py`_
 ================== ================ =================
 
-.. _Cancel IOI cpp: https://github.com/tkim/ioi_api_repository/blob/master/C%2B%2B/CancelIOI/CancelIOI.cpp
+.. _Cancel IOI cpp: https://github.com/tkim/ioi_api_repository/blob/master/C%2B%2B/CancelIOI/CancelIOI.cpp1
 
-.. _Cancel IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/CancelIOI/CancelIOI.cs
+.. _Cancel IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/CancelIOI/CancelIOI.cs1
 
-.. _Cancel IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/CancelIOI/src/com/bloomberg/ioi/samples/CancelIOI.java
+.. _Cancel IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/CancelIOI/src/com/bloomberg/ioi/samples/CancelIOI.java1
 
-.. _Cancel IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/CancelIOI.py
+.. _Cancel IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/CancelIOI.py1
 
-.. _Cancel IOI vba: https://github.com/tkim/ioi_api_repository/blob/master/VBA/CancelIOI.cls
+.. _Cancel IOI vba: https://github.com/tkim/ioi_api_repository/blob/master/VBA/CancelIOI.cls1
 
 
 .. hint:: 
@@ -40,7 +40,7 @@ Full code sample:-
 	
 	For complete VBA code sample please download from this `link`_.
 
-	.. _link: https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm
+	.. _link: https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm1
 
 
 .. code-block:: python
@@ -106,15 +106,15 @@ Full code sample:-
 `Create IOI java`_ `Create IOI py`_
 ================== ================ =================
 
-.. _Create IOI cpp: https://github.com/tkim/ioi_api_repository/blob/master/C%2B%2B/CreateIOI/CreateIOI.cpp
+.. _Create IOI cpp: https://github.com/tkim/ioi_api_repository/blob/master/C%2B%2B/CreateIOI/CreateIOI.cpp1
 
-.. _Create IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/CreateIOI/CreateIOI.cs
+.. _Create IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/CreateIOI/CreateIOI.cs1
 
-.. _Create IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/CreateIOI/src/com/bloomberg/ioi/samples/CreateIOI.java
+.. _Create IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/CreateIOI/src/com/bloomberg/ioi/samples/CreateIOI.java1
 
-.. _Create IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/CreateIOI.py
+.. _Create IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/CreateIOI.py1
 
-.. _Create IOI vba: https://github.com/tkim/ioi_api_repository/blob/master/VBA/CreateIOI.cls
+.. _Create IOI vba: https://github.com/tkim/ioi_api_repository/blob/master/VBA/CreateIOI.cls1
 
 
 .. hint:: 
@@ -123,7 +123,7 @@ Full code sample:-
 
 	For complete VBA code sample please download from this `link`_.
 
-	.. _link: https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm
+	.. _link: https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm1
 	
 	
 .. code-block:: python
@@ -224,15 +224,15 @@ Full code sample:-
 `Update IOI java`_ `Update IOI py`_
 ================== ================ =================
 
-.. _Update IOI cpp: https://github.com/tkim/ioi_api_repository/blob/master/C%2B%2B/UpdateIOI/UpdateIOI.cpp
+.. _Update IOI cpp: https://github.com/tkim/ioi_api_repository/blob/master/C%2B%2B/UpdateIOI/UpdateIOI.cpp1
 
-.. _Update IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/UpdateIOI/UpdateIOI.cs
+.. _Update IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/UpdateIOI/UpdateIOI.cs1
 
-.. _Update IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/UpdateIOI/src/com/bloomberg/ioi/samples/UpdateIOI.java
+.. _Update IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/UpdateIOI/src/com/bloomberg/ioi/samples/UpdateIOI.java1
 
-.. _Update IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/UpdateIOI.py
+.. _Update IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/UpdateIOI.py1
 
-.. _Update IOI vba: https://github.com/tkim/ioi_api_repository/blob/master/VBA/UpdateIOI.cls
+.. _Update IOI vba: https://github.com/tkim/ioi_api_repository/blob/master/VBA/UpdateIOI.cls1
 
 
 .. hint:: 
@@ -241,7 +241,7 @@ Full code sample:-
 
 	For complete VBA code sample please download from this `link`_.
 
-	.. _link: https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm
+	.. _link: https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm1
 
 
 .. code-block:: python
