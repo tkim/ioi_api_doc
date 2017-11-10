@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>IOI API Publication &mdash; ioi-api-doc  documentation</title>
+  <title>Bloomberg API Service for IOI API Subscription &mdash; ioi-api-doc  documentation</title>
   
 
   
@@ -34,8 +34,9 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="ioi-api-doc  documentation" href="../index.html"/>
-        <link rel="next" title="Bloomberg API Service for IOI API Publication" href="reqResp.html"/>
-        <link rel="prev" title="Introduction" href="../introduction.html"/> 
+        <link rel="up" title="IOI API Subscription" href="index.html"/>
+        <link rel="next" title="FAQ" href="../faq.html"/>
+        <link rel="prev" title="IOI API Subscription" href="index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,15 +83,12 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">IOI API Publication</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="reqResp.html">Bloomberg API Service for IOI API Publication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reqResp.html#accessing-the-test-environment">Accessing the Test Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reqResp.html#cancel-ioi-message">Cancel IOI Message</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reqResp.html#create-ioi-message">Create IOI Message</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reqResp.html#update-ioi-message">Update IOI Message</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publication/index.html">IOI API Publication</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">IOI API Subscription</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Bloomberg API Service for IOI API Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-the-test-environment">Accessing the Test Environment</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../subscription/index.html">IOI API Subscription</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
@@ -123,11 +121,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>IOI API Publication</li>
+          <li><a href="index.html">IOI API Subscription</a> &raquo;</li>
+      
+    <li>Bloomberg API Service for IOI API Subscription</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/publication/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/subscription/subscription.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -137,20 +137,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ioi-api-publication">
-<h1>IOI API Publication<a class="headerlink" href="#ioi-api-publication" title="Permalink to this headline">¶</a></h1>
-<p>This document is for developers who will use the Bloomberg IOI API to publish the IOI (Indication of Interest) messages.</p>
-<p>The published messages can be found in <code class="docutils literal"><span class="pre">IOI&lt;GO&gt;</span></code> function in the Bloomberg terminal.</p>
-<p>The service name for production is <code class="docutils literal"><span class="pre">//blp/ioiapi-request</span></code> and for test environment is <code class="docutils literal"><span class="pre">//blp/ioiapi-beta-request</span></code>.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="reqResp.html">Bloomberg API Service for IOI API Publication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reqResp.html#accessing-the-test-environment">Accessing the Test Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reqResp.html#cancel-ioi-message">Cancel IOI Message</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reqResp.html#create-ioi-message">Create IOI Message</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reqResp.html#update-ioi-message">Update IOI Message</a></li>
-</ul>
+  <div class="section" id="bloomberg-api-service-for-ioi-api-subscription">
+<h1>Bloomberg API Service for IOI API Subscription<a class="headerlink" href="#bloomberg-api-service-for-ioi-api-subscription" title="Permalink to this headline">¶</a></h1>
+<p>For IOI subscription, this is accomplished by referencing  ________ as the service name in your program. This command will allow your service  to redirect all IOI API subscription to the test environment.</p>
+<p>Once the client has thoroughly tested the custom-built strategies, they can access the production environment by changing the service name from  ________ to  ________ .</p>
 </div>
+<div class="section" id="accessing-the-test-environment">
+<h1>Accessing the Test Environment<a class="headerlink" href="#accessing-the-test-environment" title="Permalink to this headline">¶</a></h1>
+<p>Bloomberg provides a test environment for clients to build and test their strategies using the IOI API.</p>
+<p>Inside the Bloomberg Terminal type DGRT Y087&lt;GO&gt; {Y (number zero) 87} This command allows the particular
+terminal window to log into the beta environment. Please note, when a user is remote into the beta
+environment it only affects that particular terminal window and the other screens will not be affected by
+the DGRT command.</p>
+<p>To check which environment your current view is in, type VSAT &lt;GO&gt; inside the Bloomberg terminal.</p>
+<p>To get back to production type DGRT OFF &lt;GO&gt;. Please note that the testing environment in Beta will not
+operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the production environment.</p>
 </div>
 
 
@@ -160,10 +161,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="reqResp.html" class="btn btn-neutral float-right" title="Bloomberg API Service for IOI API Publication" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="IOI API Subscription" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bloomberg API Service for IOI API Publication &mdash; ioi-api-doc  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="ioi-api-doc  documentation" href="../index.html"/>
+        <link rel="up" title="IOI API Publication" href="index.html"/>
+        <link rel="next" title="IOI API Subscription" href="../subscription/index.html"/>
+        <link rel="prev" title="IOI API Publication" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ioi-api-doc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">IOI API Publication</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Bloomberg API Service for IOI API Publication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-the-test-environment">Accessing the Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cancel-ioi-message">Cancel IOI Message</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-ioi-message">Create IOI Message</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-ioi-message">Update IOI Message</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../subscription/index.html">IOI API Subscription</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">ioi-api-doc</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">IOI API Publication</a> &raquo;</li>
+      
+    <li>Bloomberg API Service for IOI API Publication</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/publication/reqResp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bloomberg-api-service-for-ioi-api-publication">
+<h1>Bloomberg API Service for IOI API Publication<a class="headerlink" href="#bloomberg-api-service-for-ioi-api-publication" title="Permalink to this headline">¶</a></h1>
+<p>For IOI publication, this is accomplished by referencing <code class="docutils literal"><span class="pre">//blp/ioiapi-beta-request</span></code> as the service name in your program. This command will allow your service  to redirect all IOI API requests to the test environment.</p>
+<p>Once the client has thoroughly tested the custom-built strategies, they can access the production
+environment by changing the service name from <code class="docutils literal"><span class="pre">//blp/ioiapi-beta-request</span></code> to <code class="docutils literal"><span class="pre">//blp/ioiapi-request</span></code>.</p>
+</div>
+<div class="section" id="accessing-the-test-environment">
+<h1>Accessing the Test Environment<a class="headerlink" href="#accessing-the-test-environment" title="Permalink to this headline">¶</a></h1>
+<p>Bloomberg provides a test environment for clients to build and test their strategies using the IOI API.</p>
+<p>Inside the Bloomberg Terminal type DGRT Y087&lt;GO&gt; {Y (number zero) 87} This command allows the particular
+terminal window to log into the beta environment. Please note, when a user is remote into the beta
+environment it only affects that particular terminal window and the other screens will not be affected by
+the DGRT command.</p>
+<p>To check which environment your current view is in, type VSAT &lt;GO&gt; inside the Bloomberg terminal.</p>
+<p>To get back to production type DGRT OFF &lt;GO&gt;. Please note that the testing environment in Beta will not
+operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the production environment.</p>
+<p>The <code class="docutils literal"><span class="pre">IOI&lt;GO&gt;</span></code> function will show a tab for Options vs. Equities IOIs.</p>
+</div>
+<div class="section" id="cancel-ioi-message">
+<h1>Cancel IOI Message<a class="headerlink" href="#cancel-ioi-message" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal"><span class="pre">CancelIoi</span></code> request allows IOI API service to Cancel IOI message.</p>
+<p>Full code sample:-</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="31%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/C%2B%2B/CancelIOI/CancelIOI.cpp1">Cancel IOI cpp</a></td>
+<td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/C%23/CancelIOI/CancelIOI.cs1">Cancel IOI cs</a></td>
+<td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/VBA/CancelIOI.cls1">Cancel IOI vba</a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/CancelIOI/src/com/bloomberg/ioi/samples/CancelIOI.java1">Cancel IOI java</a></td>
+<td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/CancelIOI.py1">Cancel IOI py</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Please right click on the top code sample link to open in a new tab.</p>
+<p class="last">For complete VBA code sample please download from this <a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm1">link</a>.</p>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span>     <span class="k">def</span> <span class="nf">processServiceStatusEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">event</span><span class="p">,</span><span class="n">session</span><span class="p">):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Processing SERVICE_STATUS event&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">event</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">messageType</span><span class="p">()</span> <span class="o">==</span> <span class="n">SERVICE_OPENED</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Service opened...&quot;</span><span class="p">)</span>
+
+            <span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_service</span><span class="p">)</span>
+
+            <span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;CsancelIoi&quot;</span><span class="p">)</span>
+
+            <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;handle&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;e58ae3d4-2d6a-426b-8844-5868c7a4e259&quot;</span><span class="p">);</span>
+
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="o">=</span> <span class="n">blpapi</span><span class="o">.</span><span class="n">CorrelationId</span><span class="p">()</span>
+
+            <span class="n">session</span><span class="o">.</span><span class="n">sendRequest</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">correlationId</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">msg</span><span class="o">.</span><span class="n">messageType</span><span class="p">()</span> <span class="o">==</span> <span class="n">SERVICE_OPEN_FAILURE</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Error: Service failed to open&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">processResponseEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Processing RESPONSE event&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">event</span><span class="p">:</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;MESSAGE: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;CORRELATION ID: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">correlationIds</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">())</span>
+
+
+        <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">correlationIds</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">requestID</span><span class="o">.</span><span class="n">value</span><span class="p">():</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;MESSAGE TYPE: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">messageType</span><span class="p">())</span>
+
+            <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">messageType</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;handle&quot;</span><span class="p">:</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">getElementAsString</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+                <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Response: Value= </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">val</span><span class="p">))</span>
+
+            <span class="k">global</span> <span class="n">bEnd</span>
+            <span class="n">bEnd</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-ioi-message">
+<h1>Create IOI Message<a class="headerlink" href="#create-ioi-message" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal"><span class="pre">createIoi</span></code> request allows IOI API service to Create IOI message.</p>
+<p>Full code sample:-</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="31%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/C%2B%2B/CreateIOI/CreateIOI.cpp1">Create IOI cpp</a></td>
+<td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/C%23/CreateIOI/CreateIOI.cs1">Create IOI cs</a></td>
+<td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/VBA/CreateIOI.cls1">Create IOI vba</a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/CreateIOI/src/com/bloomberg/ioi/samples/CreateIOI.java1">Create IOI java</a></td>
+<td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/CreateIOI.py1">Create IOI py</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Please right click on the top code sample link to open in a new tab.</p>
+<p class="last">For complete VBA code sample please download from this <a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm1">link</a>.</p>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">processServiceStatusEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">event</span><span class="p">,</span><span class="n">session</span><span class="p">):</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Processing SERVICE_STATUS event&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">event</span><span class="p">:</span>
+
+    <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">messageType</span><span class="p">()</span> <span class="o">==</span> <span class="n">SERVICE_OPENED</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Service opened...&quot;</span><span class="p">)</span>
+
+        <span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_service</span><span class="p">)</span>
+
+        <span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;createIoi&quot;</span><span class="p">)</span>
+
+        <span class="n">ioi</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;ioi&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Set the good-until time of this option to 15 minutes from now</span>
+        <span class="n">ioi</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;goodUntil&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">900</span><span class="p">))</span>
+
+        <span class="c1"># Create the option</span>
+        <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;option&quot;</span><span class="p">)</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;option&quot;</span><span class="p">)</span>
+        <span class="n">option</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;structure&quot;</span><span class="p">,</span> <span class="s2">&quot;CallSpread&quot;</span><span class="p">)</span>
+
+        <span class="c1"># This option has two legs. Create the first leg</span>
+        <span class="n">leg1</span> <span class="o">=</span> <span class="n">option</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;legs&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
+        <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span><span class="s2">&quot;Call&quot;</span><span class="p">)</span>
+        <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;strike&quot;</span><span class="p">,</span> <span class="mi">230</span><span class="p">)</span>
+        <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;expiry&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+        <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;style&quot;</span><span class="p">,</span> <span class="s2">&quot;European&quot;</span><span class="p">)</span>
+        <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ratio&quot;</span><span class="p">,</span> <span class="o">+</span><span class="mf">1.00</span><span class="p">)</span>
+        <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;exchange&quot;</span><span class="p">,</span> <span class="s2">&quot;LN&quot;</span><span class="p">)</span>
+        <span class="n">leg1</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">)</span>
+        <span class="n">leg1</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">,</span> <span class="s2">&quot;VOD LN Equity&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Create the second leg</span>
+        <span class="n">leg2</span> <span class="o">=</span> <span class="n">option</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;legs&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
+        <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span><span class="s2">&quot;Call&quot;</span><span class="p">)</span>
+        <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;strike&quot;</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
+        <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;expiry&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+        <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;style&quot;</span><span class="p">,</span> <span class="s2">&quot;European&quot;</span><span class="p">)</span>
+        <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ratio&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.25</span><span class="p">)</span>
+        <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;exchange&quot;</span><span class="p">,</span> <span class="s2">&quot;LN&quot;</span><span class="p">)</span>
+        <span class="n">leg2</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">)</span>
+        <span class="n">leg2</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">,</span> <span class="s2">&quot;VOD LN Equity&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Create a quote consisting of a bid and an offer</span>
+        <span class="n">bid</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;bid&quot;</span><span class="p">)</span>
+        <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;delta&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="o">.</span><span class="mo">0041</span><span class="p">)</span>
+        <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+        <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
+        <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
+        <span class="n">bid</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;bid notes&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Set the offer</span>
+        <span class="n">offer</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;offer&quot;</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mf">83.64</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;offer notes&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Set targets</span>
+        <span class="n">includes</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;targets&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;includes&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">acronym</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;BLPA&quot;</span><span class="p">,</span> <span class="s2">&quot;BLPB&quot;</span><span class="p">]:</span>
+            <span class="n">target</span> <span class="o">=</span> <span class="n">includes</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
+            <span class="n">target</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;acronym&quot;</span><span class="p">)</span>
+            <span class="n">target</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;acronym&quot;</span><span class="p">,</span> <span class="n">acronym</span><span class="p">)</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="o">=</span> <span class="n">blpapi</span><span class="o">.</span><span class="n">CorrelationId</span><span class="p">()</span>
+
+        <span class="n">session</span><span class="o">.</span><span class="n">sendRequest</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">correlationId</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">msg</span><span class="o">.</span><span class="n">messageType</span><span class="p">()</span> <span class="o">==</span> <span class="n">SERVICE_OPEN_FAILURE</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Error: Service failed to open&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="update-ioi-message">
+<h1>Update IOI Message<a class="headerlink" href="#update-ioi-message" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal"><span class="pre">updateIoi</span></code> request allows IOI API service to Update IOI message.</p>
+<p>Full code sample:-</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="31%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/C%2B%2B/UpdateIOI/UpdateIOI.cpp1">Update IOI cpp</a></td>
+<td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/C%23/UpdateIOI/UpdateIOI.cs1">Update IOI cs</a></td>
+<td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/VBA/UpdateIOI.cls1">Update IOI vba</a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/UpdateIOI/src/com/bloomberg/ioi/samples/UpdateIOI.java1">Update IOI java</a></td>
+<td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/UpdateIOI.py1">Update IOI py</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Please right click on the top code sample link to open in a new tab.</p>
+<p class="last">For complete VBA code sample please download from this <a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/VBA/IOIAPI_Samples_VBA.xlsm1">link</a>.</p>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">processServiceStatusEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">event</span><span class="p">,</span><span class="n">session</span><span class="p">):</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Processing SERVICE_STATUS event&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">event</span><span class="p">:</span>
+
+    <span class="k">if</span> <span class="n">msg</span><span class="o">.</span><span class="n">messageType</span><span class="p">()</span> <span class="o">==</span> <span class="n">SERVICE_OPENED</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Service opened...&quot;</span><span class="p">)</span>
+
+        <span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_service</span><span class="p">)</span>
+
+        <span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;updateIoi&quot;</span><span class="p">)</span>
+
+        <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;handle&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="s2">&quot;46fa7703-3c16-4dbf-ae19-cec2f68db563&quot;</span><span class="p">);</span>
+
+
+        <span class="n">ioi</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;ioi&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Set the good-until time of this option to 15 minutes from now</span>
+        <span class="n">ioi</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;goodUntil&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">900</span><span class="p">))</span>
+
+        <span class="c1"># Update the bid</span>
+        <span class="n">bid</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;bid&quot;</span><span class="p">)</span>
+        <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;delta&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="o">.</span><span class="mi">9006</span><span class="p">)</span>
+        <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+        <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
+        <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
+        <span class="n">bid</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;bid notes updated&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Update the offer</span>
+        <span class="n">offer</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;offer&quot;</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mf">18203.66</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
+        <span class="n">offer</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;offer notes updated&quot;</span><span class="p">)</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="o">=</span> <span class="n">blpapi</span><span class="o">.</span><span class="n">CorrelationId</span><span class="p">()</span>
+
+        <span class="n">session</span><span class="o">.</span><span class="n">sendRequest</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">correlationId</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">msg</span><span class="o">.</span><span class="n">messageType</span><span class="p">()</span> <span class="o">==</span> <span class="n">SERVICE_OPEN_FAILURE</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Error: Service failed to open&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../subscription/index.html" class="btn btn-neutral float-right" title="IOI API Subscription" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="IOI API Publication" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Terrence C. Kim.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
