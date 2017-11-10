@@ -87,6 +87,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">IOI API Subscription</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Bloomberg API Service for IOI API Subscription</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#accessing-the-test-environment">Accessing the Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ioi-api-subscription">IOI API Subscription</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
@@ -152,6 +153,44 @@ the DGRT command.</p>
 <p>To check which environment your current view is in, type VSAT &lt;GO&gt; inside the Bloomberg terminal.</p>
 <p>To get back to production type DGRT OFF &lt;GO&gt;. Please note that the testing environment in Beta will not
 operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the production environment.</p>
+</div>
+<div class="section" id="ioi-api-subscription">
+<h1>IOI API Subscription<a class="headerlink" href="#ioi-api-subscription" title="Permalink to this headline">¶</a></h1>
+<p>The IOI API Subscription allows IOI messages over subscription service.</p>
+<p>Full code sample:-</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="48%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_SubscribeIOI.cs">Subscribe IOI cs</a></td>
+<td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_SubscribeIOI.py">Subscribe IOI py</a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_SubscribeIOI.java">Subscribe IOI java</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Please right click on the top code sample link to open in a new tab.</p>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">createIOISubscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Create IOI subscription&quot;</span><span class="p">)</span>
+
+    <span class="c1">#Create the topic string for the ioi subscription.</span>
+    <span class="n">ioiTopic</span> <span class="o">=</span> <span class="n">d_ioi</span> <span class="o">+</span> <span class="s2">&quot;/ioi&quot;</span>
+
+    <span class="n">subscriptions</span> <span class="o">=</span> <span class="n">blpapi</span><span class="o">.</span><span class="n">SubscriptionList</span><span class="p">()</span>
+
+    <span class="n">subscriptions</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">topic</span><span class="o">=</span><span class="n">ioiTopic</span><span class="p">,</span><span class="n">correlationId</span><span class="o">=</span><span class="n">ioiSubscriptionID</span><span class="p">)</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending subscription...&quot;</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">subscriptions</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 
 

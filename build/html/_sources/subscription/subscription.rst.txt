@@ -21,3 +21,52 @@ To check which environment your current view is in, type VSAT <GO> inside the Bl
 To get back to production type DGRT OFF <GO>. Please note that the testing environment in Beta will not 
 operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the production environment.
 
+
+IOI API Subscription 
+====================
+
+
+The IOI API Subscription allows IOI messages over subscription service.
+
+
+Full code sample:-
+
+===================== =================== 
+`Subscribe IOI cs`_   `Subscribe IOI py`_	
+--------------------- ------------------- 
+`Subscribe IOI java`_ 
+===================== =================== 
+
+
+.. _Subscribe IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_SubscribeIOI.cs
+
+.. _Subscribe IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_SubscribeIOI.java
+
+.. _Subscribe IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_SubscribeIOI.py
+
+
+.. hint:: 
+
+	Please right click on the top code sample link to open in a new tab.
+	
+
+
+.. code-block:: python
+             
+    
+    def createIOISubscription(self, session):
+
+        print("Create IOI subscription")
+    
+        #Create the topic string for the ioi subscription.
+        ioiTopic = d_ioi + "/ioi"
+    
+        subscriptions = blpapi.SubscriptionList()
+        
+        subscriptions.add(topic=ioiTopic,correlationId=ioiSubscriptionID)
+
+        print("Sending subscription...")
+        session.subscribe(subscriptions)
+
+
+
