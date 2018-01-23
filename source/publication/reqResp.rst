@@ -32,20 +32,30 @@ Cancel IOI Message
 The ``cancelIoi`` request allows IOI API service to Cancel IOI message. 
 
 
-Full code sample:-
+Full code sample (Options IOI):-
 
-================== ================ 
+================== ================== 
 `Cancel IOI cs`_   `Cancel IOI py`_	
------------------- ---------------- 
+------------------ ------------------ 
 `Cancel IOI java`_ 
-================== ================ 
-
+================== ==================
 
 .. _Cancel IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_CancelIOI.cs
 
 .. _Cancel IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_CancelIOI.java
 
 .. _Cancel IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CancelIOI.py
+
+
+Full code sample (Equity IOI):-
+
+================== ================== 
+`Cancel E IOI py`_ 
+------------------ ------------------ 
+ 
+================== ==================
+
+.. _Cancel E IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CancelEquityIOI.py
 
 
 .. hint:: 
@@ -79,7 +89,7 @@ Create IOI Message
 The ``createIoi`` request allows IOI API service to Create IOI message. 
 
 
-Full code sample:-
+Full code sample (Options IOI):-
 
 ================== ================ 
 `Create IOI cs`_   `Create IOI py`_
@@ -93,6 +103,18 @@ Full code sample:-
 .. _Create IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_CreateIOI.java
 
 .. _Create IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CreateIOI.py
+
+
+Full code sample (Equity IOI):-
+
+================== ================== 
+`Create E IOI py`_ 
+------------------ ------------------ 
+ 
+================== ==================
+
+
+.. _Create E IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CreateEquityIOI.py
 
 
 .. hint:: 
@@ -180,7 +202,7 @@ Update IOI Message
 The ``updateIoi`` request allows IOI API service to Update IOI message. 
 
 
-Full code sample:-
+Full code sample (Options IOI):-
 
 ================== ================ 
 `Update IOI cs`_   `Update IOI py`_
@@ -194,6 +216,18 @@ Full code sample:-
 .. _Update IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_UpdateIOI.java
 
 .. _Update IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_UpdateIOI.py
+
+
+Full code sample (Equity IOI):-
+
+================== ================== 
+`Update E IOI py`_ 
+------------------ ------------------ 
+ 
+================== ==================
+
+
+.. _Update E IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_UpdateEquityIOI.py
 
 
 .. hint:: 
