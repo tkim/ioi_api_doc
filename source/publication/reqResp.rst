@@ -50,11 +50,12 @@ Full code sample (Options IOI):-
 Full code sample (Equity IOI):-
 
 ================== ================== 
-`Cancel E IOI py`_ 
+`Cancel E IOI cs`_ `Cancel E IOI py`_ 
 ------------------ ------------------ 
  
 ================== ==================
 
+.. _Cancel E IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_CancelEquityIOI.cs
 .. _Cancel E IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CancelEquityIOI.py
 
 
