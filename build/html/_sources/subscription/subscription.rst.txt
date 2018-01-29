@@ -1,9 +1,9 @@
 Bloomberg API Service for IOI API Subscription
 ==============================================
 
-For IOI subscription, this is accomplished by referencing  ________ as the service name in your program. This command will allow your service  to redirect all IOI API subscription to the test environment.   
+For IOI subscription, this is accomplished by referencing ``\\blp\ioisub-beta`` as the service name in your program. This command will allow your service  to redirect all IOI API subscription to the test environment.   
 
-Once the client has thoroughly tested the custom-built strategies, they can access the production environment by changing the service name from  ________ to  ________ .
+Once the client has thoroughly tested the custom-built strategies, they can access the production environment by changing the service name from  ``\\blp\ioisub-beta`` to ``\\blp\ioisub``.
 
 
 Accessing the Test Environment
