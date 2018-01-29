@@ -108,12 +108,12 @@ Full code sample (Options IOI):-
 Full code sample (Equity IOI):-
 
 ================== ================== 
-`Create E IOI py`_ 
+`Create E IOI cs`  `Create E IOI py`_ 
 ------------------ ------------------ 
  
 ================== ==================
 
-
+.. _Create E IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_CreateEquityIOI.cs
 .. _Create E IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CreateEquityIOI.py
 
 
