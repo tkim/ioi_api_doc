@@ -223,11 +223,12 @@ Full code sample (Options IOI):-
 Full code sample (Equity IOI):-
 
 ================== ================== 
-`Update E IOI py`_ 
+`Update E IOI cs`_ `Update E IOI py`_ 
 ------------------ ------------------ 
  
 ================== ==================
 
+.. _Update E IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_UpdateEquityIOI.cs
 
 .. _Update E IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_UpdateEquityIOI.py
 
