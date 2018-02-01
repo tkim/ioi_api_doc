@@ -49,15 +49,15 @@ Full code sample (Options IOI):-
 
 Full code sample (Equity IOI):-
 
-================== ================== 
-`Cancel E IOI cs`_ `Cancel E IOI py`_ 
------------------- ------------------ 
- 
-================== ==================
+==================== ================== 
+`Cancel E IOI cs`_   `Cancel E IOI py`_ 
+-------------------- ------------------ 
+`Cancel E IOI java`_
+==================== ==================
 
 .. _Cancel E IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_CancelEquityIOI.cs
 .. _Cancel E IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CancelEquityIOI.py
-
+.. _Cancel E IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/java_dapi_CancelEquityIOI.java
 
 .. hint:: 
 
@@ -108,15 +108,17 @@ Full code sample (Options IOI):-
 
 Full code sample (Equity IOI):-
 
-================== ================== 
-`Create E IOI cs`_ `Create E IOI py`_ 
------------------- ------------------ 
- 
-================== ==================
+==================== ================== 
+`Create E IOI cs`_   `Create E IOI py`_ 
+-------------------- ------------------ 
+`Create E IOI java`_ 
+==================== ==================
 
 .. _Create E IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_CreateEquityIOI.cs
 
 .. _Create E IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CreateEquityIOI.py
+
+.. _Create E IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/java_dapi_CreateEquityIOI.java
 
 
 .. hint:: 
@@ -222,15 +224,17 @@ Full code sample (Options IOI):-
 
 Full code sample (Equity IOI):-
 
-================== ================== 
-`Update E IOI cs`_ `Update E IOI py`_ 
------------------- ------------------ 
- 
-================== ==================
+==================== ================== 
+`Update E IOI cs`_   `Update E IOI py`_ 
+-------------------- ------------------ 
+`Update E IOI java`_ 
+==================== ==================
 
 .. _Update E IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_UpdateEquityIOI.cs
 
 .. _Update E IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_UpdateEquityIOI.py
+
+.. _Update E IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/java_dapi_UpdateEquityIOI.java
 
 
 .. hint:: 
