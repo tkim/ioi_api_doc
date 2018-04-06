@@ -16,7 +16,7 @@ The object model for Java, .NET and C++ are identical. The C interface provides 
 
 .. important::
 	
-	Please note that there never should be a performance test performed on any of the API environment as this is a shared environment and we monitor and increase capacity as needed.
+	Please note that performance/load test should never be performed on any of the API environment as this is a shared environment and we monitor and increase capacity as needed.
 
 
 
