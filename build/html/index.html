@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -23,26 +25,20 @@
   
 
   
-  
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="ioi-api-doc  documentation" href="#"/>
-        <link rel="next" title="Introduction" href="introduction.html"/> 
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="introduction.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -79,7 +75,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publication/index.html">IOI API Publication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="subscription/index.html">IOI API Subscription</a></li>
@@ -96,34 +95,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">ioi-api-doc</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ioi-api-doc</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="#">Docs</a> &raquo;</li>
-      
-    <li>IOI API Programmers Guide</li>
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>IOI API Programmers Guide</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -139,7 +158,7 @@ IOI (Indication of Interest) messages.</p>
 <p>The object model for Java, .NET and C++ are identical. The C interface provides a C-style version of the object model.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">Please note that there never should be a performance test performed on any of the API environment as this is a shared environment and we monitor and increase capacity as needed.</p>
+<p class="last">Please note that performance/load test should never be performed on any of the API environment as this is a shared environment and we monitor and increase capacity as needed.</p>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
@@ -162,6 +181,7 @@ IOI (Indication of Interest) messages.</p>
 <li class="toctree-l1"><a class="reference internal" href="subscription/index.html">IOI API Subscription</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="subscription/subscription.html">Bloomberg API Service for IOI API Subscription</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subscription/subscription.html#accessing-the-test-environment">Accessing the Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subscription/subscription.html#description-of-elements">Description of Elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subscription/subscription.html#ioi-api-subscription">IOI API Subscription</a></li>
 </ul>
 </li>
@@ -176,12 +196,13 @@ IOI (Indication of Interest) messages.</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
@@ -195,7 +216,7 @@ IOI (Indication of Interest) messages.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -214,9 +235,11 @@ IOI (Indication of Interest) messages.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>
@@ -230,14 +253,13 @@ IOI (Indication of Interest) messages.</p>
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

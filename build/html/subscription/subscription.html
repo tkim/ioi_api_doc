@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -23,28 +25,21 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="ioi-api-doc  documentation" href="../index.html"/>
-        <link rel="up" title="IOI API Subscription" href="index.html"/>
-        <link rel="next" title="FAQ" href="../faq.html"/>
-        <link rel="prev" title="IOI API Subscription" href="index.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FAQ" href="../faq.html" />
+    <link rel="prev" title="IOI API Subscription" href="index.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -81,12 +76,16 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publication/index.html">IOI API Publication</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">IOI API Subscription</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Bloomberg API Service for IOI API Subscription</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#accessing-the-test-environment">Accessing the Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description-of-elements">Description of Elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ioi-api-subscription">IOI API Subscription</a></li>
 </ul>
 </li>
@@ -103,36 +102,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">ioi-api-doc</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ioi-api-doc</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">IOI API Subscription</a> &raquo;</li>
-      
-    <li>Bloomberg API Service for IOI API Subscription</li>
+        
+      <li>Bloomberg API Service for IOI API Subscription</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/subscription/subscription.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -140,8 +159,8 @@
             
   <div class="section" id="bloomberg-api-service-for-ioi-api-subscription">
 <h1>Bloomberg API Service for IOI API Subscription<a class="headerlink" href="#bloomberg-api-service-for-ioi-api-subscription" title="Permalink to this headline">¶</a></h1>
-<p>For IOI subscription, this is accomplished by referencing <code class="docutils literal"><span class="pre">\\blp\ioisub-beta</span></code> as the service name in your program. This command will allow your service  to redirect all IOI API subscription to the test environment.</p>
-<p>Once the client has thoroughly tested the custom-built strategies, they can access the production environment by changing the service name from  <code class="docutils literal"><span class="pre">\\blp\ioisub-beta</span></code> to <code class="docutils literal"><span class="pre">\\blp\ioisub</span></code>.</p>
+<p>For IOI subscription, this is accomplished by referencing <code class="docutils literal notranslate"><span class="pre">\\blp\ioisub-beta</span></code> as the service name in your program. This command will allow your service  to redirect all IOI API subscription to the test environment.</p>
+<p>Once the client has thoroughly tested the custom-built strategies, they can access the production environment by changing the service name from  <code class="docutils literal notranslate"><span class="pre">\\blp\ioisub-beta</span></code> to <code class="docutils literal notranslate"><span class="pre">\\blp\ioisub</span></code>.</p>
 </div>
 <div class="section" id="accessing-the-test-environment">
 <h1>Accessing the Test Environment<a class="headerlink" href="#accessing-the-test-environment" title="Permalink to this headline">¶</a></h1>
@@ -153,6 +172,262 @@ the DGRT command.</p>
 <p>To check which environment your current view is in, type VSAT &lt;GO&gt; inside the Bloomberg terminal.</p>
 <p>To get back to production type DGRT OFF &lt;GO&gt;. Please note that the testing environment in Beta will not
 operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the production environment.</p>
+</div>
+<div class="section" id="description-of-elements">
+<h1>Description of Elements<a class="headerlink" href="#description-of-elements" title="Permalink to this headline">¶</a></h1>
+<p>The following elements are available for equity and options IOI subscription.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="42%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element Name</th>
+<th class="head">Description</th>
+<th class="head">Type</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">change</span></code></td>
+<td>IOI State: New, Replace and Cancel</td>
+<td>String</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">id_value</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_natural</span></code>
+<code class="docutils literal notranslate"><span class="pre">(ioi_offer_natural)</span></code></td>
+<td>&#160;</td>
+<td>INT32</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_notes</span></code>
+<code class="docutils literal notranslate"><span class="pre">(ioi_offer_notes)</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_fixed_currency</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_price_fixed_currency</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_fixed_price</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_price_fixed_price</span></code></td>
+<td>&#160;</td>
+<td>FLOAT64</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_moneyness</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_price_moneyness</span></code></td>
+<td>&#160;</td>
+<td>FLOAT64</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_limitPrice</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_limitPrice</span></code></td>
+<td>&#160;</td>
+<td>FLOAT64</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_offsetAmount</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_offsetAmount</span></code></td>
+<td>&#160;</td>
+<td>FLOAT64</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_offsetFrom</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_offsetFrom</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_offsetType</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_offsetType</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_reference</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_price_reference</span></code></td>
+<td>Bid, Mid, Ask</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_type</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_price_type</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_qualifiers_n</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_qualifiers_n</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_qualifiers_count</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_qualifiers_count</span></code></td>
+<td>&#160;</td>
+<td>INT32</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_referencePrice_currency</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_referencePrice_currency</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_referencePrice_price</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_referencePrice_price</span></code></td>
+<td>&#160;</td>
+<td>FLOAT64</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_size_quality</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_size_quality</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_size_quantity</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_size_quantity</span></code></td>
+<td>&#160;</td>
+<td>INT64</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_size_type</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_size_type</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_volatility</span></code>
+<code class="docutils literal notranslate"><span class="pre">ioi_offer_volatility</span></code></td>
+<td>&#160;</td>
+<td>FLOAT64</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_clientId</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_goodUntil</span></code></td>
+<td>&#160;</td>
+<td>DATETIME</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_delta</span></code></td>
+<td>&#160;</td>
+<td>FLOAT64</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_exchange</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_expiry</span></code></td>
+<td>&#160;</td>
+<td>DATETIME</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_futureRefDate</span></code></td>
+<td>&#160;</td>
+<td>DATETIME</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_listed_figi</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_listed_ticker</span></code></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_listed_type</span></code></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_ratio</span></code></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_strike</span></code></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_style</span></code></td>
+<td>European, American</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_type</span></code></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ioi_instrument_option_legs_n_underlying_figi</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ioi_instrument_option_legs_n_underlying_ticker</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ioi_instrument_option_legs_n_underlying_type</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_count</span></code></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_structure</span></code></td>
+<td>Custom, CallSpread, PutSpread, Straddle
+Strangle, SingleLegCall, SingleLegPut
+CalendarCallSpread, CalendarPutSpread
+CallSpreadReversal, PutSpreadReversal
+DiagonalCalendarCallSpread,
+DiagonalCalendarPutSpread,
+CallButterfly, PutButterfly,
+IronButterfly, RiskReversal, Box,
+CallLadder, PutLadder, CallCondor,
+PutCondor, IronCondor, JellyRoll,
+RatioCallSpread, RatioPutSpread</td>
+<td>String</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_stock_security_figi</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_stock_security_ticker</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_stock_security_type</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_type</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_benchmark</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_broker</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_customId</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_orderType</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_strategy_brief</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_strategy_detailed</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_strategy_name</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_sentTime</span></code></td>
+<td>&#160;</td>
+<td>DATETIME</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">originalId_value</span></code></td>
+<td>&#160;</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="ioi-api-subscription">
 <h1>IOI API Subscription<a class="headerlink" href="#ioi-api-subscription" title="Permalink to this headline">¶</a></h1>
@@ -168,7 +443,7 @@ operate in the exact same way as the production environment. Also, please note t
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_SubscribeIOI.py">Subscribe IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_SubscribeIOI.java">Subscribe IOI java</a></td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -176,7 +451,7 @@ operate in the exact same way as the production environment. Also, please note t
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">createIOISubscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">createIOISubscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Create IOI subscription&quot;</span><span class="p">)</span>
 
@@ -195,15 +470,16 @@ operate in the exact same way as the production environment. Also, please note t
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="IOI API Subscription" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="IOI API Subscription" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -216,7 +492,7 @@ operate in the exact same way as the production environment. Also, please note t
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -235,9 +511,11 @@ operate in the exact same way as the production environment. Also, please note t
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -251,14 +529,13 @@ operate in the exact same way as the production environment. Also, please note t
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
