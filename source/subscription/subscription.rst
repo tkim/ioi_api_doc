@@ -35,8 +35,8 @@ The following elements are available for equity and options IOI subscription.
 |``id_value``                                  |                                         | String   |
 +----------------------------------------------+-----------------------------------------+----------+
 |``ioi_bid_natural``                           |                                         | INT32    |
-|                                              |                                         |          |
-|``(ioi_offer_natural)``                       |                                         |          |
+|----------------------------------------------|                                         |          |
+|``ioi_offer_natural``                         |                                         |          |
 +----------------------------------------------+-----------------------------------------+----------+
 |``ioi_bid_notes``                             |                                         | String   | 
 |``(ioi_offer_notes)``                         |                                         |          |
