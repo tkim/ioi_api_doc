@@ -160,9 +160,9 @@ operate in the exact same way as the production environment. Also, please note t
 <p>The following elements are available for equity and options IOI subscription.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="50%" />
-<col width="41%" />
-<col width="10%" />
+<col width="51%" />
+<col width="40%" />
+<col width="9%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Element Name</th>
@@ -361,69 +361,81 @@ operate in the exact same way as the production environment. Also, please note t
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_structure</span></code></td>
-<td>Custom, CallSpread, PutSpread, Straddle
-Strangle, SingleLegCall, SingleLegPut
-CalendarCallSpread, CalendarPutSpread
-CallSpreadReversal, PutSpreadReversal
-DiagonalCalendarCallSpread,
-DiagonalCalendarPutSpread,
-CallButterfly, PutButterfly,
-IronButterfly, RiskReversal, Box,
-CallLadder, PutLadder, CallCondor,
-PutCondor, IronCondor, JellyRoll,
-RatioCallSpread, RatioPutSpread</td>
-<td>String</td>
+<tr class="row-odd"><td rowspan="12"><code class="docutils literal"><span class="pre">ioi_instrument_option_structure</span></code></td>
+<td>Custom, CallSpread, PutSpread,</td>
+<td rowspan="12">String</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_stock_security_figi</span></code></td>
+<tr class="row-even"><td>Straddle, Strangle, SingleLegCall,</td>
+</tr>
+<tr class="row-odd"><td>SingleLegPut, CalendarCallSpread,</td>
+</tr>
+<tr class="row-even"><td>CalendarPutSpread, CallSpreadReversal,</td>
+</tr>
+<tr class="row-odd"><td>PutSpreadReversal,</td>
+</tr>
+<tr class="row-even"><td>DiagonalCalendarCallSpread,</td>
+</tr>
+<tr class="row-odd"><td>DiagonalCalendarPutSpread,</td>
+</tr>
+<tr class="row-even"><td>CallButterfly, PutButterfly,</td>
+</tr>
+<tr class="row-odd"><td>IronButterfly, RiskReversal, Box,</td>
+</tr>
+<tr class="row-even"><td>CallLadder, PutLadder, CallCondor,</td>
+</tr>
+<tr class="row-odd"><td>PutCondor, IronCondor, JellyRoll,</td>
+</tr>
+<tr class="row-even"><td>RatioCallSpread, RatioPutSpread</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_stock_security_figi</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_stock_security_ticker</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_stock_security_ticker</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_stock_security_type</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_stock_security_type</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_type</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_type</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_routing_benchmark</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_routing_benchmark</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_routing_broker</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_routing_broker</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_routing_customId</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_routing_customId</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_routing_orderType</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_routing_orderType</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_routing_strategy_brief</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_routing_strategy_brief</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_routing_strategy_detailed</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_routing_strategy_detailed</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_routing_strategy_name</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_routing_strategy_name</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_sentTime</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_sentTime</span></code></td>
 <td>&nbsp;</td>
 <td>DateTime</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">originalId_value</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">originalId_value</span></code></td>
 <td>&nbsp;</td>
 <td>String</td>
 </tr>
