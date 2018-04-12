@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -23,28 +25,21 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="ioi-api-doc  documentation" href="../index.html"/>
-        <link rel="up" title="IOI API Publication" href="index.html"/>
-        <link rel="next" title="IOI API Subscription" href="../subscription/index.html"/>
-        <link rel="prev" title="IOI API Publication" href="index.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="IOI API Subscription" href="../subscription/index.html" />
+    <link rel="prev" title="IOI API Publication" href="index.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -81,7 +76,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">IOI API Publication</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Bloomberg API Service for IOI API Publication</a></li>
@@ -89,6 +87,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#cancel-ioi-message">Cancel IOI Message</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-ioi-message">Create IOI Message</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-ioi-message">Update IOI Message</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description-of-elements">Description of Elements</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../subscription/index.html">IOI API Subscription</a></li>
@@ -105,36 +104,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">ioi-api-doc</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ioi-api-doc</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">IOI API Publication</a> &raquo;</li>
-      
-    <li>Bloomberg API Service for IOI API Publication</li>
+        
+      <li>Bloomberg API Service for IOI API Publication</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/publication/reqResp.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -142,9 +161,9 @@
             
   <div class="section" id="bloomberg-api-service-for-ioi-api-publication">
 <h1>Bloomberg API Service for IOI API Publication<a class="headerlink" href="#bloomberg-api-service-for-ioi-api-publication" title="Permalink to this headline">¶</a></h1>
-<p>For IOI publication, this is accomplished by referencing <code class="docutils literal"><span class="pre">//blp/ioiapi-beta-request</span></code> as the service name in your program. This command will allow your service  to redirect all IOI API requests to the test environment.</p>
+<p>For IOI publication, this is accomplished by referencing <code class="docutils literal notranslate"><span class="pre">//blp/ioiapi-beta-request</span></code> as the service name in your program. This command will allow your service  to redirect all IOI API requests to the test environment.</p>
 <p>Once the client has thoroughly tested the custom-built strategies, they can access the production
-environment by changing the service name from <code class="docutils literal"><span class="pre">//blp/ioiapi-beta-request</span></code> to <code class="docutils literal"><span class="pre">//blp/ioiapi-request</span></code>.</p>
+environment by changing the service name from <code class="docutils literal notranslate"><span class="pre">//blp/ioiapi-beta-request</span></code> to <code class="docutils literal notranslate"><span class="pre">//blp/ioiapi-request</span></code>.</p>
 </div>
 <div class="section" id="accessing-the-test-environment">
 <h1>Accessing the Test Environment<a class="headerlink" href="#accessing-the-test-environment" title="Permalink to this headline">¶</a></h1>
@@ -156,11 +175,11 @@ the DGRT command.</p>
 <p>To check which environment your current view is in, type VSAT &lt;GO&gt; inside the Bloomberg terminal.</p>
 <p>To get back to production type DGRT OFF &lt;GO&gt;. Please note that the testing environment in Beta will not
 operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the production environment.</p>
-<p>The <code class="docutils literal"><span class="pre">IOI&lt;GO&gt;</span></code> function will show a tab for Options vs. Equities IOIs.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">IOI&lt;GO&gt;</span></code> function will show a tab for Options vs. Equities IOIs.</p>
 </div>
 <div class="section" id="cancel-ioi-message">
 <h1>Cancel IOI Message<a class="headerlink" href="#cancel-ioi-message" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal"><span class="pre">cancelIoi</span></code> request allows IOI API service to Cancel IOI message.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">cancelIoi</span></code> request allows IOI API service to Cancel IOI message.</p>
 <p>Full code sample (Options IOI):-</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -172,7 +191,7 @@ operate in the exact same way as the production environment. Also, please note t
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CancelIOI.py">Cancel IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_CancelIOI.java">Cancel IOI java</a></td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -187,7 +206,7 @@ operate in the exact same way as the production environment. Also, please note t
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CancelEquityIOI.py">Cancel E IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/java_dapi_CancelEquityIOI.java">Cancel E IOI java</a></td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -195,7 +214,7 @@ operate in the exact same way as the production environment. Also, please note t
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendCancelIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendCancelIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 
     <span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_ioi</span><span class="p">)</span>
     <span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;cancelIoi&quot;</span><span class="p">)</span>
@@ -212,7 +231,7 @@ operate in the exact same way as the production environment. Also, please note t
 </div>
 <div class="section" id="create-ioi-message">
 <h1>Create IOI Message<a class="headerlink" href="#create-ioi-message" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal"><span class="pre">createIoi</span></code> request allows IOI API service to Create IOI message.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">createIoi</span></code> request allows IOI API service to Create IOI message.</p>
 <p>Full code sample (Options IOI):-</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -224,7 +243,7 @@ operate in the exact same way as the production environment. Also, please note t
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CreateIOI.py">Create IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_CreateIOI.java">Create IOI java</a></td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -239,7 +258,7 @@ operate in the exact same way as the production environment. Also, please note t
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CreateEquityIOI.py">Create E IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/java_dapi_CreateEquityIOI.java">Create E IOI java</a></td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -247,7 +266,7 @@ operate in the exact same way as the production environment. Also, please note t
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">sendCreateIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">sendCreateIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 
 <span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_ioi</span><span class="p">)</span>
 <span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;createIoi&quot;</span><span class="p">)</span>
@@ -319,7 +338,7 @@ operate in the exact same way as the production environment. Also, please note t
 </div>
 <div class="section" id="update-ioi-message">
 <h1>Update IOI Message<a class="headerlink" href="#update-ioi-message" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal"><span class="pre">updateIoi</span></code> request allows IOI API service to Update IOI message.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">updateIoi</span></code> request allows IOI API service to Update IOI message.</p>
 <p>Full code sample (Options IOI):-</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -331,7 +350,7 @@ operate in the exact same way as the production environment. Also, please note t
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_UpdateIOI.py">Update IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_UpdateIOI.java">Update IOI java</a></td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -346,7 +365,7 @@ operate in the exact same way as the production environment. Also, please note t
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_UpdateEquityIOI.py">Update E IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/java_dapi_UpdateEquityIOI.java">Update E IOI java</a></td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -354,7 +373,7 @@ operate in the exact same way as the production environment. Also, please note t
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendUpdateIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendUpdateIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 
 <span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_ioi</span><span class="p">)</span>
 <span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;updateIoi&quot;</span><span class="p">)</span>
@@ -427,18 +446,158 @@ operate in the exact same way as the production environment. Also, please note t
 </pre></div>
 </div>
 </div>
+<div class="section" id="description-of-elements">
+<h1>Description of Elements<a class="headerlink" href="#description-of-elements" title="Permalink to this headline">¶</a></h1>
+<p>The following elements are available for equity and options IOI subscription.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="55%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element Name</th>
+<th class="head">Description</th>
+<th class="head">Type</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">acronym</span></code></td>
+<td>&#160;</td>
+<td>string</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">bid</span></code></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">brief</span></code></td>
+<td>&#160;</td>
+<td>string</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">currency</span></code></td>
+<td>Currency of the IOI</td>
+<td>string</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">delta</span></code></td>
+<td>&#160;</td>
+<td>float64</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">exchange</span></code></td>
+<td>&#160;</td>
+<td>string</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">expiry</span></code></td>
+<td>&#160;</td>
+<td>datetime</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">figi</span></code></td>
+<td>&#160;</td>
+<td>string</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">fixed</span></code></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">futureRefDate</span></code></td>
+<td>&#160;</td>
+<td>datetime</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">goodUntil</span></code></td>
+<td>&#160;</td>
+<td>datetime</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">handle</span></code></td>
+<td>unique value to identify IOI message</td>
+<td>string</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">instrument</span></code></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">limitPrice</span></code></td>
+<td>&#160;</td>
+<td>float64</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">natural</span></code></td>
+<td>&#160;</td>
+<td>bool</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">notes</span></code></td>
+<td>&#160;</td>
+<td>string</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">offsetAmount</span></code></td>
+<td>&#160;</td>
+<td>float64</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">offsetFrom</span></code></td>
+<td>&#160;</td>
+<td>Enum</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">pegged</span></code></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">price</span></code></td>
+<td>&#160;</td>
+<td>float64</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">qualifiers</span></code></td>
+<td>&#160;</td>
+<td>string</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">quality</span></code></td>
+<td>&#160;</td>
+<td>enum</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">quantity</span></code></td>
+<td>&#160;</td>
+<td>int64</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ratio</span></code></td>
+<td>&#160;</td>
+<td>float64</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">strike</span></code></td>
+<td>&#160;</td>
+<td>float64</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">style</span></code></td>
+<td>&#160;</td>
+<td>enum</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">structure</span></code></td>
+<td>&#160;</td>
+<td>enum</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ticker</span></code></td>
+<td>&#160;</td>
+<td>string</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">type</span></code></td>
+<td>&#160;</td>
+<td>enum</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">volatility</span></code></td>
+<td>&#160;</td>
+<td>float64</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../subscription/index.html" class="btn btn-neutral float-right" title="IOI API Subscription" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../subscription/index.html" class="btn btn-neutral float-right" title="IOI API Subscription" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="IOI API Publication" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="IOI API Publication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -451,7 +610,7 @@ operate in the exact same way as the production environment. Also, please note t
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -470,9 +629,11 @@ operate in the exact same way as the production environment. Also, please note t
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
             VERSION:'',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -486,14 +647,13 @@ operate in the exact same way as the production environment. Also, please note t
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
