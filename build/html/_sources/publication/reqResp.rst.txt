@@ -25,6 +25,70 @@ operate in the exact same way as the production environment. Also, please note t
 The ``IOI<GO>`` function will show a tab for Options vs. Equities IOIs.
 
 
+Desktop vs. Server Authentication
+=================================
+
+Desktop:
+
+.. code-block:: python
+
+    d_ioi = "//blp/ioiapi-beta-request"
+    d_host = "localhost"
+    d_port = 1234
+
+
+Server:
+
+.. code-block:: python
+
+    d_ioi = "//blp/ioiapi-beta-request"
+    d_auth = "//blp/apiauth"
+    d_host = "abc.com"
+    d_port = 1234
+    d_user = "myAuthID"
+    d_ip = "10.20.30.40"
+
+Set authorization request:
+
+.. code-block:: python
+    
+    def sendAuthRequest(self, session):
+
+        authService = session.getService(d_auth)
+        authReq = authService.createAuthorizationRequest()
+        authReq.set("emrsID", d_user)
+        authReq.set("ipAdress", d_ip)
+        self.identity = session.createIdentity()
+
+        print ("Sending authorization rquest: %s" % (authReq))
+
+        session.sendAuthorizationRequest(authReq, self.identity)
+
+        print ("Authorization request sent.")
+
+    ...
+
+    def processAuthorizationStatusEvent(self, event):
+
+        print("Processing AUTHORIZATION_STATUS event")
+
+        for msg in event:
+
+            print("AUTHORIZATION_STATUS message: %s" % (msg))
+
+    ...
+
+    def processEvent(self, event, session):
+        try:
+
+        ...
+
+        elif event.eventType() == blpapi.Event.AUTHORIZATION_STATUS:
+            self.processAuthorizationStatusEvent(event)
+
+        ...
+
+
 Cancel IOI Message
 ==================
 

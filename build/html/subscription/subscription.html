@@ -85,6 +85,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">IOI API Subscription</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Bloomberg API Service for IOI API Subscription</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#accessing-the-test-environment">Accessing the Test Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#desktop-vs-server-authentication">Desktop vs. Server Authentication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ioi-api-subscription">IOI API Subscription</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#description-of-elements">Description of Elements</a></li>
 </ul>
@@ -172,6 +173,62 @@ the DGRT command.</p>
 <p>To check which environment your current view is in, type VSAT &lt;GO&gt; inside the Bloomberg terminal.</p>
 <p>To get back to production type DGRT OFF &lt;GO&gt;. Please note that the testing environment in Beta will not
 operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the production environment.</p>
+</div>
+<div class="section" id="desktop-vs-server-authentication">
+<h1>Desktop vs. Server Authentication<a class="headerlink" href="#desktop-vs-server-authentication" title="Permalink to this headline">¶</a></h1>
+<p>Desktop:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d_ioi</span> <span class="o">=</span> <span class="s2">&quot;//blp/ioiapi-beta-request&quot;</span>
+<span class="n">d_host</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>
+<span class="n">d_port</span> <span class="o">=</span> <span class="mi">1234</span>
+</pre></div>
+</div>
+<p>Server:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d_ioi</span> <span class="o">=</span> <span class="s2">&quot;//blp/ioiapi-beta-request&quot;</span>
+<span class="n">d_auth</span> <span class="o">=</span> <span class="s2">&quot;//blp/apiauth&quot;</span>
+<span class="n">d_host</span> <span class="o">=</span> <span class="s2">&quot;abc.com&quot;</span>
+<span class="n">d_port</span> <span class="o">=</span> <span class="mi">1234</span>
+<span class="n">d_user</span> <span class="o">=</span> <span class="s2">&quot;myAuthID&quot;</span>
+<span class="n">d_ip</span> <span class="o">=</span> <span class="s2">&quot;10.20.30.40&quot;</span>
+</pre></div>
+</div>
+<p>Set authorization request:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendAuthRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+
+    <span class="n">authService</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_auth</span><span class="p">)</span>
+    <span class="n">authReq</span> <span class="o">=</span> <span class="n">authService</span><span class="o">.</span><span class="n">createAuthorizationRequest</span><span class="p">()</span>
+    <span class="n">authReq</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;emrsID&quot;</span><span class="p">,</span> <span class="n">d_user</span><span class="p">)</span>
+    <span class="n">authReq</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;ipAdress&quot;</span><span class="p">,</span> <span class="n">d_ip</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">identity</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">createIdentity</span><span class="p">()</span>
+
+    <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Sending authorization rquest: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">authReq</span><span class="p">))</span>
+
+    <span class="n">session</span><span class="o">.</span><span class="n">sendAuthorizationRequest</span><span class="p">(</span><span class="n">authReq</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">identity</span><span class="p">)</span>
+
+    <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Authorization request sent.&quot;</span><span class="p">)</span>
+
+<span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">processAuthorizationStatusEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Processing AUTHORIZATION_STATUS event&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">event</span><span class="p">:</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;AUTHORIZATION_STATUS message: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">msg</span><span class="p">))</span>
+
+<span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">processEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+
+    <span class="o">...</span>
+
+    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">eventType</span><span class="p">()</span> <span class="o">==</span> <span class="n">blpapi</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">AUTHORIZATION_STATUS</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processAuthorizationStatusEvent</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+
+    <span class="o">...</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="ioi-api-subscription">
 <h1>IOI API Subscription<a class="headerlink" href="#ioi-api-subscription" title="Permalink to this headline">¶</a></h1>
