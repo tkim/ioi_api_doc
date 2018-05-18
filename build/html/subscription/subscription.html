@@ -271,6 +271,7 @@ operate in the exact same way as the production environment. Also, please note t
 <div class="section" id="description-of-elements">
 <h1>Description of Elements<a class="headerlink" href="#description-of-elements" title="Permalink to this headline">¶</a></h1>
 <p>The following elements are available for equity and options IOI subscription.</p>
+<p>The sell-side sending IOIs will buy from the buy-side at the bid size/price and sell to the buy-side at the offer size/price.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="53%" />
@@ -349,7 +350,7 @@ operate in the exact same way as the production environment. Also, please note t
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_reference</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_type</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">Market, limit, or unspecified</td>
 <td rowspan="2">string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_type</span></code></td>
@@ -451,23 +452,23 @@ operate in the exact same way as the production environment. Also, please note t
 <td>string</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_type</span></code></td>
-<td>&#160;</td>
+<td>Options IOI leg type</td>
 <td>string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_underlying_figi</span></code></td>
-<td>&#160;</td>
+<td>Options IOI underlying figi</td>
 <td>string</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_underlying_ticker</span></code></td>
-<td>&#160;</td>
+<td>Options IOI underlying ticker</td>
 <td>string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_underlying_type</span></code></td>
-<td>&#160;</td>
+<td>Options IOI underlying type</td>
 <td>string</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_count</span></code></td>
-<td>&#160;</td>
+<td>Options IOI legs count</td>
 <td>string</td>
 </tr>
 <tr class="row-even"><td rowspan="13"><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_structure</span></code></td>
@@ -499,19 +500,19 @@ operate in the exact same way as the production environment. Also, please note t
 <tr class="row-even"><td>RatioCallSpread, RatioPutSpread</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_stock_security_figi</span></code></td>
-<td>&#160;</td>
+<td>Equity IOI security figi</td>
 <td>string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_stock_security_ticker</span></code></td>
-<td>&#160;</td>
+<td>Equity IOI security ticker</td>
 <td>string</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_stock_security_type</span></code></td>
-<td>&#160;</td>
+<td>Equity IOI security type</td>
 <td>string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_type</span></code></td>
-<td>&#160;</td>
+<td>IOI instrument type</td>
 <td>string</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_benchmark</span></code></td>
@@ -543,7 +544,7 @@ operate in the exact same way as the production environment. Also, please note t
 <td>string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_sentTime</span></code></td>
-<td>&#160;</td>
+<td>IOI sent time</td>
 <td>dateTime</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">originalId_value</span></code></td>
@@ -559,11 +560,11 @@ operate in the exact same way as the production environment. Also, please note t
 <td>string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">trader_username</span></code></td>
-<td>&#160;</td>
+<td>Trader name</td>
 <td>string</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">trader_uuid</span></code></td>
-<td>&#160;</td>
+<td>Trader UUID</td>
 <td>int64</td>
 </tr>
 </tbody>

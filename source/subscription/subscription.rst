@@ -140,6 +140,8 @@ Description of Elements
 
 The following elements are available for equity and options IOI subscription.
 
+The sell-side sending IOIs will buy from the buy-side at the bid size/price and sell to the buy-side at the offer size/price.
+
 +--------------------------------------------------+------------------------------------+---------+
 |Element Name                                      | Description                        | Type    |
 +==================================================+====================================+=========+
@@ -185,7 +187,7 @@ The following elements are available for equity and options IOI subscription.
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_price_reference``                     |                                    |         |  
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_price_type``                            |                                    | string  | 
+|``ioi_bid_price_type``                            | Market, limit, or unspecified      | string  | 
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_price_type``                          |                                    |         | 
 +--------------------------------------------------+------------------------------------+---------+
@@ -245,15 +247,15 @@ The following elements are available for equity and options IOI subscription.
 +--------------------------------------------------+------------------------------------+---------+
 |``ioi_instrument_option_legs_n_style``            | European, American                 | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_type``             |                                    | string  |
+|``ioi_instrument_option_legs_n_type``             | Options IOI leg type               | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_underlying_figi``  |                                    | string  |
+|``ioi_instrument_option_legs_n_underlying_figi``  | Options IOI underlying figi        | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_underlying_ticker``|                                    | string  |
+|``ioi_instrument_option_legs_n_underlying_ticker``| Options IOI underlying ticker      | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_underlying_type``  |                                    | string  |
+|``ioi_instrument_option_legs_n_underlying_type``  | Options IOI underlying type        | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_count``              |                                    | string  |
+|``ioi_instrument_option_legs_count``              | Options IOI legs count             | string  |
 +--------------------------------------------------+------------------------------------+---------+
 |``ioi_instrument_option_structure``               | Custom, CallSpread, PutSpread,     | string  |
 |                                                  +------------------------------------+         |
@@ -281,13 +283,13 @@ The following elements are available for equity and options IOI subscription.
 |                                                  +------------------------------------+         |
 |                                                  | RatioCallSpread, RatioPutSpread    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_stock_security_figi``            |                                    | string  |
+|``ioi_instrument_stock_security_figi``            | Equity IOI security figi           | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_stock_security_ticker``          |                                    | string  |
+|``ioi_instrument_stock_security_ticker``          | Equity IOI security ticker         | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_stock_security_type``            |                                    | string  |
+|``ioi_instrument_stock_security_type``            | Equity IOI security type           | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_type``                           |                                    | string  |
+|``ioi_instrument_type``                           | IOI instrument type                | string  |
 +--------------------------------------------------+------------------------------------+---------+
 |``ioi_routing_benchmark``                         |                                    | string  |
 +--------------------------------------------------+------------------------------------+---------+
@@ -303,7 +305,7 @@ The following elements are available for equity and options IOI subscription.
 +--------------------------------------------------+------------------------------------+---------+
 |``ioi_routing_strategy_name``                     |                                    | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_sentTime``                                  |                                    | dateTime|
+|``ioi_sentTime``                                  |IOI sent time                       | dateTime|
 +--------------------------------------------------+------------------------------------+---------+
 |``originalId_value``                              |                                    | string  |
 +--------------------------------------------------+------------------------------------+---------+
@@ -311,7 +313,7 @@ The following elements are available for equity and options IOI subscription.
 +--------------------------------------------------+------------------------------------+---------+
 |``trader_acronym``                                |                                    | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``trader_username``                               |                                    | string  |
+|``trader_username``                               |Trader name                         | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``trader_uuid``                                   |                                    | int64   |
+|``trader_uuid``                                   |Trader UUID                         | int64   |
 +--------------------------------------------------+------------------------------------+---------+
