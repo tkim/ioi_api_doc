@@ -166,13 +166,11 @@
 <div class="section" id="accessing-the-test-environment">
 <h1>Accessing the Test Environment<a class="headerlink" href="#accessing-the-test-environment" title="Permalink to this headline">¶</a></h1>
 <p>Bloomberg provides a test environment for clients to build and test their strategies using the IOI API.</p>
-<p>Inside the Bloomberg Terminal type DGRT Y087&lt;GO&gt; {Y (number zero) 87} This command allows the particular
-terminal window to log into the beta environment. Please note, when a user is remote into the beta
-environment it only affects that particular terminal window and the other screens will not be affected by
-the DGRT command.</p>
+<p>Inside the Bloomberg Terminal type UAT ON &lt;GO&gt;.This command allows the particular terminal window and launchpad to log into the beta environment. Please note, when a user is remote into the beta environment it only affects that particular terminal window and the other Bloomberg panels will not be affected by the UAT ON &lt;GO&gt; command.</p>
 <p>To check which environment your current view is in, type VSAT &lt;GO&gt; inside the Bloomberg terminal.</p>
-<p>To get back to production type DGRT OFF &lt;GO&gt;. Please note that the testing environment in Beta will not
-operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the production environment.</p>
+<p>To get back to production type UAT OFF &lt;GO&gt;. Please note that the testing environment in Beta will not
+operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the
+production environment and no one should perform any volume or load testing in the beta environment.</p>
 </div>
 <div class="section" id="desktop-vs-server-authentication">
 <h1>Desktop vs. Server Authentication<a class="headerlink" href="#desktop-vs-server-authentication" title="Permalink to this headline">¶</a></h1>
@@ -286,35 +284,44 @@ operate in the exact same way as the production environment. Also, please note t
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">id_value</span></code></td>
-<td>&#160;</td>
+<td><div class="first last line-block">
+<div class="line">Unique Bloomberg value to</div>
+<div class="line">identify IOI message,</div>
+<div class="line">also known as handle</div>
+</div>
+</td>
 <td>string</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_natural</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">Indicate natural IOI</td>
 <td rowspan="2">int32</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_natural</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_notes</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">Notes section for IOI messages</td>
 <td rowspan="2">string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_notes</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_fixed_currency</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2"><div class="first last line-block">
+<div class="line">Three letter currency acronym</div>
+<div class="line">for the IOI</div>
+</div>
+</td>
 <td rowspan="2">string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_fixed_currency</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_fixed_price</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI fixed price</td>
 <td rowspan="2">float64</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_fixed_price</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_moneyness</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI price moneyness</td>
 <td rowspan="2">float64</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_moneyness</span></code></td>
@@ -380,13 +387,13 @@ operate in the exact same way as the production environment. Also, please note t
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_referencePrice_price</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_size_quality</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">Small, Medium, or Large</td>
 <td rowspan="2">string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_size_quality</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_size_quantity</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">Actual quantity of the IOI</td>
 <td rowspan="2">int64</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_size_quantity</span></code></td>

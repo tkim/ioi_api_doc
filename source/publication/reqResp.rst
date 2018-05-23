@@ -12,15 +12,13 @@ Accessing the Test Environment
 
 Bloomberg provides a test environment for clients to build and test their strategies using the IOI API.
 
-Inside the Bloomberg Terminal type DGRT Y087<GO> {Y (number zero) 87} This command allows the particular 
-terminal window to log into the beta environment. Please note, when a user is remote into the beta 
-environment it only affects that particular terminal window and the other screens will not be affected by 
-the DGRT command.
+Inside the Bloomberg Terminal type UAT ON <GO>.This command allows the particular terminal window and launchpad to log into the beta environment. Please note, when a user is remote into the beta environment it only affects that particular terminal window and the other Bloomberg panels will not be affected by the UAT ON <GO> command.
 
 To check which environment your current view is in, type VSAT <GO> inside the Bloomberg terminal.
 
-To get back to production type DGRT OFF <GO>. Please note that the testing environment in Beta will not 
-operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the production environment.
+To get back to production type UAT OFF <GO>. Please note that the testing environment in Beta will not 
+operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the 
+production environment and no one should perform any volume or load testing in the beta environment.
 
 The ``IOI<GO>`` function will show a tab for Options vs. Equities IOIs.
 
@@ -413,7 +411,7 @@ The following elements are available for equity and options IOI subscription.
 +------------------------------+-----------------------------------------------+---------+
 |``goodUntil``                 |                                               | datetime|
 +------------------------------+-----------------------------------------------+---------+
-|``handle``                    | unique value to identify IOI message          | string  |
+|``handle``                    |Unique Bloomberg value to identify IOI message | string  |
 +------------------------------+-----------------------------------------------+---------+
 | ``instrument``               |                                               |         |
 +------------------------------+-----------------------------------------------+---------+

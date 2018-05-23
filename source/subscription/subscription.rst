@@ -11,15 +11,13 @@ Accessing the Test Environment
 
 Bloomberg provides a test environment for clients to build and test their strategies using the IOI API.
 
-Inside the Bloomberg Terminal type DGRT Y087<GO> {Y (number zero) 87} This command allows the particular 
-terminal window to log into the beta environment. Please note, when a user is remote into the beta 
-environment it only affects that particular terminal window and the other screens will not be affected by 
-the DGRT command.
+Inside the Bloomberg Terminal type UAT ON <GO>.This command allows the particular terminal window and launchpad to log into the beta environment. Please note, when a user is remote into the beta environment it only affects that particular terminal window and the other Bloomberg panels will not be affected by the UAT ON <GO> command.
 
 To check which environment your current view is in, type VSAT <GO> inside the Bloomberg terminal.
 
-To get back to production type DGRT OFF <GO>. Please note that the testing environment in Beta will not 
-operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the production environment.
+To get back to production type UAT OFF <GO>. Please note that the testing environment in Beta will not 
+operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the 
+production environment and no one should perform any volume or load testing in the beta environment.
 
 
 Desktop vs. Server Authentication
@@ -145,25 +143,27 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 +--------------------------------------------------+------------------------------------+---------+
 |Element Name                                      | Description                        | Type    |
 +==================================================+====================================+=========+
-|``id_value``                                      |                                    | string  |
+|``id_value``                                      |  | Unique Bloomberg value to       | string  |
+|                                                  |  | identify IOI message,           |         |
+|                                                  |  | also known as handle            |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_natural``                               |                                    | int32   |
+|``ioi_bid_natural``                               | Indicate natural IOI               | int32   |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_natural``                             |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_notes``                                 |                                    | string  |
+|``ioi_bid_notes``                                 | Notes section for IOI messages     | string  |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_notes``                               |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_price_fixed_currency``                  |                                    | string  |
-+--------------------------------------------------+                                    |         |
+|``ioi_bid_price_fixed_currency``                  |  | Three letter currency acronym   | string  |
++--------------------------------------------------+  | for the IOI                     |         |
 |``ioi_offer_price_fixed_currency``                |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_price_fixed_price``                     |                                    | float64 |
+|``ioi_bid_price_fixed_price``                     | IOI fixed price                    | float64 |
 +--------------------------------------------------+                                    |         | 
 |``ioi_offer_price_fixed_price``                   |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_price_moneyness``                       |                                    | float64 |
+|``ioi_bid_price_moneyness``                       | IOI price moneyness                | float64 |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_price_moneyness``                     |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+ 
@@ -207,11 +207,11 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_referencePrice_price``                |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_size_quality``                          |                                    | string  |
+|``ioi_bid_size_quality``                          | Small, Medium, or Large            | string  |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_size_quality``                        |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_size_quantity``                         |                                    | int64   |
+|``ioi_bid_size_quantity``                         | Actual quantity of the IOI         | int64   |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_size_quantity``                       |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
