@@ -503,7 +503,8 @@ production environment and no one should perform any volume or load testing in t
 </div>
 <div class="section" id="description-of-elements">
 <h1>Description of Elements<a class="headerlink" href="#description-of-elements" title="Permalink to this headline">¶</a></h1>
-<p>The following elements are available for equity and options IOI subscription.</p>
+<p>The following elements are available for equity and options IOI publication.</p>
+<p>The sell-side sending IOIs will buy from the buy-side at the bid size/price and sell to the buy-side at the offer size/price.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="35%" />
@@ -518,122 +519,118 @@ production environment and no one should perform any volume or load testing in t
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">acronym</span></code></td>
+<td>IPER code to target IOIs</td>
+<td>string</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">brief</span></code></td>
 <td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">bid</span></code></td>
-<td>&#160;</td>
-<td>&#160;</td>
-</tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">brief</span></code></td>
-<td>&#160;</td>
-<td>string</td>
-</tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">currency</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">currency</span></code></td>
 <td>Currency of the IOI</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">delta</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">delta</span></code></td>
 <td>&#160;</td>
 <td>float64</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">exchange</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">exchange</span></code></td>
 <td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">expiry</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">expiry</span></code></td>
 <td>&#160;</td>
 <td>datetime</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">figi</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">figi</span></code></td>
 <td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">fixed</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">fixed</span></code></td>
 <td>&#160;</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">futureRefDate</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">futureRefDate</span></code></td>
 <td>&#160;</td>
 <td>datetime</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">goodUntil</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">goodUntil</span></code></td>
 <td>&#160;</td>
 <td>datetime</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">handle</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">handle</span></code></td>
 <td>Unique Bloomberg value to identify IOI message</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">instrument</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">instrument</span></code></td>
 <td>&#160;</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">limitPrice</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">limitPrice</span></code></td>
 <td>&#160;</td>
 <td>float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">natural</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">natural</span></code></td>
 <td>&#160;</td>
 <td>bool</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">notes</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">notes</span></code></td>
 <td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">offsetAmount</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">offsetAmount</span></code></td>
 <td>&#160;</td>
 <td>float64</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">offsetFrom</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">offsetFrom</span></code></td>
 <td>&#160;</td>
 <td>Enum</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">pegged</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">pegged</span></code></td>
 <td>&#160;</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">price</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">price</span></code></td>
 <td>&#160;</td>
 <td>float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">qualifiers</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">qualifiers</span></code></td>
 <td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">quality</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">quality</span></code></td>
 <td>&#160;</td>
 <td>enum</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">quantity</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">quantity</span></code></td>
 <td>&#160;</td>
 <td>int64</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ratio</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ratio</span></code></td>
 <td>&#160;</td>
 <td>float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">strike</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">strike</span></code></td>
 <td>&#160;</td>
 <td>float64</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">style</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">style</span></code></td>
 <td>&#160;</td>
 <td>enum</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">structure</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">structure</span></code></td>
 <td>&#160;</td>
 <td>enum</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ticker</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ticker</span></code></td>
 <td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">type</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">type</span></code></td>
 <td>&#160;</td>
 <td>enum</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">volatility</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">volatility</span></code></td>
 <td>&#160;</td>
 <td>float64</td>
 </tr>

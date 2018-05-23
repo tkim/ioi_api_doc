@@ -384,14 +384,14 @@ Full code sample (Equity IOI):-
 Description of Elements
 =======================
 
-The following elements are available for equity and options IOI subscription.
+The following elements are available for equity and options IOI publication.
+
+The sell-side sending IOIs will buy from the buy-side at the bid size/price and sell to the buy-side at the offer size/price.
 
 +------------------------------+-----------------------------------------------+---------+
 |Element Name                  | Description                                   | Type    |
 +==============================+===============================================+=========+
-|``acronym``                   |                                               | string  |
-+------------------------------+-----------------------------------------------+---------+
-|``bid``                       |                                               |         |
+|``acronym``                   | IPER code to target IOIs                      | string  |
 +------------------------------+-----------------------------------------------+---------+  
 |``brief``                     |                                               | string  |
 +------------------------------+-----------------------------------------------+---------+
@@ -413,7 +413,7 @@ The following elements are available for equity and options IOI subscription.
 +------------------------------+-----------------------------------------------+---------+
 |``handle``                    |Unique Bloomberg value to identify IOI message | string  |
 +------------------------------+-----------------------------------------------+---------+
-| ``instrument``               |                                               |         |
+|``instrument``                |                                               |         |
 +------------------------------+-----------------------------------------------+---------+
 |``limitPrice``                |                                               | float64 |
 +------------------------------+-----------------------------------------------+---------+
