@@ -162,24 +162,20 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 |``ioi_bid_price_fixed_price``                     | IOI fixed price                    | float64 |
 +--------------------------------------------------+                                    |         | 
 |``ioi_offer_price_fixed_price``                   |                                    |         |
-+--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_price_moneyness``                       | IOI price moneyness                | float64 |
-+--------------------------------------------------+                                    |         |
-|``ioi_offer_price_moneyness``                     |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+ 
-|``ioi_bid_price_pegged_limitPrice``               |                                    | float64 |
+|``ioi_bid_price_pegged_limitPrice``               | IOI pegged limit price             | float64 |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_price_pegged_limitPrice``             |                                    |         |       
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_price_pegged_offsetAmount``             |                                    | float64 |
+|``ioi_bid_price_pegged_offsetAmount``             | IOI pegged offset amount           | float64 |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_price_pegged_offsetAmount``           |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_price_pegged_offsetFrom``               |                                    | string  |
+|``ioi_bid_price_pegged_offsetFrom``               | IOI pegged offset from             | string  |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_price_pegged_offsetFrom``             |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_price_pegged_offsetType``               |                                    | string  |
+|``ioi_bid_price_pegged_offsetType``               | IOI pegged offset type             | string  |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_price_pegged_offsetType``             |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
@@ -191,19 +187,19 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_price_type``                          |                                    |         | 
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_qualifiers_n``                          |                                    | string  |
+|``ioi_bid_qualifiers_n``                          | IOI bid/offer qualifiers           | string  |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_qualifiers_n``                        |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_qualifiers_count``                      |                                    | int32   |
+|``ioi_bid_qualifiers_count``                      | IOI bid/offer qualifiers count     | int32   |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_qualifiers_count``                    |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_referencePrice_currency``               |                                    | string  |
+|``ioi_bid_referencePrice_currency``               | IOI bid/offer reference currency   | string  |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_referencePrice_currency``             |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_referencePrice_price``                  |                                    | float64 |
+|``ioi_bid_referencePrice_price``                  | IOI bid/offer reference price      | float64 |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_referencePrice_price``                |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
@@ -215,35 +211,35 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_size_quantity``                       |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_size_type``                             |                                    | string  |
+|``ioi_bid_size_type``                             | IOI bid/offer size type            | string  |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_size_type``                           |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_volatility``                            |                                    | float64 |
+|``ioi_bid_volatility``                            | IOI bid/offer volatility           | float64 |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_volatility``                          |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_clientId``                                  |                                    | string  |
+|``ioi_clientId``                                  | IOI Client ID                      | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_goodUntil``                                 |                                    | dateTime|
+|``ioi_goodUntil``                                 | IOI good until time                | dateTime|
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_delta``            |                                    | float64 |
+|``ioi_instrument_option_legs_n_delta``            | Options IOI delta                  | float64 |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_exchange``         |                                    | string  |
+|``ioi_instrument_option_legs_n_exchange``         | Options IOI exchange               | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_expiry``           |                                    | dateTime|
+|``ioi_instrument_option_legs_n_expiry``           | Options IOI leg expiry             | dateTime|
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_futureRefDate``    |                                    | dateTime|
+|``ioi_instrument_option_legs_n_futureRefDate``    | Options IOI future reference date  | dateTime|
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_listed_figi``      |                                    | string  | 
+|``ioi_instrument_option_legs_n_listed_figi``      | Options IOI FIGI                   | string  | 
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_listed_ticker``    |                                    | string  |
+|``ioi_instrument_option_legs_n_listed_ticker``    | Options IOI ticker                 | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_listed_type``      |                                    | string  |
+|``ioi_instrument_option_legs_n_listed_type``      | Options IOI type                   | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_ratio``            |                                    | float64 |
+|``ioi_instrument_option_legs_n_ratio``            | Options IOI ratio                  | float64 |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_instrument_option_legs_n_strike``           |                                    | float64 |
+|``ioi_instrument_option_legs_n_strike``           | Options IOI strike                 | float64 |
 +--------------------------------------------------+------------------------------------+---------+
 |``ioi_instrument_option_legs_n_style``            | European, American                 | string  |
 +--------------------------------------------------+------------------------------------+---------+

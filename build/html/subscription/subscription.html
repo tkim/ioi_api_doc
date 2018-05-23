@@ -320,32 +320,26 @@ production environment and no one should perform any volume or load testing in t
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_fixed_price</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_moneyness</span></code></td>
-<td rowspan="2">IOI price moneyness</td>
-<td rowspan="2">float64</td>
-</tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_moneyness</span></code></td>
-</tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_limitPrice</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI pegged limit price</td>
 <td rowspan="2">float64</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_limitPrice</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_offsetAmount</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI pegged offset amount</td>
 <td rowspan="2">float64</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_offsetAmount</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_offsetFrom</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI pegged offset from</td>
 <td rowspan="2">string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_offsetFrom</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_offsetType</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI pegged offset type</td>
 <td rowspan="2">string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_offsetType</span></code></td>
@@ -363,25 +357,25 @@ production environment and no one should perform any volume or load testing in t
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_type</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_qualifiers_n</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI bid/offer qualifiers</td>
 <td rowspan="2">string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_qualifiers_n</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_qualifiers_count</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI bid/offer qualifiers count</td>
 <td rowspan="2">int32</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_qualifiers_count</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_referencePrice_currency</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI bid/offer reference currency</td>
 <td rowspan="2">string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_referencePrice_currency</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_referencePrice_price</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI bid/offer reference price</td>
 <td rowspan="2">float64</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_referencePrice_price</span></code></td>
@@ -399,59 +393,59 @@ production environment and no one should perform any volume or load testing in t
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_size_quantity</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_size_type</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI bid/offer size type</td>
 <td rowspan="2">string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_size_type</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_volatility</span></code></td>
-<td rowspan="2">&#160;</td>
+<td rowspan="2">IOI bid/offer volatility</td>
 <td rowspan="2">float64</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_volatility</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_clientId</span></code></td>
-<td>&#160;</td>
+<td>IOI Client ID</td>
 <td>string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_goodUntil</span></code></td>
-<td>&#160;</td>
+<td>IOI good until time</td>
 <td>dateTime</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_delta</span></code></td>
-<td>&#160;</td>
+<td>Options IOI delta</td>
 <td>float64</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_exchange</span></code></td>
-<td>&#160;</td>
+<td>Options IOI exchange</td>
 <td>string</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_expiry</span></code></td>
-<td>&#160;</td>
+<td>Options IOI leg expiry</td>
 <td>dateTime</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_futureRefDate</span></code></td>
-<td>&#160;</td>
+<td>Options IOI future reference date</td>
 <td>dateTime</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_listed_figi</span></code></td>
-<td>&#160;</td>
+<td>Options IOI FIGI</td>
 <td>string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_listed_ticker</span></code></td>
-<td>&#160;</td>
+<td>Options IOI ticker</td>
 <td>string</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_listed_type</span></code></td>
-<td>&#160;</td>
+<td>Options IOI type</td>
 <td>string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_ratio</span></code></td>
-<td>&#160;</td>
+<td>Options IOI ratio</td>
 <td>float64</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_strike</span></code></td>
-<td>&#160;</td>
+<td>Options IOI strike</td>
 <td>float64</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_style</span></code></td>
