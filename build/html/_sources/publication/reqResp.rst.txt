@@ -392,62 +392,60 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 |Element Name                  | Description                                   | Type    |
 +==============================+===============================================+=========+
 |``acronym``                   | IPER code to target IOIs                      | string  |
-+------------------------------+-----------------------------------------------+---------+  
-|``brief``                     |                                               | string  |
 +------------------------------+-----------------------------------------------+---------+
 |``currency``                  | Currency of the IOI                           | string  |
 +------------------------------+-----------------------------------------------+---------+
-|``delta``                     |                                               | float64 |
+|``delta``                     | Options delta                                 | float64 |
 +------------------------------+-----------------------------------------------+---------+
-|``exchange``                  |                                               | string  |
+|``futureRefDate``             | future reference date                         | datetime|
 +------------------------------+-----------------------------------------------+---------+
-|``expiry``                    |                                               | datetime|
-+------------------------------+-----------------------------------------------+---------+
-|``figi``                      |                                               | string  |
-+------------------------------+-----------------------------------------------+---------+
-|``fixed``                     |                                               |         |
-+------------------------------+-----------------------------------------------+---------+
-|``futureRefDate``             |                                               | datetime|
-+------------------------------+-----------------------------------------------+---------+
-|``goodUntil``                 |                                               | datetime|
+|``goodUntil``                 | good until date/time                          | datetime|
 +------------------------------+-----------------------------------------------+---------+
 |``handle``                    |Unique Bloomberg value to identify IOI message | string  |
 +------------------------------+-----------------------------------------------+---------+
-|``instrument``                |                                               |         |
+|``instrument``                | Stock or Options                              |         |
 +------------------------------+-----------------------------------------------+---------+
-|``limitPrice``                |                                               | float64 |
+|``limitPrice``                | Limit price                                   | float64 |
 +------------------------------+-----------------------------------------------+---------+
-|``natural``                   |                                               | bool    |
+|``natural``                   | Natural IOI indicator                         | bool    |
 +------------------------------+-----------------------------------------------+---------+
-|``notes``                     |                                               | string  |
+|``notes``                     | Free text field                               | string  |
 +------------------------------+-----------------------------------------------+---------+
-|``offsetAmount``              |                                               | float64 |
+|``offsetAmount``              | pegged offset amount                          | float64 |
 +------------------------------+-----------------------------------------------+---------+
-|``offsetFrom``                |                                               | Enum    |
+|``offsetFrom``                | pegged offset from Bid, Mid, Ask              | Enum    |
 +------------------------------+-----------------------------------------------+---------+
-|``pegged``                    |                                               |         |
+|``price``                     | IOI price                                     | float64 |
 +------------------------------+-----------------------------------------------+---------+
-|``price``                     |                                               | float64 |
+|``qualifiers``                | IOI qualifiers                                | string  |
 +------------------------------+-----------------------------------------------+---------+
-|``qualifiers``                |                                               | string  |
+|``quality``                   | Small, Medium, or Large                       | enum    |
 +------------------------------+-----------------------------------------------+---------+
-|``quality``                   |                                               | enum    |
+|``quantity``                  | Actual quantity of the IOI                    | int64   |
 +------------------------------+-----------------------------------------------+---------+
-|``quantity``                  |                                               | int64   |
+|``ratio``                     | Options IOI ratio                             | float64 |
 +------------------------------+-----------------------------------------------+---------+
-|``ratio``                     |                                               | float64 |
+|``strike``                    | Options IOI strike                            | float64 |
 +------------------------------+-----------------------------------------------+---------+
-|``strike``                    |                                               | float64 |
+|``style``                     | Options IOI style (e.g. European or American) | enum    |
 +------------------------------+-----------------------------------------------+---------+
-|``style``                     |                                               | enum    |
+|``structure``                 | Options IOI structure                         | enum    |
+|                              |  | Custom, CallSpread, PutSpread, Straddle,   |         |
+|                              |  | Strangle, SingleLegCall, SingleLegPut,     |         |
+|                              |  | CalendarCallSpread, CalendarPutSpread,     |         |
+|                              |  | CallSpreadReversal, PutSpreadReversal,     |         |
+|                              |  | DiagonalCalendarCallSpread,                |         |
+|                              |  | DiagonalCalendarPutSpread, CallButterfly,  |         |
+|                              |  | PutButterfly, IronButterfly, RiskReversal, |         |
+|                              |  | Box, CallLadder, PutLadder, CallCondor,    |         |
+|                              |  | PutCondor, IronCondor, JellyRoll,          |         |
+|                              |  | RatioCallSpread, RatioPutSpread            |         |
 +------------------------------+-----------------------------------------------+---------+
-|``structure``                 |                                               | enum    |
+|``ticker``                    | IOI ticker                                    | string  |
 +------------------------------+-----------------------------------------------+---------+
-|``ticker``                    |                                               | string  |
+|``type``                      | Options IOI type  (e.g. Call or Put)          | enum    |
 +------------------------------+-----------------------------------------------+---------+
-|``type``                      |                                               | enum    |
-+------------------------------+-----------------------------------------------+---------+
-|``volatility``                |                                               | float64 |
+|``volatility``                | Options IOI volatility                        | float64 |
 +------------------------------+-----------------------------------------------+---------+
 
 

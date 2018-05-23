@@ -522,116 +522,108 @@ production environment and no one should perform any volume or load testing in t
 <td>IPER code to target IOIs</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">brief</span></code></td>
-<td>&#160;</td>
-<td>string</td>
-</tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">currency</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">currency</span></code></td>
 <td>Currency of the IOI</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">delta</span></code></td>
-<td>&#160;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">delta</span></code></td>
+<td>Options delta</td>
 <td>float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">exchange</span></code></td>
-<td>&#160;</td>
-<td>string</td>
-</tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">expiry</span></code></td>
-<td>&#160;</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">futureRefDate</span></code></td>
+<td>future reference date</td>
 <td>datetime</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">figi</span></code></td>
-<td>&#160;</td>
-<td>string</td>
-</tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">fixed</span></code></td>
-<td>&#160;</td>
-<td>&#160;</td>
-</tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">futureRefDate</span></code></td>
-<td>&#160;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">goodUntil</span></code></td>
+<td>good until date/time</td>
 <td>datetime</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">goodUntil</span></code></td>
-<td>&#160;</td>
-<td>datetime</td>
-</tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">handle</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">handle</span></code></td>
 <td>Unique Bloomberg value to identify IOI message</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">instrument</span></code></td>
-<td>&#160;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">instrument</span></code></td>
+<td>Stock or Options</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">limitPrice</span></code></td>
-<td>&#160;</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">limitPrice</span></code></td>
+<td>Limit price</td>
 <td>float64</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">natural</span></code></td>
-<td>&#160;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">natural</span></code></td>
+<td>Natural IOI indicator</td>
 <td>bool</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">notes</span></code></td>
-<td>&#160;</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">notes</span></code></td>
+<td>Free text field</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">offsetAmount</span></code></td>
-<td>&#160;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">offsetAmount</span></code></td>
+<td>pegged offset amount</td>
 <td>float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">offsetFrom</span></code></td>
-<td>&#160;</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">offsetFrom</span></code></td>
+<td>pegged offset from Bid, Mid, Ask</td>
 <td>Enum</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">pegged</span></code></td>
-<td>&#160;</td>
-<td>&#160;</td>
-</tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">price</span></code></td>
-<td>&#160;</td>
+<td>IOI price</td>
 <td>float64</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">qualifiers</span></code></td>
-<td>&#160;</td>
+<td>IOI qualifiers</td>
 <td>string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">quality</span></code></td>
-<td>&#160;</td>
+<td>Small, Medium, or Large</td>
 <td>enum</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">quantity</span></code></td>
-<td>&#160;</td>
+<td>Actual quantity of the IOI</td>
 <td>int64</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ratio</span></code></td>
-<td>&#160;</td>
+<td>Options IOI ratio</td>
 <td>float64</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">strike</span></code></td>
-<td>&#160;</td>
+<td>Options IOI strike</td>
 <td>float64</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">style</span></code></td>
-<td>&#160;</td>
+<td>Options IOI style (e.g. European or American)</td>
 <td>enum</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">structure</span></code></td>
-<td>&#160;</td>
+<td><dl class="first last docutils">
+<dt>Options IOI structure</dt>
+<dd><div class="first last line-block">
+<div class="line">Custom, CallSpread, PutSpread, Straddle,</div>
+<div class="line">Strangle, SingleLegCall, SingleLegPut,</div>
+<div class="line">CalendarCallSpread, CalendarPutSpread,</div>
+<div class="line">CallSpreadReversal, PutSpreadReversal,</div>
+<div class="line">DiagonalCalendarCallSpread,</div>
+<div class="line">DiagonalCalendarPutSpread, CallButterfly,</div>
+<div class="line">PutButterfly, IronButterfly, RiskReversal,</div>
+<div class="line">Box, CallLadder, PutLadder, CallCondor,</div>
+<div class="line">PutCondor, IronCondor, JellyRoll,</div>
+<div class="line">RatioCallSpread, RatioPutSpread</div>
+</div>
+</dd>
+</dl>
+</td>
 <td>enum</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ticker</span></code></td>
-<td>&#160;</td>
+<td>IOI ticker</td>
 <td>string</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">type</span></code></td>
-<td>&#160;</td>
+<td>Options IOI type  (e.g. Call or Put)</td>
 <td>enum</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">volatility</span></code></td>
-<td>&#160;</td>
+<td>Options IOI volatility</td>
 <td>float64</td>
 </tr>
 </tbody>

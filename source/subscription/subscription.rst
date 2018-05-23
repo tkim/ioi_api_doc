@@ -215,7 +215,7 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_size_type``                           |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
-|``ioi_bid_volatility``                            | IOI bid/offer volatility           | float64 |
+|``ioi_bid_volatility``                            | Options IOI bid/offer volatility   | float64 |
 +--------------------------------------------------+                                    |         |
 |``ioi_offer_volatility``                          |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
