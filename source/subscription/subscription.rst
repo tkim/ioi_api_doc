@@ -313,3 +313,34 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 +--------------------------------------------------+------------------------------------+---------+
 |``trader_uuid``                                   |Trader UUID                         | int64   |
 +--------------------------------------------------+------------------------------------+---------+
+
+
+
+Actionable IOI
+==============
+
+The IOIs published via IOI API Publication service can be actionable by the receiving buy-side firms.
+
+The sell-side using IOI API Publication service can specify the targeting EMSX broker code along with ``customId`` element.
+The ``customId`` will allow the order receiving sell-side to tie the order back to the original IOI generated from the sell-side.
+
+
++------------------------------+-----------------------------------------------+---------+
+|Element Name                  | Description                                   | Type    |
++==============================+===============================================+=========+
+|``broker``                    |  | The broker code used in EMSX to submit the | string  |
+|                              |  | order. This is viewable as                 |         |
+|                              |  | ``ioi_routing_broker`` element in the      |         | 
+|                              |  | IOI API Subscription service.              |         |
++------------------------------+-----------------------------------------------+---------+
+|``customId``                  |  | Optional, can be created by the sell-side  | string  |
+|                              |  | to correlate back to an order. This is     |         |
+|                              |  | viewable as ``ioi_routing_id`` element in  |         |
+|                              |  | the IOI API Subscription service.          |         |
++------------------------------+-----------------------------------------------+---------+
+|``strategy``                  |  | Optinal, if specified and the strategy     | string  |
+|                              |  | exists in ``EQMB<GO>``, this element will  |         |
+|                              |  | be accepted.                               |         |
++------------------------------+-----------------------------------------------+---------+
+
+

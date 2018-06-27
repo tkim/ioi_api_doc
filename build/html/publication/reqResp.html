@@ -89,6 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#create-ioi-message">Create IOI Message</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-ioi-message">Update IOI Message</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#description-of-elements">Description of Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#actionable-ioi">Actionable IOI</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../subscription/index.html">IOI API Subscription</a></li>
@@ -625,6 +626,56 @@ production environment and no one should perform any volume or load testing in t
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">volatility</span></code></td>
 <td>Options IOI volatility</td>
 <td>float64</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="actionable-ioi">
+<h1>Actionable IOI<a class="headerlink" href="#actionable-ioi" title="Permalink to this headline">¶</a></h1>
+<p>The IOIs published via IOI API Publication service from the sell-side can be actionable by the receiving buy-side firms.</p>
+<p>The sell-side using IOI API Publication service can specify the targeting EMSX broker code along with <code class="docutils literal notranslate"><span class="pre">customId</span></code> element.
+The <code class="docutils literal notranslate"><span class="pre">customId</span></code> will allow the order receiving sell-side to tie the order back to the original IOI generated from the sell-side.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="55%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Element Name</th>
+<th class="head">Description</th>
+<th class="head">Type</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">broker</span></code></td>
+<td><div class="first last line-block">
+<div class="line">The broker code used in EMSX to submit the</div>
+<div class="line">order. This is viewable as</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">ioi_routing_broker</span></code> element in the</div>
+<div class="line">IOI API Subscription service.</div>
+</div>
+</td>
+<td>string</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">customId</span></code></td>
+<td><div class="first last line-block">
+<div class="line">Optional, can be created by the sell-side</div>
+<div class="line">to correlate back to an order. This is</div>
+<div class="line">viewable as <code class="docutils literal notranslate"><span class="pre">ioi_routing_id</span></code> element in</div>
+<div class="line">the IOI API Subscription service.</div>
+</div>
+</td>
+<td>string</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">strategy</span></code></td>
+<td><div class="first last line-block">
+<div class="line">Optinal, if specified and the strategy</div>
+<div class="line">exists in <code class="docutils literal notranslate"><span class="pre">EQMB&lt;GO&gt;</span></code>, this element will</div>
+<div class="line">be accepted.</div>
+</div>
+</td>
+<td>string</td>
 </tr>
 </tbody>
 </table>
