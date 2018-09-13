@@ -1,9 +1,9 @@
 Bloomberg API Service for IOI API Subscription
 ==============================================
 
-For IOI subscription, this is accomplished by referencing ``\\blp\ioisub-beta`` as the service name in your program. This command will allow your service  to redirect all IOI API subscription to the test environment.   
+For IOI subscription, this is accomplished by referencing ``//blp/ioisub-beta`` as the service name in your program. This command will allow your service  to redirect all IOI API subscription to the test environment.   
 
-Once the client has thoroughly tested the custom-built strategies, they can access the production environment by changing the service name from  ``\\blp\ioisub-beta`` to ``\\blp\ioisub``.
+Once the client has thoroughly tested the custom-built strategies, they can access the production environment by changing the service name from  ``//blp/ioisub-beta`` to ``//blp/ioisub``.
 
 
 Accessing the Test Environment
@@ -307,7 +307,7 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 +--------------------------------------------------+------------------------------------+---------+
 |``state``                                         |IOI State: New, Replace and Cancel  | string  |
 +--------------------------------------------------+------------------------------------+---------+
-|``trader_acronym``                                |                                    | string  |
+|``trader_acronym``                                |IPER code                           | string  |
 +--------------------------------------------------+------------------------------------+---------+
 |``trader_username``                               |Trader name                         | string  |
 +--------------------------------------------------+------------------------------------+---------+
