@@ -388,6 +388,12 @@ The following elements are available for equity and options IOI publication.
 
 The sell-side sending IOIs will buy from the buy-side at the bid size/price and sell to the buy-side at the offer size/price.
 
+
+.. important::
+
+    All times are in UTC.
+    
+
 +------------------------------+-----------------------------------------------+---------+
 |Element Name                  | Description                                   | Type    |
 +==============================+===============================================+=========+
