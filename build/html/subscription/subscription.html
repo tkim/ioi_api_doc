@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Bloomberg API Service for IOI API Subscription &mdash; IOI API Programmers Guide 1.0.0 documentation</title>
+  <title>Bloomberg API Service for IOI API Subscription &mdash; IOI API Programmers Guide 1.2.0 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="IOI API Programmers Guide 1.0.0 documentation" href="../index.html"/>
+    <link rel="top" title="IOI API Programmers Guide 1.2.0 documentation" href="../index.html"/>
         <link rel="up" title="IOI API Subscription" href="index.html"/>
         <link rel="next" title="FAQ" href="../faq.html"/>
         <link rel="prev" title="IOI API Subscription" href="index.html"/> 
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                1.0.0
+                1.2.0
               </div>
             
           
@@ -153,9 +153,9 @@
 <div class="section" id="accessing-the-test-environment">
 <h1>Accessing the Test Environment<a class="headerlink" href="#accessing-the-test-environment" title="Permalink to this headline">¶</a></h1>
 <p>Bloomberg provides a test environment for clients to build and test their strategies using the IOI API.</p>
-<p>Inside the Bloomberg Terminal type UAT ON &lt;GO&gt;.This command allows the particular terminal window and launchpad to log into the beta environment. Please note, when a user is remote into the beta environment it only affects that particular terminal window and the other Bloomberg panels will not be affected by the UAT ON &lt;GO&gt; command.</p>
-<p>To check which environment your current view is in, type VSAT &lt;GO&gt; inside the Bloomberg terminal.</p>
-<p>To get back to production type UAT OFF &lt;GO&gt;. Please note that the testing environment in Beta will not
+<p>Inside the Bloomberg Terminal type <code class="docutils literal"><span class="pre">UAT</span> <span class="pre">ON</span> <span class="pre">&lt;GO&gt;</span></code>.This command allows the particular terminal window and launchpad to log into the beta environment. Please note, when a user is remote into the beta environment it only affects that particular terminal window and the other Bloomberg panels will not be affected by the <code class="docutils literal"><span class="pre">UAT</span> <span class="pre">ON</span> <span class="pre">&lt;GO&gt;</span></code> command.</p>
+<p>To check which environment your current view is in, type <code class="docutils literal"><span class="pre">VSAT</span> <span class="pre">&lt;GO&gt;</span></code> inside the Bloomberg terminal.</p>
+<p>To get back to production type <code class="docutils literal"><span class="pre">UAT</span> <span class="pre">OFF</span> <span class="pre">&lt;GO&gt;</span></code>. Please note that the testing environment in Beta will not
 operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the
 production environment and no one should perform any volume or load testing in the beta environment.</p>
 </div>
@@ -257,6 +257,10 @@ production environment and no one should perform any volume or load testing in t
 <h1>Description of Elements<a class="headerlink" href="#description-of-elements" title="Permalink to this headline">¶</a></h1>
 <p>The following elements are available for equity and options IOI subscription.</p>
 <p>The sell-side sending IOIs will buy from the buy-side at the bid size/price and sell to the buy-side at the offer size/price.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">All times are in UTC.</p>
+</div>
 <table border="1" class="docutils">
 <colgroup>
 <col width="53%" />
@@ -650,7 +654,7 @@ The <code class="docutils literal"><span class="pre">customId</span></code> will
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'1.0.0',
+            VERSION:'1.2.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

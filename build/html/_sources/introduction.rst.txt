@@ -17,11 +17,11 @@ the Bloomberg authorization.
 		#. Signed EMSxNET Order Originator Agreement.
 		#. Install serverapi.exe and register with Bloomberg.
 		#. Enable IOI API per UUID by the Global EMSX Trade Desk for Test (Beta) and Production. 
-		#. To get access to IOI API in UAT and production, please click <Help><Help> on EMSX<GO>.
-		#. Download Bloomberg Desktop API v3 SDK from WAPI<GO> in Bloomberg terminal.
+		#. To get access to IOI API in UAT and production, please click <Help><Help> on ``EMSX<GO>``.
+		#. Download Bloomberg Desktop API v3 SDK from ``WAPI<GO>`` in Bloomberg terminal.
 		
 
-To get access to IOI API in UAT and production, please click <Help><Help> on EMSX<GO>.
+To get access to IOI API in UAT and production, please click <Help><Help> on ``EMSX<GO>``.
 
 
 Sign Up - Programming Support
@@ -354,7 +354,7 @@ Creating User Identities
 In the server environment, the user identities must be created and cached prior to the making requests.  Therefore, the process would look as follows:-
 
 
-.. image:: /image/userIdentity2.png
+.. image:: /image/creatingUserIdentity.png
 
 
 .. note::
@@ -412,7 +412,7 @@ We will receive a Response event for the Authentication service. In the example 
 		if(msg.correlationID()==authRequestID) {
 		
 		if(msg.messageType().equals(AUTHORIZATION_SUCCESS)) {
-			System.out.println("Authorised...Opening EMSX service...");
+			System.out.println("Authorised...Opening IOI service...");
 			System.out.println("Seat Type: " + userIdentity.seatType().toString());
 			session.openServiceAsync(d_service);
 		} else if(msg.messageType().equals(AUTHORIZATION_FAILURE)) {
@@ -428,7 +428,7 @@ We will receive a Response event for the Authentication service. In the example 
 	}
 
 
-When we receive the successful authorization, we can continue with opening the usual EMSX service. If multiple authorization requests have been sent, for a number of different UUIDs, it is necessary to wait for all the responses before being able to use all the identity objects.
+When we receive the successful authorization, we can continue with opening the IOI service. If multiple authorization requests have been sent, for a number of different UUIDs, it is necessary to wait for all the responses before being able to use all the identity objects.
 
 In the above code, you will see that we examine the ‘seatType’ of the identity. The seat type in this case will be either BPS or non-BPS.
 
@@ -437,13 +437,11 @@ Using User Identities
 =====================
 
 
-In the server environment, there is no Bloomberg terminal, and therefore no implied user can be identified.  Moreover, the server is capable of connecting to any number of EMSX user blotters, simultaneously. Therefore, the application making the call must indicate which user is the intended target. This is done through the creation and use of Identity object.
+In the server environment, there is no Bloomberg terminal, and therefore no implied user can be identified.  Moreover, the server is capable of connecting to any number of IOI user identities, simultaneously. Therefore, the application making the call must indicate which user is the intended target. This is done through the creation and use of Identity object.
 
 An Identity object represents a specific Bloomberg UUID.  Once created, an Identity object can be cached for 24hrs, and used with every ``sendRequest()`` and ``subscribe()`` call. 
 
-Identity objects are live, that is they remain connected to Bloomberg in real-time and are capable of receiving events. We recommend that an identity is recreated every 24hrs, to ensure that it picks up the latest changes to any user settings, including access to EMSX. 
-
-Any number of user Identity object can be created by a server-side application. If the application uses the identities of real traders within a firm, then each trader would have an identity created to represent them in the server application. The server application would, perhaps, receive an instruction from the upstream client-side application to create an order in a trader’s blotter. The server application would select the appropriate user identity from the cache and add it to the request.
+Identity objects are live, that is they remain connected to Bloomberg in real-time and are capable of receiving events. We recommend that an identity is recreated every 24hrs, to ensure that it picks up the latest changes to any user settings, including access to ``IOI<GO>``. 
 
 Migrating the existing desktop application call to a server application simply involves changing all ``sendRequest()`` and ``subscribe()`` calls to include the appropriate identity, as follows:-
 
