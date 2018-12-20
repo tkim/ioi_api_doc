@@ -23,42 +23,31 @@ the Bloomberg authorization.
 
 To get access to IOI API in UAT and production, please click <Help><Help> on ``EMSX<GO>``.
 
-
-Sign Up - Programming Support
-=============================
-
-
-For general programming support, please open an account through the following URL:- 
-
-https://service.bloomberg.com
+Support
+=======
 
 
-For a new user, you will need to first start by creating the account in https://service.bloomberg.com  and select “Request a new account”.
+For all IOI functionality and IOI API techincal inquires please contact the EMSX Trade Desk. They are available 24/6 and please ensure you provide your Bloomberg UUID.
 
 
-.. image:: /image/signIn.png
-	:width: 300pt
+By Bloomberg Terminal:
+
+HELP 2x (F1 key) on your terminal, ask to speak to the EMSX Trade Desk
+HELP 1x (F1 key) on your terminal, to compose an email message to the EMSX Trade Desk.
 
 
-Select Enterprise Solutions:-
+By email: 
+
+emsx@bloomberg.net
 
 
-.. image:: /image/accountType.png
-	:width: 300pt
+By Phone: 
 
+Please call your local global customer support number and ask to speak to the EMSX Trade Desk 
 
-Fill out the details on Account Registration:- 
-
-
-.. image:: /image/accountReg.png
-	:width: 300pt
-
-Select B-Pipe, select the role as Technical Contact, and insert Customer #.  The Customer # can be found in the terminal by 
-typing IAM<GO>. Select production information as B-Pipe and click register to finish:-
-
-
-.. image:: /image/register.png
-	:width: 300pt
+=============== ================ =============
++1-212-617-2000 +44-20-7330-7500 +65-6212-1000
+=============== ================ =============
 
 
 
