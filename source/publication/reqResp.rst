@@ -391,7 +391,7 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 
 .. important::
 
-    All times are in UTC.
+    All times in IOI API are Datetime objects. Every language has slightly different syntax but unless the user specifies an offset, the datetime object defaults to UTC.
 
 
 +------------------------------+-----------------------------------------------+---------+
