@@ -262,21 +262,33 @@ production environment and no one should perform any volume or load testing in t
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">createIOISubscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">createIOISubscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Create IOI subscription&quot;</span><span class="p">)</span>
+     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Create IOI subscription&quot;</span><span class="p">)</span>
 
-    <span class="c1">#Create the topic string for the ioi subscription.</span>
-    <span class="n">ioiTopic</span> <span class="o">=</span> <span class="n">d_ioi</span> <span class="o">+</span> <span class="s2">&quot;/ioi&quot;</span>
+     <span class="c1">#Create the topic string for the ioi subscription.</span>
+     <span class="n">ioiTopic</span> <span class="o">=</span> <span class="n">d_ioi</span> <span class="o">+</span> <span class="s2">&quot;/ioi&quot;</span>
 
-    <span class="n">subscriptions</span> <span class="o">=</span> <span class="n">blpapi</span><span class="o">.</span><span class="n">SubscriptionList</span><span class="p">()</span>
+     <span class="n">subscriptions</span> <span class="o">=</span> <span class="n">blpapi</span><span class="o">.</span><span class="n">SubscriptionList</span><span class="p">()</span>
 
-    <span class="n">subscriptions</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">topic</span><span class="o">=</span><span class="n">ioiTopic</span><span class="p">,</span><span class="n">correlationId</span><span class="o">=</span><span class="n">ioiSubscriptionID</span><span class="p">)</span>
+     <span class="n">subscriptions</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">topic</span><span class="o">=</span><span class="n">ioiTopic</span><span class="p">,</span><span class="n">correlationId</span><span class="o">=</span><span class="n">ioiSubscriptionID</span><span class="p">)</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending subscription...&quot;</span><span class="p">)</span>
-    <span class="n">session</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">subscriptions</span><span class="p">)</span>
+     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending subscription...&quot;</span><span class="p">)</span>
+     <span class="n">session</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">subscriptions</span><span class="p">)</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div>
 <div class="section" id="description-of-elements">
 <h1>Description of Elements<a class="headerlink" href="#description-of-elements" title="Permalink to this headline">¶</a></h1>
@@ -373,7 +385,8 @@ production environment and no one should perform any volume or load testing in t
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_type</span></code></td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_qualifiers_n</span></code></td>
-<td rowspan="2">IOI bid/offer qualifiers</td>
+<td rowspan="2">IOI bid/offer qualifiers
+(e.g. H, U, V, I) <a class="reference internal" href="#definitions" id="id1">[definitions]</a></td>
 <td rowspan="2">string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_qualifiers_n</span></code></td>
@@ -634,6 +647,12 @@ The <code class="docutils literal notranslate"><span class="pre">customId</span>
 </td>
 <td>string</td>
 </tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="definitions" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[definitions]</a></td><td>H = Customer Order in Hand - Firm agency order direct from the customer, U = Customer Principal Interest - Firm principal order originating from previous facilitation, V = Swithc / Versus Trade, I = In Touch With - , X = For Crossing, W = Working, T = Over Time / Day, D = VWAP, R = Ready to Trade, S = Portfolio Shown.</td></tr>
 </tbody>
 </table>
 </div>

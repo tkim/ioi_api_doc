@@ -124,7 +124,7 @@ Full code sample:-
 
 
 .. code-block:: python
-             
+   :linenos:          
     
     def createIOISubscription(self, session):
 
@@ -202,7 +202,7 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 |``ioi_offer_price_type``                          |                                    |         | 
 +--------------------------------------------------+------------------------------------+---------+
 |``ioi_bid_qualifiers_n``                          | IOI bid/offer qualifiers           | string  |
-+--------------------------------------------------+                                    |         |
++--------------------------------------------------+ (e.g. H, U, V, I) [definitions]_   |         |
 |``ioi_offer_qualifiers_n``                        |                                    |         |
 +--------------------------------------------------+------------------------------------+---------+
 |``ioi_bid_qualifiers_count``                      | IOI bid/offer qualifiers count     | int32   |
@@ -357,4 +357,4 @@ The ``customId`` will allow the order receiving sell-side to tie the order back 
 |                              |  | be accepted.                               |         |
 +------------------------------+-----------------------------------------------+---------+
 
-
+.. [definitions] H = Customer Order in Hand - Firm agency order direct from the customer, U = Customer Principal Interest - Firm principal order originating from previous facilitation, V = Swithc / Versus Trade, I = In Touch With - , X = For Crossing, W = Working, T = Over Time / Day, D = VWAP, R = Ready to Trade, S = Portfolio Shown.

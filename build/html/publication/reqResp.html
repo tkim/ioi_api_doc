@@ -281,20 +281,31 @@ production environment and no one should perform any volume or load testing in t
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendCancelIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">sendCancelIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 
-    <span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_ioi</span><span class="p">)</span>
-    <span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;cancelIoi&quot;</span><span class="p">)</span>
+     <span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_ioi</span><span class="p">)</span>
+     <span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;cancelIoi&quot;</span><span class="p">)</span>
 
-    <span class="n">handle</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;handle&quot;</span><span class="p">)</span>
-    <span class="n">handle</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;f6f07a52-a0e7-4060-b8dd-35181b036143&quot;</span><span class="p">)</span>
+     <span class="n">handle</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;handle&quot;</span><span class="p">)</span>
+     <span class="n">handle</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;f6f07a52-a0e7-4060-b8dd-35181b036143&quot;</span><span class="p">)</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending Request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
+     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending Request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">sendRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;CancelIOI request sent.&quot;</span><span class="p">)</span>
+     <span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">sendRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;CancelIOI request sent.&quot;</span><span class="p">)</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div>
 <div class="section" id="create-ioi-message">
 <h1>Create IOI Message<a class="headerlink" href="#create-ioi-message" title="Permalink to this headline">¶</a></h1>
@@ -333,75 +344,141 @@ production environment and no one should perform any volume or load testing in t
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">sendCreateIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</pre></div></td><td class="code"><div class="highlight"><pre><span></span>      <span class="k">def</span> <span class="nf">sendCreateIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 
-<span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_ioi</span><span class="p">)</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;createIoi&quot;</span><span class="p">)</span>
+     <span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_ioi</span><span class="p">)</span>
+     <span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;createIoi&quot;</span><span class="p">)</span>
 
-<span class="n">ioi</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;ioi&quot;</span><span class="p">)</span>
+     <span class="n">ioi</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;ioi&quot;</span><span class="p">)</span>
 
-<span class="c1"># Set the good-until time of this option to 15 minutes from now</span>
-<span class="n">ioi</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;goodUntil&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">900</span><span class="p">))</span>
+     <span class="c1"># Set the good-until time of this option to 15 minutes from now</span>
+     <span class="n">ioi</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;goodUntil&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">900</span><span class="p">))</span>
 
-<span class="c1"># Create the option</span>
-<span class="n">option</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;option&quot;</span><span class="p">)</span>
-<span class="n">option</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;structure&quot;</span><span class="p">,</span> <span class="s2">&quot;CallSpread&quot;</span><span class="p">)</span>
+     <span class="c1"># Create the option</span>
+     <span class="n">option</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;option&quot;</span><span class="p">)</span>
+     <span class="n">option</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;structure&quot;</span><span class="p">,</span> <span class="s2">&quot;CallSpread&quot;</span><span class="p">)</span>
 
-<span class="c1"># This option has two legs. Create the first leg</span>
-<span class="n">leg1</span> <span class="o">=</span> <span class="n">option</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;legs&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span><span class="s2">&quot;Call&quot;</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;strike&quot;</span><span class="p">,</span> <span class="mi">230</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;expiry&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;style&quot;</span><span class="p">,</span> <span class="s2">&quot;European&quot;</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ratio&quot;</span><span class="p">,</span> <span class="o">+</span><span class="mf">1.00</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;exchange&quot;</span><span class="p">,</span> <span class="s2">&quot;LN&quot;</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">,</span> <span class="s2">&quot;VOD LN Equity&quot;</span><span class="p">)</span>
+     <span class="c1"># This option has two legs. Create the first leg</span>
+     <span class="n">leg1</span> <span class="o">=</span> <span class="n">option</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;legs&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span><span class="s2">&quot;Call&quot;</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;strike&quot;</span><span class="p">,</span> <span class="mi">230</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;expiry&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;style&quot;</span><span class="p">,</span> <span class="s2">&quot;European&quot;</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ratio&quot;</span><span class="p">,</span> <span class="o">+</span><span class="mf">1.00</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;exchange&quot;</span><span class="p">,</span> <span class="s2">&quot;LN&quot;</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">,</span> <span class="s2">&quot;VOD LN Equity&quot;</span><span class="p">)</span>
 
-<span class="c1"># Create the second leg</span>
-<span class="n">leg2</span> <span class="o">=</span> <span class="n">option</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;legs&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span><span class="s2">&quot;Call&quot;</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;strike&quot;</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;expiry&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;style&quot;</span><span class="p">,</span> <span class="s2">&quot;European&quot;</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ratio&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.25</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;exchange&quot;</span><span class="p">,</span> <span class="s2">&quot;LN&quot;</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">,</span> <span class="s2">&quot;VOD LN Equity&quot;</span><span class="p">)</span>
+     <span class="c1"># Create the second leg</span>
+     <span class="n">leg2</span> <span class="o">=</span> <span class="n">option</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;legs&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span><span class="s2">&quot;Call&quot;</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;strike&quot;</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;expiry&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;style&quot;</span><span class="p">,</span> <span class="s2">&quot;European&quot;</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ratio&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.25</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;exchange&quot;</span><span class="p">,</span> <span class="s2">&quot;LN&quot;</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">,</span> <span class="s2">&quot;VOD LN Equity&quot;</span><span class="p">)</span>
 
-<span class="c1"># Create a quote consisting of a bid and an offer</span>
-<span class="n">bid</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;bid&quot;</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mf">83.63</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;bid notes&quot;</span><span class="p">)</span>
+     <span class="c1"># Create a quote consisting of a bid and an offer</span>
+     <span class="n">bid</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;bid&quot;</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mf">83.63</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;bid notes&quot;</span><span class="p">)</span>
 
-<span class="c1"># Set the offer</span>
-<span class="n">offer</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;offer&quot;</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mf">83.64</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;offer notes&quot;</span><span class="p">)</span>
+     <span class="c1"># Set the offer</span>
+     <span class="n">offer</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;offer&quot;</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mf">83.64</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;offer notes&quot;</span><span class="p">)</span>
 
-<span class="c1"># Set targets</span>
-<span class="n">includes</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;targets&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;includes&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">acronym</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;BLPA&quot;</span><span class="p">,</span> <span class="s2">&quot;BLPB&quot;</span><span class="p">]:</span>
-    <span class="n">target</span> <span class="o">=</span> <span class="n">includes</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
-    <span class="n">target</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;acronym&quot;</span><span class="p">)</span>
-    <span class="n">target</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;acronym&quot;</span><span class="p">,</span> <span class="n">acronym</span><span class="p">)</span>
+     <span class="c1"># Set targets</span>
+     <span class="n">includes</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;targets&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;includes&quot;</span><span class="p">)</span>
+     <span class="k">for</span> <span class="n">acronym</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;BLPA&quot;</span><span class="p">,</span> <span class="s2">&quot;BLPB&quot;</span><span class="p">]:</span>
+         <span class="n">target</span> <span class="o">=</span> <span class="n">includes</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
+         <span class="n">target</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;acronym&quot;</span><span class="p">)</span>
+         <span class="n">target</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;acronym&quot;</span><span class="p">,</span> <span class="n">acronym</span><span class="p">)</span>
 
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending Request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
+     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending Request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
 
-<span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">sendRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;CreateIOI request sent.&quot;</span><span class="p">)</span>
+     <span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">sendRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;CreateIOI request sent.&quot;</span><span class="p">)</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div>
 <div class="section" id="update-ioi-message">
 <h1>Update IOI Message<a class="headerlink" href="#update-ioi-message" title="Permalink to this headline">¶</a></h1>
@@ -440,78 +517,147 @@ production environment and no one should perform any volume or load testing in t
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendUpdateIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre></div></td><td class="code"><div class="highlight"><pre><span></span>     <span class="k">def</span> <span class="nf">sendUpdateIOI</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 
-<span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_ioi</span><span class="p">)</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;updateIoi&quot;</span><span class="p">)</span>
+     <span class="n">service</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_ioi</span><span class="p">)</span>
+     <span class="n">request</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">createRequest</span><span class="p">(</span><span class="s2">&quot;updateIoi&quot;</span><span class="p">)</span>
 
-<span class="n">handle</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;handle&quot;</span><span class="p">)</span>
-<span class="n">handle</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;5f20228a-bef6-41bb-81eb-6abe0b21a00e&quot;</span><span class="p">)</span>
+     <span class="n">handle</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;handle&quot;</span><span class="p">)</span>
+     <span class="n">handle</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;5f20228a-bef6-41bb-81eb-6abe0b21a00e&quot;</span><span class="p">)</span>
 
-<span class="n">ioi</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;ioi&quot;</span><span class="p">)</span>
+     <span class="n">ioi</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;ioi&quot;</span><span class="p">)</span>
 
-<span class="c1"># Set the good-until time of this option to 15 minutes from now</span>
-<span class="n">ioi</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;goodUntil&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">900</span><span class="p">))</span>
+     <span class="c1"># Set the good-until time of this option to 15 minutes from now</span>
+     <span class="n">ioi</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;goodUntil&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">900</span><span class="p">))</span>
 
-<span class="c1"># Create the option</span>
-<span class="n">option</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;option&quot;</span><span class="p">)</span>
-<span class="n">option</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;structure&quot;</span><span class="p">,</span> <span class="s2">&quot;CallSpread&quot;</span><span class="p">)</span>
+     <span class="c1"># Create the option</span>
+     <span class="n">option</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;option&quot;</span><span class="p">)</span>
+     <span class="n">option</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;structure&quot;</span><span class="p">,</span> <span class="s2">&quot;CallSpread&quot;</span><span class="p">)</span>
 
-<span class="c1"># This option has two legs. Create the first leg</span>
-<span class="n">leg1</span> <span class="o">=</span> <span class="n">option</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;legs&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span><span class="s2">&quot;Call&quot;</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;strike&quot;</span><span class="p">,</span> <span class="mi">230</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;expiry&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;style&quot;</span><span class="p">,</span> <span class="s2">&quot;European&quot;</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ratio&quot;</span><span class="p">,</span> <span class="o">+</span><span class="mf">1.00</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;exchange&quot;</span><span class="p">,</span> <span class="s2">&quot;LN&quot;</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">)</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">,</span> <span class="s2">&quot;VOD LN Equity&quot;</span><span class="p">)</span>
+     <span class="c1"># This option has two legs. Create the first leg</span>
+     <span class="n">leg1</span> <span class="o">=</span> <span class="n">option</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;legs&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span><span class="s2">&quot;Call&quot;</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;strike&quot;</span><span class="p">,</span> <span class="mi">230</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;expiry&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;style&quot;</span><span class="p">,</span> <span class="s2">&quot;European&quot;</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ratio&quot;</span><span class="p">,</span> <span class="o">+</span><span class="mf">1.00</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;exchange&quot;</span><span class="p">,</span> <span class="s2">&quot;LN&quot;</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">)</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">,</span> <span class="s2">&quot;VOD LN Equity&quot;</span><span class="p">)</span>
 
-<span class="c1"># Create the second leg</span>
-<span class="n">leg2</span> <span class="o">=</span> <span class="n">option</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;legs&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
-<span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span><span class="s2">&quot;Call&quot;</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;strike&quot;</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;expiry&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;style&quot;</span><span class="p">,</span> <span class="s2">&quot;European&quot;</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ratio&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.25</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;exchange&quot;</span><span class="p">,</span> <span class="s2">&quot;LN&quot;</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">)</span>
-<span class="n">leg2</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">,</span> <span class="s2">&quot;VOD LN Equity&quot;</span><span class="p">)</span>
+     <span class="c1"># Create the second leg</span>
+     <span class="n">leg2</span> <span class="o">=</span> <span class="n">option</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;legs&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
+     <span class="n">leg1</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span><span class="s2">&quot;Call&quot;</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;strike&quot;</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;expiry&quot;</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;style&quot;</span><span class="p">,</span> <span class="s2">&quot;European&quot;</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ratio&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.25</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;exchange&quot;</span><span class="p">,</span> <span class="s2">&quot;LN&quot;</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">)</span>
+     <span class="n">leg2</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;underlying&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;ticker&quot;</span><span class="p">,</span> <span class="s2">&quot;VOD LN Equity&quot;</span><span class="p">)</span>
 
-<span class="c1"># Create a quote consisting of a bid and an offer</span>
-<span class="n">bid</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;bid&quot;</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mf">83.63</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
-<span class="n">bid</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;bid notes&quot;</span><span class="p">)</span>
+     <span class="c1"># Create a quote consisting of a bid and an offer</span>
+     <span class="n">bid</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;bid&quot;</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mf">83.63</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
+     <span class="n">bid</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;bid notes&quot;</span><span class="p">)</span>
 
-<span class="c1"># Set the offer</span>
-<span class="n">offer</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;offer&quot;</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mf">83.64</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
-<span class="n">offer</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;offer notes&quot;</span><span class="p">)</span>
+     <span class="c1"># Set the offer</span>
+     <span class="n">offer</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;offer&quot;</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mf">83.64</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;size&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;quantity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="mf">202.15</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;referencePrice&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;currency&quot;</span><span class="p">,</span> <span class="s2">&quot;GBp&quot;</span><span class="p">)</span>
+     <span class="n">offer</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;offer notes&quot;</span><span class="p">)</span>
 
-<span class="c1"># Set targets</span>
-<span class="n">includes</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;targets&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;includes&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">acronym</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;BLPA&quot;</span><span class="p">,</span> <span class="s2">&quot;BLPB&quot;</span><span class="p">]:</span>
-    <span class="n">target</span> <span class="o">=</span> <span class="n">includes</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
-    <span class="n">target</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;acronym&quot;</span><span class="p">)</span>
-    <span class="n">target</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;acronym&quot;</span><span class="p">,</span> <span class="n">acronym</span><span class="p">)</span>
+     <span class="c1"># Set targets</span>
+     <span class="n">includes</span> <span class="o">=</span> <span class="n">ioi</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;targets&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;includes&quot;</span><span class="p">)</span>
+     <span class="k">for</span> <span class="n">acronym</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;BLPA&quot;</span><span class="p">,</span> <span class="s2">&quot;BLPB&quot;</span><span class="p">]:</span>
+         <span class="n">target</span> <span class="o">=</span> <span class="n">includes</span><span class="o">.</span><span class="n">appendElement</span><span class="p">()</span>
+         <span class="n">target</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="s2">&quot;acronym&quot;</span><span class="p">)</span>
+         <span class="n">target</span><span class="o">.</span><span class="n">setElement</span><span class="p">(</span><span class="s2">&quot;acronym&quot;</span><span class="p">,</span> <span class="n">acronym</span><span class="p">)</span>
 
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending Request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
+     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sending Request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="o">.</span><span class="n">toString</span><span class="p">())</span>
 
-<span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">sendRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;UpdateIOI request sent.&quot;</span><span class="p">)</span>
+     <span class="bp">self</span><span class="o">.</span><span class="n">requestID</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">sendRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;UpdateIOI request sent.&quot;</span><span class="p">)</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div>
 <div class="section" id="description-of-elements">
 <h1>Description of Elements<a class="headerlink" href="#description-of-elements" title="Permalink to this headline">¶</a></h1>
@@ -519,7 +665,7 @@ production environment and no one should perform any volume or load testing in t
 <p>The sell-side sending IOIs will buy from the buy-side at the bid size/price and sell to the buy-side at the offer size/price.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">All times are in UTC.</p>
+<p class="last">All times in IOI API are Datetime objects. Every language has slightly different syntax but unless the user specifies an offset, the datetime object defaults to UTC.</p>
 </div>
 <table border="1" class="docutils">
 <colgroup>
@@ -587,7 +733,7 @@ production environment and no one should perform any volume or load testing in t
 <td>float64</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">qualifiers</span></code></td>
-<td>IOI qualifiers</td>
+<td>IOI qualifiers (e.g. H, U, V, I) <a class="reference internal" href="../subscription/subscription.html#definition" id="id1">[definition]</a></td>
 <td>string</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">quality</span></code></td>
@@ -692,6 +838,12 @@ The <code class="docutils literal notranslate"><span class="pre">customId</span>
 </td>
 <td>string</td>
 </tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="definition" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[definition]</a></td><td>H = Customer Order in Hand - Firm agency order direct from the customer, U = Customer Principal Interest - Firm principal order originating from previous facilitation, V = Swithc / Versus Trade, I = In Touch With - , X = For Crossing, W = Working, T = Over Time / Day, D = VWAP, R = Ready to Trade, S = Portfolio Shown.</td></tr>
 </tbody>
 </table>
 </div>
