@@ -20,6 +20,15 @@ operate in the exact same way as the production environment. Also, please note t
 production environment and no one should perform any volume or load testing in the beta environment.
 
 
+API Demo Tool 
+=============
+API Demo Tool is a handy tool while developing on any Bloomberg API services. The API Demo Tool provides real-time schema viewing tool among other handy tools that can be leveraged during the initial development.
+
+The API Demo Tool can be downloaded from the Bloomberg terminal along with other generic Bloomberg API code samples.
+
+    ``WAPI<GO>`` >> API Download Center >> Download 
+
+    
 Desktop vs. Server Authentication
 =================================
 
