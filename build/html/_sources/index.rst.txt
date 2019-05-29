@@ -14,7 +14,7 @@ The Bloomberg API interface is thread-safe and thread-aware, giving applications
 The object model for Java, .NET and C++ are identical. The C interface provides a C-style version of the object model.
 
 
-.. important::
+.. warning::
 	
 	Please note that performance/load test should never be performed on any of the API environment as this is a shared environment and we monitor and increase capacity as needed.
 
