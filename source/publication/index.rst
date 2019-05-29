@@ -8,6 +8,7 @@ The published messages can be found in ``IOI<GO>`` function in the Bloomberg ter
 
 The service name for production is ``//blp/ioiapi-request`` and for test environment is ``//blp/ioiapi-beta-request``. 
 
+Unlike the EMSX API, the IOI API service supports partial response messages which will return messages that are a subset of the information.
 
 .. toctree::
    :maxdepth: 2

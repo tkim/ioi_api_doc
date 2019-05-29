@@ -9,6 +9,7 @@ The subscribed message can be found in  ``IOI<GO>`` function in the Bloomberg te
 
 The service name is ``//blp/ioisub`` for production and ``//blp/ioisub-beta`` to call the test environment.
 
+Unlike the EMSX API, the IOI API service supports partial response messages which will return messages that are a subset of the information.
 
 .. toctree::
    :maxdepth: 2
