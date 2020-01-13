@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>IOI API Subscription &mdash; IOI API Programmers Guide 1.4.0 documentation</title>
+  <title>IOI API Subscription &mdash; IOI API Programmers Guide 1.5.0 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                1.4.0
+                1.5.0
               </div>
             
           
@@ -166,6 +166,8 @@
 <p>This document is for developers who will use the Bloomberg IOI API Server to subscribe to IOI (Indication of Interest) messages from various brokers.</p>
 <p>The subscribed message can be found in  <code class="docutils literal notranslate"><span class="pre">IOI&lt;GO&gt;</span></code> function in the Bloomberg terminal.</p>
 <p>The service name is <code class="docutils literal notranslate"><span class="pre">//blp/ioisub</span></code> for production and <code class="docutils literal notranslate"><span class="pre">//blp/ioisub-beta</span></code> to call the test environment.</p>
+<p>Unlike the EMSX API, the IOI API service supports partial response messages which will return messages that are a subset of the information.</p>
+<p><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/ioisub_1.0.0.8.xml">IOI API Subscription Schema</a></p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="subscription.html">Bloomberg API Service for IOI API Subscription</a></li>

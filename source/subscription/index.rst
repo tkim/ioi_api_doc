@@ -11,6 +11,11 @@ The service name is ``//blp/ioisub`` for production and ``//blp/ioisub-beta`` to
 
 Unlike the EMSX API, the IOI API service supports partial response messages which will return messages that are a subset of the information.
 
+`IOI API Subscription Schema`_
+
+.. _IOI API Subscription Schema: https://github.com/tkim/ioi_api_repository/blob/master/ioisub_1.0.0.8.xml
+
+
 .. toctree::
    :maxdepth: 2
 

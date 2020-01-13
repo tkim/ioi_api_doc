@@ -10,6 +10,10 @@ The service name for production is ``//blp/ioiapi-request`` and for test environ
 
 Unlike the EMSX API, the IOI API service supports partial response messages which will return messages that are a subset of the information.
 
+`IOI API Publication Schema`_
+
+.. _IOI API Publication Schema: https://github.com/tkim/ioi_api_repository/blob/master/ioiapi-request_1.0.0.3.xml
+
 .. toctree::
    :maxdepth: 2
 
