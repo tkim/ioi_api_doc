@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Bloomberg API Service for IOI API Subscription &mdash; IOI API Programmers Guide 1.5.0 documentation</title>
+  <title>Bloomberg API Service for IOI API Subscription &mdash; IOI API Programmers Guide 1.6.0 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                1.5.0
+                1.6.0
               </div>
             
           
@@ -182,7 +182,7 @@ production environment and no one should perform any volume or load testing in t
 <p>API Demo Tool is a handy tool while developing on any Bloomberg API services. The API Demo Tool provides real-time schema viewing tool among other handy tools that can be leveraged during the initial development.</p>
 <p>The API Demo Tool can be downloaded from the Bloomberg terminal along with other generic Bloomberg API code samples.</p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">WAPI&lt;GO&gt;</span></code> &gt;&gt; API Download Center &gt;&gt; Download</div></blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">WAPI&lt;GO&gt;</span></code> &gt;&gt; <code class="docutils literal notranslate"><span class="pre">API</span> <span class="pre">Download</span> <span class="pre">Center</span></code> &gt;&gt; <code class="docutils literal notranslate"><span class="pre">Download</span></code></div></blockquote>
 </div>
 <div class="section" id="desktop-vs-server-authentication">
 <h1>Desktop vs. Server Authentication<a class="headerlink" href="#desktop-vs-server-authentication" title="Permalink to this headline">¶</a></h1>
@@ -289,6 +289,472 @@ production environment and no one should perform any volume or load testing in t
      <span class="n">session</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">subscriptions</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
+<p>Output:-</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_SubscribeIOI.py
+Bloomberg - IOI API Example - DesktopAPI - SubscribeIOI
+Connecting to localhost:8194
+Processing SESSION_STATUS event
+SessionConnectionUp = {
+    server = &quot;localhost:8194&quot;
+    encryptionStatus = &quot;Clear&quot;
+}
+
+Session connection is up
+Processing SESSION_STATUS event
+SessionStarted = {
+    initialEndpoints[] = {
+        initialEndpoints = {
+            address = &quot;localhost:8194&quot;
+        }
+    }
+}
+
+Session started...
+Processing SERVICE_STATUS event
+ServiceOpened = {
+    serviceName = &quot;//blp/ioisub-beta&quot;
+}
+
+IOIAPI service opened... Sending request...
+Create IOI subscription
+Sending subscription: //blp/ioisub-beta/ioi
+Processing SUBSCRIPTION_STATUS event
+SUBSCRIPTION_STATUS MESSAGE: SubscriptionStarted = {
+    exceptions[] = {
+    }
+    streamIds[] = {
+        &quot;1&quot;
+    }
+    receivedFrom = {
+        address = &quot;localhost:8194&quot;
+    }
+    reason = &quot;Subscriber made a subscription&quot;
+}
+
+IOIAPI subscription started...
+SUBSCRIPTION_STATUS MESSAGE: SubscriptionStreamsActivated = {
+    streams[] = {
+        streams = {
+            id = &quot;1&quot;
+            endpoint = {
+                address = &quot;localhost:8194&quot;
+            }
+        }
+    }
+    reason = &quot;Subscriber made a subscription&quot;
+}
+
+Processing SUBSCRIPTION_DATA event
+Ioidata = {
+    ioi_instrument_type = &quot;stock&quot;
+    ioi_instrument_stock_security_ticker = &quot;VOD LN Equity&quot;
+    ioi_goodUntil = 2020-01-23T14:45:59.000+00:00
+    ioi_bid_price_type = &quot;fixed&quot;
+    ioi_bid_price_fixed_price = 226.500000
+    ioi_bid_price_fixed_currency = &quot;GBp&quot;
+    ioi_bid_size_type = &quot;quantity&quot;
+    ioi_bid_size_quantity = 1000
+    ioi_bid_notes = &quot;bid notes&quot;
+    ioi_bid_qualifiers_count = 0
+    ioi_bid_natural = 0
+    ioi_sentTime = 2020-01-23T14:30:59.267+00:00
+    ioi_id = &quot;-1034576088&quot;
+    state = &quot;New&quot;
+    id_value = &quot;-1034576088&quot;
+    originalId_value = &quot;-1034576088&quot;
+    trader_uuid = 6767714
+    trader_acronym = &quot;B:BLP&quot;
+    trader_username = &quot;TKIM&quot;
+    receivedTime = 2020-01-23T14:30:59.267+00:00
+}
+
+IOI MESSAGE: CorrelationID(1)
+ioi_instrument_type: stock
+ioi_instrument_option_legs_count: 0
+ioi_instrument_option_legs_0_strike: 0
+ioi_instrument_option_legs_0_expiry:
+ioi_instrument_option_legs_0_type:
+ioi_instrument_option_legs_0_ratio: 0
+ioi_instrument_option_legs_0_underlying_type:
+ioi_instrument_option_legs_0_underlying_ticker:
+ioi_instrument_option_legs_0_underlying_figi:
+ioi_instrument_option_legs_0_exchange:
+ioi_instrument_option_legs_0_style:
+ioi_instrument_option_legs_0_futureRefDate:
+ioi_instrument_option_legs_0_delta: 0
+ioi_instrument_option_legs_1_strike: 0
+ioi_instrument_option_legs_1_expiry:
+ioi_instrument_option_legs_1_type:
+ioi_instrument_option_legs_1_ratio: 0
+ioi_instrument_option_legs_1_underlying_type:
+ioi_instrument_option_legs_1_underlying_ticker:
+ioi_instrument_option_legs_1_underlying_figi:
+ioi_instrument_option_legs_1_exchange:
+ioi_instrument_option_legs_1_style:
+ioi_instrument_option_legs_1_futureRefDate:
+ioi_instrument_option_legs_1_delta: 0
+ioi_instrument_option_legs_2_strike: 0
+ioi_instrument_option_legs_2_expiry:
+ioi_instrument_option_legs_2_type:
+ioi_instrument_option_legs_2_ratio: 0
+ioi_instrument_option_legs_2_underlying_type:
+ioi_instrument_option_legs_2_underlying_ticker:
+ioi_instrument_option_legs_2_underlying_figi:
+ioi_instrument_option_legs_2_exchange:
+ioi_instrument_option_legs_2_style:
+ioi_instrument_option_legs_2_futureRefDate:
+ioi_instrument_option_legs_2_delta: 0
+ioi_instrument_option_legs_3_strike: 0
+ioi_instrument_option_legs_3_expiry:
+ioi_instrument_option_legs_3_type:
+ioi_instrument_option_legs_3_ratio: 0
+ioi_instrument_option_legs_3_underlying_type:
+ioi_instrument_option_legs_3_underlying_ticker:
+ioi_instrument_option_legs_3_underlying_figi:
+ioi_instrument_option_legs_3_exchange:
+ioi_instrument_option_legs_3_style:
+ioi_instrument_option_legs_3_futureRefDate:
+ioi_instrument_option_legs_3_delta: 0
+ioi_instrument_option_structure:
+ioi_instrument_stock_security_ticker: VOD LN Equity
+ioi_instrument_stock_security_figi:
+ioi_goodUntil: 2020-01-23T14:45:59.000+00:00
+ioi_bid_price_type: fixed
+ioi_bid_price_fixed_price: 226
+ioi_bid_price_fixed_currency: GBp
+ioi_bid_price_pegged_offsetAmount: 0
+ioi_bid_price_pegged_offsetFrom:
+ioi_bid_price_pegged_limitPrice: 0
+ioi_bid_price_reference:
+ioi_bid_price_moneyness: 0
+ioi_bid_size_type: quantity
+ioi_bid_size_quantity: 1000
+ioi_bid_size_quality:
+ioi_bid_referencePrice_price: 0
+ioi_bid_referencePrice_currency:
+ioi_bid_volatility: 0
+ioi_bid_notes: bid notes
+ioi_bid_qualifiers_count: 0
+ioi_bid_qualifiers_0:
+ioi_bid_qualifiers_1:
+ioi_bid_qualifiers_2:
+ioi_bid_qualifiers_3:
+ioi_bid_qualifiers_4:
+ioi_offer_price_type:
+ioi_offer_price_fixed_price: 0
+ioi_offer_price_fixed_currency:
+ioi_offer_price_pegged_offsetAmount: 0
+ioi_offer_price_pegged_offsetFrom:
+ioi_offer_price_pegged_limitPrice: 0
+ioi_offer_price_reference:
+ioi_offer_price_moneyness: 0
+ioi_offer_size_type:
+ioi_offer_size_quantity: 0
+ioi_offer_size_quality:
+ioi_offer_referencePrice_price: 0
+ioi_offer_referencePrice_currency:
+ioi_offer_volatility: 0
+ioi_offer_notes:
+ioi_offer_qualifiers_count: 0
+ioi_offer_qualifiers_0:
+ioi_offer_qualifiers_1:
+ioi_offer_qualifiers_2:
+ioi_offer_qualifiers_3:
+ioi_offer_qualifiers_4:
+ioi_routing_strategy_name:
+ioi_routing_strategy_brief:
+ioi_routing_strategy_detailed:
+ioi_routing_customId:
+ioi_routing_broker:
+ioi_sentTime: 2020-01-23T14:30:59.267+00:00
+change:
+Processing SUBSCRIPTION_DATA event
+Processing SUBSCRIPTION_DATA event
+Exception:  raw write() returned invalid length 72 (should have been between 0 and 36)
+Processing SUBSCRIPTION_DATA event
+Ioidata = {
+    ioi_instrument_type = &quot;stock&quot;
+    ioi_instrument_stock_security_ticker = &quot;SINA UW Equity&quot;
+    ioi_goodUntil = 2020-01-23T14:36:15.000+00:00
+    ioi_bid_price_type = &quot;fixed&quot;
+    ioi_bid_price_fixed_price = 40.390000
+    ioi_bid_price_fixed_currency = &quot;USD&quot;
+    ioi_bid_size_type = &quot;quantity&quot;
+    ioi_bid_size_quantity = 8279
+    ioi_bid_notes = &quot;1/22/2020 3:38:35 PM&quot;
+    ioi_bid_qualifiers_count = 0
+    ioi_bid_natural = 0
+    ioi_sentTime = 2020-01-23T14:31:15.183+00:00
+    ioi_id = &quot;D4291-23JAN2020-229-x0&quot;
+    state = &quot;New&quot;
+    id_value = &quot;1781985133&quot;
+    originalId_value = &quot;1781985133&quot;
+    trader_uuid = 12624540
+    trader_acronym = &quot;B:BLP&quot;
+    receivedTime = 2020-01-23T14:31:15.183+00:00
+}
+
+IOI MESSAGE: CorrelationID(1)
+ioi_instrument_type: stock
+ioi_instrument_option_legs_count: 0
+ioi_instrument_option_legs_0_strike: 0
+ioi_instrument_option_legs_0_expiry:
+ioi_instrument_option_legs_0_type:
+ioi_instrument_option_legs_0_ratio: 0
+ioi_instrument_option_legs_0_underlying_type:
+ioi_instrument_option_legs_0_underlying_ticker:
+ioi_instrument_option_legs_0_underlying_figi:
+ioi_instrument_option_legs_0_exchange:
+ioi_instrument_option_legs_0_style:
+ioi_instrument_option_legs_0_futureRefDate:
+ioi_instrument_option_legs_0_delta: 0
+ioi_instrument_option_legs_1_strike: 0
+ioi_instrument_option_legs_1_expiry:
+ioi_instrument_option_legs_1_type:
+ioi_instrument_option_legs_1_ratio: 0
+ioi_instrument_option_legs_1_underlying_type:
+ioi_instrument_option_legs_1_underlying_ticker:
+ioi_instrument_option_legs_1_underlying_figi:
+ioi_instrument_option_legs_1_exchange:
+ioi_instrument_option_legs_1_style:
+ioi_instrument_option_legs_1_futureRefDate:
+ioi_instrument_option_legs_1_delta: 0
+ioi_instrument_option_legs_2_strike: 0
+ioi_instrument_option_legs_2_expiry:
+ioi_instrument_option_legs_2_type:
+ioi_instrument_option_legs_2_ratio: 0
+ioi_instrument_option_legs_2_underlying_type:
+ioi_instrument_option_legs_2_underlying_ticker:
+ioi_instrument_option_legs_2_underlying_figi:
+ioi_instrument_option_legs_2_exchange:
+ioi_instrument_option_legs_2_style:
+ioi_instrument_option_legs_2_futureRefDate:
+ioi_instrument_option_legs_2_delta: 0
+ioi_instrument_option_legs_3_strike: 0
+ioi_instrument_option_legs_3_expiry:
+ioi_instrument_option_legs_3_type:
+ioi_instrument_option_legs_3_ratio: 0
+ioi_instrument_option_legs_3_underlying_type:
+ioi_instrument_option_legs_3_underlying_ticker:
+ioi_instrument_option_legs_3_underlying_figi:
+ioi_instrument_option_legs_3_exchange:
+ioi_instrument_option_legs_3_style:
+ioi_instrument_option_legs_3_futureRefDate:
+ioi_instrument_option_legs_3_delta: 0
+ioi_instrument_option_structure:
+ioi_instrument_stock_security_ticker: SINA UW Equity
+ioi_instrument_stock_security_figi:
+ioi_goodUntil: 2020-01-23T14:36:15.000+00:00
+ioi_bid_price_type: fixed
+ioi_bid_price_fixed_price: 40
+ioi_bid_price_fixed_currency: USD
+ioi_bid_price_pegged_offsetAmount: 0
+ioi_bid_price_pegged_offsetFrom:
+ioi_bid_price_pegged_limitPrice: 0
+ioi_bid_price_reference:
+ioi_bid_price_moneyness: 0
+ioi_bid_size_type: quantity
+ioi_bid_size_quantity: 8279
+ioi_bid_size_quality:
+ioi_bid_referencePrice_price: 0
+ioi_bid_referencePrice_currency:
+ioi_bid_volatility: 0
+ioi_bid_notes: 1/22/2020 3:38:35 PM
+ioi_bid_qualifiers_count: 0
+ioi_bid_qualifiers_0:
+ioi_bid_qualifiers_1:
+ioi_bid_qualifiers_2:
+ioi_bid_qualifiers_3:
+ioi_bid_qualifiers_4:
+ioi_offer_price_type:
+ioi_offer_price_fixed_price: 0
+ioi_offer_price_fixed_currency:
+ioi_offer_price_pegged_offsetAmount: 0
+ioi_offer_price_pegged_offsetFrom:
+ioi_offer_price_pegged_limitPrice: 0
+ioi_offer_price_reference:
+ioi_offer_price_moneyness: 0
+ioi_offer_size_type:
+ioi_offer_size_quantity: 0
+ioi_offer_size_quality:
+ioi_offer_referencePrice_price: 0
+ioi_offer_referencePrice_currency:
+ioi_offer_volatility: 0
+ioi_offer_notes:
+ioi_offer_qualifiers_count: 0
+ioi_offer_qualifiers_0:
+ioi_offer_qualifiers_1:
+ioi_offer_qualifiers_2:
+ioi_offer_qualifiers_3:
+ioi_offer_qualifiers_4:
+ioi_routing_strategy_name:
+ioi_routing_strategy_brief:
+ioi_routing_strategy_detailed:
+ioi_routing_customId:
+ioi_routing_broker:
+ioi_sentTime: 2020-01-23T14:31:15.183+00:00
+change:
+Processing SUBSCRIPTION_DATA event
+Ioidata = {
+    ioi_instrument_type = &quot;option&quot;
+    ioi_instrument_option_legs_count = 2
+    ioi_instrument_option_legs_0_strike = 230.000000
+    ioi_instrument_option_legs_0_expiry = 2020-01-31T12:00:00.000+00:00
+    ioi_instrument_option_legs_0_type = &quot;Call&quot;
+    ioi_instrument_option_legs_0_ratio = 1.000000
+    ioi_instrument_option_legs_0_underlying_figi = &quot;BBG000C6K6G9&quot;
+    ioi_instrument_option_legs_0_exchange = &quot;LN&quot;
+    ioi_instrument_option_legs_0_style = &quot;European&quot;
+    ioi_instrument_option_legs_1_strike = 240.000000
+    ioi_instrument_option_legs_1_expiry = 2020-01-31T12:00:00.000+00:00
+    ioi_instrument_option_legs_1_type = &quot;Call&quot;
+    ioi_instrument_option_legs_1_ratio = -1.250000
+    ioi_instrument_option_legs_1_underlying_figi = &quot;BBG000C6K6G9&quot;
+    ioi_instrument_option_legs_1_exchange = &quot;LN&quot;
+    ioi_instrument_option_legs_1_style = &quot;European&quot;
+    ioi_instrument_option_structure = &quot;CallSpread&quot;
+    ioi_goodUntil = 2020-01-23T14:46:21.192+00:00
+    ioi_bid_price_type = &quot;fixed&quot;
+    ioi_bid_price_fixed_price = 83.630000
+    ioi_bid_price_fixed_currency = &quot;&quot;
+    ioi_bid_size_type = &quot;quantity&quot;
+    ioi_bid_size_quantity = 1000
+    ioi_bid_referencePrice_price = 202.150000
+    ioi_bid_referencePrice_currency = &quot;GBp&quot;
+    ioi_bid_notes = &quot;bid notes&quot;
+    ioi_bid_qualifiers_count = 0
+    ioi_offer_price_type = &quot;fixed&quot;
+    ioi_offer_price_fixed_price = 83.640000
+    ioi_offer_price_fixed_currency = &quot;&quot;
+    ioi_offer_size_type = &quot;quantity&quot;
+    ioi_offer_size_quantity = 2000
+    ioi_offer_referencePrice_price = 202.150000
+    ioi_offer_referencePrice_currency = &quot;GBp&quot;
+    ioi_offer_notes = &quot;offer notes&quot;
+    ioi_offer_qualifiers_count = 0
+    state = &quot;New&quot;
+    id_value = &quot;0678b50e-287c-416f-813a-bf34cde3f300&quot;
+    originalId_value = &quot;0678b50e-287c-416f-813a-bf34cde3f300&quot;
+    trader_uuid = 6767714
+    trader_acronym = &quot;S:BLP&quot;
+    receivedTime = 2020-01-23T14:31:21.577+00:00
+}
+
+IOI MESSAGE: CorrelationID(1)
+ioi_instrument_type: option
+ioi_instrument_option_legs_count: 2
+ioi_instrument_option_legs_0_strike: 230
+ioi_instrument_option_legs_0_expiry: 2020-01-31T12:00:00.000+00:00
+ioi_instrument_option_legs_0_type: Call
+ioi_instrument_option_legs_0_ratio: 1
+ioi_instrument_option_legs_0_underlying_type:
+ioi_instrument_option_legs_0_underlying_ticker:
+ioi_instrument_option_legs_0_underlying_figi: BBG000C6K6G9
+ioi_instrument_option_legs_0_exchange: LN
+ioi_instrument_option_legs_0_style: European
+ioi_instrument_option_legs_0_futureRefDate:
+ioi_instrument_option_legs_0_delta: 0
+ioi_instrument_option_legs_1_strike: 240
+ioi_instrument_option_legs_1_expiry: 2020-01-31T12:00:00.000+00:00
+ioi_instrument_option_legs_1_type: Call
+ioi_instrument_option_legs_1_ratio: -1
+ioi_instrument_option_legs_1_underlying_type:
+ioi_instrument_option_legs_1_underlying_ticker:
+ioi_instrument_option_legs_1_underlying_figi: BBG000C6K6G9
+ioi_instrument_option_legs_1_exchange: LN
+ioi_instrument_option_legs_1_style: European
+ioi_instrument_option_legs_1_futureRefDate:
+ioi_instrument_option_legs_1_delta: 0
+ioi_instrument_option_legs_2_strike: 0
+ioi_instrument_option_legs_2_expiry:
+ioi_instrument_option_legs_2_type:
+ioi_instrument_option_legs_2_ratio: 0
+ioi_instrument_option_legs_2_underlying_type:
+ioi_instrument_option_legs_2_underlying_ticker:
+ioi_instrument_option_legs_2_underlying_figi:
+ioi_instrument_option_legs_2_exchange:
+ioi_instrument_option_legs_2_style:
+ioi_instrument_option_legs_2_futureRefDate:
+ioi_instrument_option_legs_2_delta: 0
+ioi_instrument_option_legs_3_strike: 0
+ioi_instrument_option_legs_3_expiry:
+ioi_instrument_option_legs_3_type:
+ioi_instrument_option_legs_3_ratio: 0
+ioi_instrument_option_legs_3_underlying_type:
+ioi_instrument_option_legs_3_underlying_ticker:
+ioi_instrument_option_legs_3_underlying_figi:
+ioi_instrument_option_legs_3_exchange:
+ioi_instrument_option_legs_3_style:
+ioi_instrument_option_legs_3_futureRefDate:
+ioi_instrument_option_legs_3_delta: 0
+ioi_instrument_option_structure: CallSpread
+ioi_instrument_stock_security_ticker:
+ioi_instrument_stock_security_figi:
+ioi_goodUntil: 2020-01-23T14:46:21.192+00:00
+ioi_bid_price_type: fixed
+ioi_bid_price_fixed_price: 83
+ioi_bid_price_fixed_currency:
+ioi_bid_price_pegged_offsetAmount: 0
+ioi_bid_price_pegged_offsetFrom:
+ioi_bid_price_pegged_limitPrice: 0
+ioi_bid_price_reference:
+ioi_bid_price_moneyness: 0
+ioi_bid_size_type: quantity
+ioi_bid_size_quantity: 1000
+ioi_bid_size_quality:
+ioi_bid_referencePrice_price: 202
+ioi_bid_referencePrice_currency: GBp
+ioi_bid_volatility: 0
+ioi_bid_notes: bid notes
+ioi_bid_qualifiers_count: 0
+ioi_bid_qualifiers_0:
+ioi_bid_qualifiers_1:
+ioi_bid_qualifiers_2:
+ioi_bid_qualifiers_3:
+ioi_bid_qualifiers_4:
+ioi_offer_price_type: fixed
+ioi_offer_price_fixed_price: 83
+ioi_offer_price_fixed_currency:
+ioi_offer_price_pegged_offsetAmount: 0
+ioi_offer_price_pegged_offsetFrom:
+ioi_offer_price_pegged_limitPrice: 0
+ioi_offer_price_reference:
+ioi_offer_price_moneyness: 0
+ioi_offer_size_type: quantity
+ioi_offer_size_quantity: 2000
+ioi_offer_size_quality:
+ioi_offer_referencePrice_price: 202
+ioi_offer_referencePrice_currency: GBp
+ioi_offer_volatility: 0
+ioi_offer_notes: offer notes
+ioi_offer_qualifiers_count: 0
+ioi_offer_qualifiers_0:
+ioi_offer_qualifiers_1:
+ioi_offer_qualifiers_2:
+ioi_offer_qualifiers_3:
+ioi_offer_qualifiers_4:
+ioi_routing_strategy_name:
+ioi_routing_strategy_brief:
+ioi_routing_strategy_detailed:
+ioi_routing_customId:
+ioi_routing_broker:
+ioi_sentTime:
+change:
+Ctrl+C pressed. Stopping...
+Processing SESSION_STATUS event
+SessionConnectionDown = {
+    server = &quot;localhost:8194&quot;
+}
+
+Session connection is down
+Processing SESSION_STATUS event
+SessionTerminated = {
+}
+
+SessionTerminated = {
+}
+</pre></div>
+</div>
 </div>
 <div class="section" id="description-of-elements">
 <h1>Description of Elements<a class="headerlink" href="#description-of-elements" title="Permalink to this headline">¶</a></h1>

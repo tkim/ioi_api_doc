@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Bloomberg API Service for IOI API Publication &mdash; IOI API Programmers Guide 1.5.0 documentation</title>
+  <title>Bloomberg API Service for IOI API Publication &mdash; IOI API Programmers Guide 1.6.0 documentation</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                1.5.0
+                1.6.0
               </div>
             
           
@@ -186,7 +186,7 @@ production environment and no one should perform any volume or load testing in t
 <p>API Demo Tool is a handy tool while developing on any Bloomberg API services. The API Demo Tool provides real-time schema viewing tool among other handy tools that can be leveraged during the initial development.</p>
 <p>The API Demo Tool can be downloaded from the Bloomberg terminal along with other generic Bloomberg API code samples.</p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">WAPI&lt;GO&gt;</span></code> &gt;&gt; API Download Center &gt;&gt; Download</div></blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">WAPI&lt;GO&gt;</span></code> &gt;&gt; <code class="docutils literal notranslate"><span class="pre">API</span> <span class="pre">Download</span> <span class="pre">Center</span></code> &gt;&gt; <code class="docutils literal notranslate"><span class="pre">Download</span></code></div></blockquote>
 </div>
 <div class="section" id="desktop-vs-server-authentication">
 <h1>Desktop vs. Server Authentication<a class="headerlink" href="#desktop-vs-server-authentication" title="Permalink to this headline">¶</a></h1>
@@ -306,6 +306,86 @@ production environment and no one should perform any volume or load testing in t
      <span class="k">print</span><span class="p">(</span><span class="s2">&quot;CancelIOI request sent.&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
+<p>Output (Options IOI):-</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CancelIOI.py
+Bloomberg - IOI API Example - DesktopAPI - CancelIOI
+Connecting to localhost:8194
+Processing SESSION_STATUS event
+SessionConnectionUp = {
+    server = &quot;localhost:8194&quot;
+    encryptionStatus = &quot;Clear&quot;
+}
+
+Processing SESSION_STATUS event
+Session started...
+Processing SERVICE_STATUS event
+IOIAPI service opened... Sending request...
+Sending Request: cancelIoi = {
+    handle = {
+        value = &quot;57d79b8b-d0e2-44ea-a573-784a26c59bde&quot;
+    }
+}
+
+CancelIOI request sent.
+Processing RESPONSE event
+MESSAGE: handle = {
+    value = &quot;d8cab256-52ec-41ab-8f76-4254f6d4d566&quot;
+}
+
+CORRELATION ID: 3
+MESSAGE TYPE: handle
+Response: Value=d8cab256-52ec-41ab-8f76-4254f6d4d566
+Terminating...
+Processing SESSION_STATUS event
+SessionConnectionDown = {
+    server = &quot;localhost:8194&quot;
+}
+
+Processing SESSION_STATUS event
+SessionTerminated = {
+}
+</pre></div>
+</div>
+<p>Output (Equity IOI):-</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CancelEquityIOI.py
+Bloomberg - IOI API Example - DesktopAPI - CancelIOI
+Connecting to localhost:8194
+Processing SESSION_STATUS event
+SessionConnectionUp = {
+    server = &quot;localhost:8194&quot;
+    encryptionStatus = &quot;Clear&quot;
+}
+
+Processing SESSION_STATUS event
+Session started...
+Processing SERVICE_STATUS event
+IOIAPI service opened... Sending request...
+Sending Request: cancelIoi = {
+    handle = {
+        value = &quot;-187572559&quot;
+    }
+}
+
+CancelIOI request sent.
+Processing RESPONSE event
+MESSAGE: handle = {
+    value = &quot;-187572559&quot;
+}
+
+CORRELATION ID: 3
+MESSAGE TYPE: handle
+Response: Value=-187572559
+Terminating...
+Processing SESSION_STATUS event
+SessionConnectionDown = {
+    server = &quot;localhost:8194&quot;
+}
+
+Processing SESSION_STATUS event
+SessionTerminated = {
+}
+</pre></div>
+</div>
 </div>
 <div class="section" id="create-ioi-message">
 <h1>Create IOI Message<a class="headerlink" href="#create-ioi-message" title="Permalink to this headline">¶</a></h1>
@@ -479,6 +559,248 @@ production environment and no one should perform any volume or load testing in t
      <span class="k">print</span><span class="p">(</span><span class="s2">&quot;CreateIOI request sent.&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
+<p>Output (Options IOI):-</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CreateIOI.py
+Bloomberg - IOI API Example - DesktopAPI - CreateIOI
+Connecting to localhost:8194
+Processing SESSION_STATUS event
+SessionConnectionUp = {
+    server = &quot;localhost:8194&quot;
+    encryptionStatus = &quot;Clear&quot;
+}
+
+Processing SESSION_STATUS event
+Session started...
+Processing SERVICE_STATUS event
+IOIAPI service opened... Sending request...
+Sending Request: createIoi = {
+    ioi = {
+        goodUntil = 2020-01-23T14:16:27.545
+        instrument = {
+            option = {
+                structure = CallSpread
+                legs[] = {
+                    legs = {
+                        type = Call
+                        strike = 230.000000
+                        expiry = 2020-01-31T12:00:00.000
+                        style = European
+                        ratio = 1.000000
+                        exchange = &quot;LN&quot;
+                        underlying = {
+                            ticker = &quot;VOD LN Equity&quot;
+                        }
+                    }
+                    legs = {
+                        strike = 240.000000
+                        expiry = 2020-01-31T12:00:00.000
+                        style = European
+                        ratio = -1.250000
+                        exchange = &quot;LN&quot;
+                        underlying = {
+                            ticker = &quot;VOD LN Equity&quot;
+                        }
+                    }
+                }
+            }
+        }
+        bid = {
+            price = {
+                fixed = {
+                    price = 83.630000
+                }
+            }
+            size = {
+                quantity = 1000
+            }
+            referencePrice = {
+                price = 202.150000
+                currency = &quot;GBp&quot;
+            }
+            notes = &quot;bid notes&quot;
+        }
+        offer = {
+            price = {
+                fixed = {
+                    price = 83.640000
+                }
+            }
+            size = {
+                quantity = 2000
+            }
+            referencePrice = {
+                price = 202.150000
+                currency = &quot;GBp&quot;
+            }
+            notes = &quot;offer notes&quot;
+        }
+        targets = {
+            includes[] = {
+                includes = {
+                    acronym = &quot;BLPA&quot;
+                }
+                includes = {
+                    acronym = &quot;BLPB&quot;
+                }
+            }
+        }
+    }
+}
+
+CreateIOI request sent.
+Processing RESPONSE event
+MESSAGE: handle = {
+    value = &quot;57d79b8b-d0e2-44ea-a573-784a26c59bde&quot;
+}
+
+CORRELATION ID: 3
+MESSAGE TYPE: handle
+Response: Value=57d79b8b-d0e2-44ea-a573-784a26c59bde
+Terminating...
+Processing SESSION_STATUS event
+SessionConnectionDown = {
+    server = &quot;localhost:8194&quot;
+}
+
+Processing SESSION_STATUS event
+SessionTerminated = {
+}
+</pre></div>
+</div>
+<p>Output (Equity IOI):-</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CreateEquityIOI.py
+Bloomberg - IOI API Example - DesktopAPI - CreateIOI
+Connecting to localhost:8194
+Processing SESSION_STATUS event
+SessionConnectionUp = {
+    server = &quot;localhost:8194&quot;
+    encryptionStatus = &quot;Clear&quot;
+}
+
+Processing SESSION_STATUS event
+Session started...
+Processing SERVICE_STATUS event
+IOIAPI service opened... Sending request...
+Sending Request: createIoi = {
+    ioi = {
+        goodUntil = 2020-01-23T14:41:38.902
+        instrument = {
+            stock = {
+                security = {
+                    ticker = &quot;VOD LN Equity&quot;
+                }
+            }
+        }
+        bid = {
+            price = {
+                fixed = {
+                    price = 226.500000
+                }
+            }
+            size = {
+                quantity = 1000
+            }
+            referencePrice = {
+                price = 226.500000
+                currency = &quot;GBp&quot;
+            }
+            notes = &quot;bid notes&quot;
+        }
+        offer = {
+            price = {
+                fixed = {
+                    price = 234.550000
+                }
+            }
+            size = {
+                quantity = 1100
+            }
+            referencePrice = {
+                price = 234.550000
+                currency = &quot;GBp&quot;
+            }
+            notes = &quot;offer notes&quot;
+        }
+        targets = {
+            includes[] = {
+                includes = {
+                    acronym = &quot;BLPA&quot;
+                }
+                includes = {
+                    acronym = &quot;BLPB&quot;
+                }
+            }
+        }
+    }
+}
+
+CreateIOI request sent.
+Processing RESPONSE event
+MESSAGE: handle = {
+    value = &quot;-87572550&quot;
+}
+
+CORRELATION ID: 3
+MESSAGE TYPE: handle
+Response: Value=-87572550
+Terminating...
+Processing SESSION_STATUS event
+SessionConnectionDown = {
+    server = &quot;localhost:8194&quot;
+}
+
+Processing SESSION_STATUS event
+SessionTerminated = {
+}
+</pre></div>
+</div>
+<p>Output (Error):-</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Always pay attention to the RESPONSE message for error messages on the REQUEST.</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CreateIOI.py
+Bloomberg - IOI API Example - DesktopAPI - CreateIOI
+Connecting to localhost:8194
+Processing SESSION_STATUS event
+SessionConnectionUp = {
+    server = &quot;localhost:8194&quot;
+    encryptionStatus = &quot;Clear&quot;
+}
+
+Processing SESSION_STATUS event
+Session started...
+Processing SERVICE_STATUS event
+IOIAPI service opened... Sending request...
+Sending Request: createIoi = {
+    ioi = {
+        goodUntil = 2020-01-23T14:13:32.078
+        instrument = {
+            option = {
+                structure = CallSpread
+...
+...
+...
+CreateIOI request sent.
+Processing RESPONSE event
+MESSAGE: exception = {
+    what = &quot;invalid expiry time 15DEC2019_12:00:00.000000+0000 on leg 1&quot;
+}
+
+CORRELATION ID: 3
+MESSAGE TYPE: exception
+Unexpected message...
+Terminating...
+Processing SESSION_STATUS event
+SessionConnectionDown = {
+    server = &quot;localhost:8194&quot;
+}
+
+Processing SESSION_STATUS event
+SessionTerminated = {
+}
+</pre></div>
+</div>
 </div>
 <div class="section" id="update-ioi-message">
 <h1>Update IOI Message<a class="headerlink" href="#update-ioi-message" title="Permalink to this headline">¶</a></h1>
@@ -658,6 +980,200 @@ production environment and no one should perform any volume or load testing in t
      <span class="k">print</span><span class="p">(</span><span class="s2">&quot;UpdateIOI request sent.&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
+<p>Output (Options IOI):-</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_UpdateIOI.py
+Bloomberg - IOI API Example - DesktopAPI - UpdateIOI
+Connecting to localhost:8194
+Processing SESSION_STATUS event
+SessionConnectionUp = {
+    server = &quot;localhost:8194&quot;
+    encryptionStatus = &quot;Clear&quot;
+}
+
+Processing SESSION_STATUS event
+Session started...
+Processing SERVICE_STATUS event
+IOIAPI service opened... Sending request...
+Sending Request: updateIoi = {
+    handle = {
+        value = &quot;f75f6035-98d8-46a2-8167-a16390fbac2c&quot;
+    }
+    ioi = {
+        goodUntil = 2020-01-23T14:39:27.082
+        instrument = {
+            option = {
+                structure = CallSpread
+                legs[] = {
+                    legs = {
+                        type = Call
+                        strike = 230.000000
+                        expiry = 2020-02-15T12:00:00.000
+                        style = European
+                        ratio = 1.000000
+                        exchange = &quot;LN&quot;
+                        underlying = {
+                            ticker = &quot;VOD LN Equity&quot;
+                        }
+                    }
+                    legs = {
+                        strike = 240.000000
+                        expiry = 2020-02-15T12:00:00.000
+                        style = European
+                        ratio = -1.250000
+                        exchange = &quot;LN&quot;
+                        underlying = {
+                            ticker = &quot;VOD LN Equity&quot;
+                        }
+                    }
+                }
+            }
+        }
+        bid = {
+            price = {
+                fixed = {
+                    price = 83.630000
+                }
+            }
+            size = {
+                quantity = 1000
+            }
+            referencePrice = {
+                price = 202.150000
+                currency = &quot;GBp&quot;
+            }
+            notes = &quot;bid notes&quot;
+        }
+        offer = {
+            price = {
+                fixed = {
+                    price = 83.640000
+                }
+            }
+            size = {
+                quantity = 2000
+            }
+            referencePrice = {
+                price = 202.150000
+                currency = &quot;GBp&quot;
+            }
+            notes = &quot;offer notes&quot;
+        }
+        targets = {
+            includes[] = {
+                includes = {
+                    acronym = &quot;BLPA&quot;
+                }
+                includes = {
+                    acronym = &quot;BLPB&quot;
+                }
+            }
+        }
+    }
+}
+
+UpdateIOI request sent.
+Processing RESPONSE event
+MESSAGE: handle = {
+    value = &quot;39797428-57ce-4c9f-8f8c-0bf886c2a9fa&quot;
+}
+
+CORRELATION ID: 3
+MESSAGE TYPE: handle
+Response: Value=39797428-57ce-4c9f-8f8c-0bf886c2a9fa
+Terminating...
+Processing SESSION_STATUS event
+SessionConnectionDown = {
+    server = &quot;localhost:8194&quot;
+}
+
+Processing SESSION_STATUS event
+SessionTerminated = {
+}
+</pre></div>
+</div>
+<p>Output (Equity IOI):-</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_UpdateEquityIOI.py
+Bloomberg - IOI API Example - DesktopAPI - UpdateIOI
+Connecting to localhost:8194
+Processing SESSION_STATUS event
+SessionConnectionUp = {
+    server = &quot;localhost:8194&quot;
+    encryptionStatus = &quot;Clear&quot;
+}
+
+Processing SESSION_STATUS event
+Session started...
+Processing SERVICE_STATUS event
+IOIAPI service opened... Sending request...
+Sending Request: updateIoi = {
+    handle = {
+        value = &quot;-87572550&quot;
+    }
+    ioi = {
+        goodUntil = 2020-01-23T14:43:07.168
+        bid = {
+            price = {
+                fixed = {
+                    price = 222.630000
+                }
+            }
+            size = {
+                quantity = 1500
+            }
+            referencePrice = {
+                price = 220.630000
+                currency = &quot;GBp&quot;
+            }
+            notes = &quot;bid notes&quot;
+        }
+        offer = {
+            price = {
+                fixed = {
+                    price = 222.640000
+                }
+            }
+            size = {
+                quantity = 2000
+            }
+            referencePrice = {
+                price = 220.640000
+                currency = &quot;GBp&quot;
+            }
+            notes = &quot;offer notes&quot;
+        }
+        targets = {
+            includes[] = {
+                includes = {
+                    acronym = &quot;BLPA&quot;
+                }
+                includes = {
+                    acronym = &quot;BLPB&quot;
+                }
+            }
+        }
+    }
+}
+
+UpdateIOI request sent.
+Processing RESPONSE event
+MESSAGE: handle = {
+    value = &quot;-187572559&quot;
+}
+
+CORRELATION ID: 3
+MESSAGE TYPE: handle
+Response: Value=-187572559
+Terminating...
+Processing SESSION_STATUS event
+SessionConnectionDown = {
+    server = &quot;localhost:8194&quot;
+}
+
+Processing SESSION_STATUS event
+SessionTerminated = {
+}
+</pre></div>
+</div>
 </div>
 <div class="section" id="description-of-elements">
 <h1>Description of Elements<a class="headerlink" href="#description-of-elements" title="Permalink to this headline">¶</a></h1>

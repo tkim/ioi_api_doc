@@ -1,6 +1,5 @@
 Bloomberg API Service for IOI API Publication
 =============================================
-
 For IOI publication, this is accomplished by referencing ``//blp/ioiapi-beta-request`` as the service name in your program. This command will allow your service  to redirect all IOI API requests to the test environment.   
 
 Once the client has thoroughly tested the custom-built strategies, they can access the production 
@@ -9,7 +8,6 @@ environment by changing the service name from ``//blp/ioiapi-beta-request`` to `
 
 Accessing the Test Environment
 ==============================
-
 Bloomberg provides a test environment for clients to build and test their strategies using the IOI API.
 
 Inside the Bloomberg Terminal type ``UAT ON <GO>``.This command allows the particular terminal window and launchpad to log into the beta environment. Please note, when a user is remote into the beta environment it only affects that particular terminal window and the other Bloomberg panels will not be affected by the ``UAT ON <GO>`` command.
@@ -29,12 +27,11 @@ API Demo Tool is a handy tool while developing on any Bloomberg API services. Th
 
 The API Demo Tool can be downloaded from the Bloomberg terminal along with other generic Bloomberg API code samples.
 
-    ``WAPI<GO>`` >> API Download Center >> Download 
+    ``WAPI<GO>`` >> ``API Download Center`` >> ``Download`` 
 
 
 Desktop vs. Server Authentication
 =================================
-
 Desktop:
 
 .. code-block:: python
@@ -98,10 +95,7 @@ Set authorization request:
 
 Cancel IOI Message
 ==================
-
-
 The ``cancelIoi`` request allows IOI API service to Cancel IOI message. 
-
 
 Full code sample (Options IOI):-
 
@@ -112,11 +106,8 @@ Full code sample (Options IOI):-
 ================== ==================
 
 .. _Cancel IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_CancelIOI.cs
-
 .. _Cancel IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_CancelIOI.java
-
 .. _Cancel IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CancelIOI.py
-
 
 Full code sample (Equity IOI):-
 
@@ -153,13 +144,95 @@ Full code sample (Equity IOI):-
         print("CancelIOI request sent.")
 
 
+Output (Options IOI):-
+
+.. code-block:: none
+
+    C:\Users\_scripts>py -3 py_dapi_CancelIOI.py
+    Bloomberg - IOI API Example - DesktopAPI - CancelIOI
+    Connecting to localhost:8194
+    Processing SESSION_STATUS event
+    SessionConnectionUp = {
+        server = "localhost:8194"
+        encryptionStatus = "Clear"
+    }
+
+    Processing SESSION_STATUS event
+    Session started...
+    Processing SERVICE_STATUS event
+    IOIAPI service opened... Sending request...
+    Sending Request: cancelIoi = {
+        handle = {
+            value = "57d79b8b-d0e2-44ea-a573-784a26c59bde"
+        }
+    }
+
+    CancelIOI request sent.
+    Processing RESPONSE event
+    MESSAGE: handle = {
+        value = "d8cab256-52ec-41ab-8f76-4254f6d4d566"
+    }
+
+    CORRELATION ID: 3
+    MESSAGE TYPE: handle
+    Response: Value=d8cab256-52ec-41ab-8f76-4254f6d4d566
+    Terminating...
+    Processing SESSION_STATUS event
+    SessionConnectionDown = {
+        server = "localhost:8194"
+    }
+
+    Processing SESSION_STATUS event
+    SessionTerminated = {
+    }
+
+
+Output (Equity IOI):-
+
+.. code-block:: none
+
+    C:\Users\_scripts>py -3 py_dapi_CancelEquityIOI.py
+    Bloomberg - IOI API Example - DesktopAPI - CancelIOI
+    Connecting to localhost:8194
+    Processing SESSION_STATUS event
+    SessionConnectionUp = {
+        server = "localhost:8194"
+        encryptionStatus = "Clear"
+    }
+
+    Processing SESSION_STATUS event
+    Session started...
+    Processing SERVICE_STATUS event
+    IOIAPI service opened... Sending request...
+    Sending Request: cancelIoi = {
+        handle = {
+            value = "-187572559"
+        }
+    }
+
+    CancelIOI request sent.
+    Processing RESPONSE event
+    MESSAGE: handle = {
+        value = "-187572559"
+    }
+
+    CORRELATION ID: 3
+    MESSAGE TYPE: handle
+    Response: Value=-187572559
+    Terminating...
+    Processing SESSION_STATUS event
+    SessionConnectionDown = {
+        server = "localhost:8194"
+    }
+
+    Processing SESSION_STATUS event
+    SessionTerminated = {
+    }
+
 
 Create IOI Message
 ==================
-
-
 The ``createIoi`` request allows IOI API service to Create IOI message. 
-
 
 Full code sample (Options IOI):-
 
@@ -169,13 +242,9 @@ Full code sample (Options IOI):-
 `Create IOI java`_ 
 ================== ================ 
 
-
 .. _Create IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_CreateIOI.cs
-
 .. _Create IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_CreateIOI.java
-
 .. _Create IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CreateIOI.py
-
 
 Full code sample (Equity IOI):-
 
@@ -186,9 +255,7 @@ Full code sample (Equity IOI):-
 ==================== ==================
 
 .. _Create E IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_CreateEquityIOI.cs
-
 .. _Create E IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CreateEquityIOI.py
-
 .. _Create E IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/java_dapi_CreateEquityIOI.java
 
 
@@ -269,11 +336,259 @@ Full code sample (Equity IOI):-
         print("CreateIOI request sent.") 
 
 
+Output (Options IOI):-
+
+.. code-block:: none
+
+    C:\Users\_scripts>py -3 py_dapi_CreateIOI.py
+    Bloomberg - IOI API Example - DesktopAPI - CreateIOI
+    Connecting to localhost:8194
+    Processing SESSION_STATUS event
+    SessionConnectionUp = {
+        server = "localhost:8194"
+        encryptionStatus = "Clear"
+    }
+
+    Processing SESSION_STATUS event
+    Session started...
+    Processing SERVICE_STATUS event
+    IOIAPI service opened... Sending request...
+    Sending Request: createIoi = {
+        ioi = {
+            goodUntil = 2020-01-23T14:16:27.545
+            instrument = {
+                option = {
+                    structure = CallSpread
+                    legs[] = {
+                        legs = {
+                            type = Call
+                            strike = 230.000000
+                            expiry = 2020-01-31T12:00:00.000
+                            style = European
+                            ratio = 1.000000
+                            exchange = "LN"
+                            underlying = {
+                                ticker = "VOD LN Equity"
+                            }
+                        }
+                        legs = {
+                            strike = 240.000000
+                            expiry = 2020-01-31T12:00:00.000
+                            style = European
+                            ratio = -1.250000
+                            exchange = "LN"
+                            underlying = {
+                                ticker = "VOD LN Equity"
+                            }
+                        }
+                    }
+                }
+            }
+            bid = {
+                price = {
+                    fixed = {
+                        price = 83.630000
+                    }
+                }
+                size = {
+                    quantity = 1000
+                }
+                referencePrice = {
+                    price = 202.150000
+                    currency = "GBp"
+                }
+                notes = "bid notes"
+            }
+            offer = {
+                price = {
+                    fixed = {
+                        price = 83.640000
+                    }
+                }
+                size = {
+                    quantity = 2000
+                }
+                referencePrice = {
+                    price = 202.150000
+                    currency = "GBp"
+                }
+                notes = "offer notes"
+            }
+            targets = {
+                includes[] = {
+                    includes = {
+                        acronym = "BLPA"
+                    }
+                    includes = {
+                        acronym = "BLPB"
+                    }
+                }
+            }
+        }
+    }
+
+    CreateIOI request sent.
+    Processing RESPONSE event
+    MESSAGE: handle = {
+        value = "57d79b8b-d0e2-44ea-a573-784a26c59bde"
+    }
+
+    CORRELATION ID: 3
+    MESSAGE TYPE: handle
+    Response: Value=57d79b8b-d0e2-44ea-a573-784a26c59bde
+    Terminating...
+    Processing SESSION_STATUS event
+    SessionConnectionDown = {
+        server = "localhost:8194"
+    }
+
+    Processing SESSION_STATUS event
+    SessionTerminated = {
+    }
+
+
+Output (Equity IOI):-
+
+.. code-block:: none
+
+    C:\Users\_scripts>py -3 py_dapi_CreateEquityIOI.py
+    Bloomberg - IOI API Example - DesktopAPI - CreateIOI
+    Connecting to localhost:8194
+    Processing SESSION_STATUS event
+    SessionConnectionUp = {
+        server = "localhost:8194"
+        encryptionStatus = "Clear"
+    }
+
+    Processing SESSION_STATUS event
+    Session started...
+    Processing SERVICE_STATUS event
+    IOIAPI service opened... Sending request...
+    Sending Request: createIoi = {
+        ioi = {
+            goodUntil = 2020-01-23T14:41:38.902
+            instrument = {
+                stock = {
+                    security = {
+                        ticker = "VOD LN Equity"
+                    }
+                }
+            }
+            bid = {
+                price = {
+                    fixed = {
+                        price = 226.500000
+                    }
+                }
+                size = {
+                    quantity = 1000
+                }
+                referencePrice = {
+                    price = 226.500000
+                    currency = "GBp"
+                }
+                notes = "bid notes"
+            }
+            offer = {
+                price = {
+                    fixed = {
+                        price = 234.550000
+                    }
+                }
+                size = {
+                    quantity = 1100
+                }
+                referencePrice = {
+                    price = 234.550000
+                    currency = "GBp"
+                }
+                notes = "offer notes"
+            }
+            targets = {
+                includes[] = {
+                    includes = {
+                        acronym = "BLPA"
+                    }
+                    includes = {
+                        acronym = "BLPB"
+                    }
+                }
+            }
+        }
+    }
+
+    CreateIOI request sent.
+    Processing RESPONSE event
+    MESSAGE: handle = {
+        value = "-87572550"
+    }
+
+    CORRELATION ID: 3
+    MESSAGE TYPE: handle
+    Response: Value=-87572550
+    Terminating...
+    Processing SESSION_STATUS event
+    SessionConnectionDown = {
+        server = "localhost:8194"
+    }
+
+    Processing SESSION_STATUS event
+    SessionTerminated = {
+    }
+
+
+Output (Error):-
+
+.. important::
+
+    Always pay attention to the RESPONSE message for error messages on the REQUEST.
+
+.. code-block:: none
+
+    C:\Users\_scripts>py -3 py_dapi_CreateIOI.py
+    Bloomberg - IOI API Example - DesktopAPI - CreateIOI
+    Connecting to localhost:8194
+    Processing SESSION_STATUS event
+    SessionConnectionUp = {
+        server = "localhost:8194"
+        encryptionStatus = "Clear"
+    }
+
+    Processing SESSION_STATUS event
+    Session started...
+    Processing SERVICE_STATUS event
+    IOIAPI service opened... Sending request...
+    Sending Request: createIoi = {
+        ioi = {
+            goodUntil = 2020-01-23T14:13:32.078
+            instrument = {
+                option = {
+                    structure = CallSpread
+    ...
+    ...
+    ...
+    CreateIOI request sent.
+    Processing RESPONSE event
+    MESSAGE: exception = {
+        what = "invalid expiry time 15DEC2019_12:00:00.000000+0000 on leg 1"
+    }
+
+    CORRELATION ID: 3
+    MESSAGE TYPE: exception
+    Unexpected message...
+    Terminating...
+    Processing SESSION_STATUS event
+    SessionConnectionDown = {
+        server = "localhost:8194"
+    }
+
+    Processing SESSION_STATUS event
+    SessionTerminated = {
+    }
+
 
 Update IOI Message
 ===================
-
-
 The ``updateIoi`` request allows IOI API service to Update IOI message. 
 
 
@@ -287,9 +602,7 @@ Full code sample (Options IOI):-
 
 
 .. _Update IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_UpdateIOI.cs
-
 .. _Update IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_UpdateIOI.java
-
 .. _Update IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_UpdateIOI.py
 
 
@@ -302,9 +615,7 @@ Full code sample (Equity IOI):-
 ==================== ==================
 
 .. _Update E IOI cs: https://github.com/tkim/ioi_api_repository/blob/master/C%23/cs_dapi_UpdateEquityIOI.cs
-
 .. _Update E IOI py: https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_UpdateEquityIOI.py
-
 .. _Update E IOI java: https://github.com/tkim/ioi_api_repository/blob/master/Java/java_dapi_UpdateEquityIOI.java
 
 
@@ -389,10 +700,208 @@ Full code sample (Equity IOI):-
         print("UpdateIOI request sent.")
 
 
+Output (Options IOI):-
+
+.. code-block:: none
+
+    C:\Users\_scripts>py -3 py_dapi_UpdateIOI.py
+    Bloomberg - IOI API Example - DesktopAPI - UpdateIOI
+    Connecting to localhost:8194
+    Processing SESSION_STATUS event
+    SessionConnectionUp = {
+        server = "localhost:8194"
+        encryptionStatus = "Clear"
+    }
+
+    Processing SESSION_STATUS event
+    Session started...
+    Processing SERVICE_STATUS event
+    IOIAPI service opened... Sending request...
+    Sending Request: updateIoi = {
+        handle = {
+            value = "f75f6035-98d8-46a2-8167-a16390fbac2c"
+        }
+        ioi = {
+            goodUntil = 2020-01-23T14:39:27.082
+            instrument = {
+                option = {
+                    structure = CallSpread
+                    legs[] = {
+                        legs = {
+                            type = Call
+                            strike = 230.000000
+                            expiry = 2020-02-15T12:00:00.000
+                            style = European
+                            ratio = 1.000000
+                            exchange = "LN"
+                            underlying = {
+                                ticker = "VOD LN Equity"
+                            }
+                        }
+                        legs = {
+                            strike = 240.000000
+                            expiry = 2020-02-15T12:00:00.000
+                            style = European
+                            ratio = -1.250000
+                            exchange = "LN"
+                            underlying = {
+                                ticker = "VOD LN Equity"
+                            }
+                        }
+                    }
+                }
+            }
+            bid = {
+                price = {
+                    fixed = {
+                        price = 83.630000
+                    }
+                }
+                size = {
+                    quantity = 1000
+                }
+                referencePrice = {
+                    price = 202.150000
+                    currency = "GBp"
+                }
+                notes = "bid notes"
+            }
+            offer = {
+                price = {
+                    fixed = {
+                        price = 83.640000
+                    }
+                }
+                size = {
+                    quantity = 2000
+                }
+                referencePrice = {
+                    price = 202.150000
+                    currency = "GBp"
+                }
+                notes = "offer notes"
+            }
+            targets = {
+                includes[] = {
+                    includes = {
+                        acronym = "BLPA"
+                    }
+                    includes = {
+                        acronym = "BLPB"
+                    }
+                }
+            }
+        }
+    }
+
+    UpdateIOI request sent.
+    Processing RESPONSE event
+    MESSAGE: handle = {
+        value = "39797428-57ce-4c9f-8f8c-0bf886c2a9fa"
+    }
+
+    CORRELATION ID: 3
+    MESSAGE TYPE: handle
+    Response: Value=39797428-57ce-4c9f-8f8c-0bf886c2a9fa
+    Terminating...
+    Processing SESSION_STATUS event
+    SessionConnectionDown = {
+        server = "localhost:8194"
+    }
+
+    Processing SESSION_STATUS event
+    SessionTerminated = {
+    }
+
+
+Output (Equity IOI):-
+
+.. code-block:: none
+
+    C:\Users\_scripts>py -3 py_dapi_UpdateEquityIOI.py
+    Bloomberg - IOI API Example - DesktopAPI - UpdateIOI
+    Connecting to localhost:8194
+    Processing SESSION_STATUS event
+    SessionConnectionUp = {
+        server = "localhost:8194"
+        encryptionStatus = "Clear"
+    }
+
+    Processing SESSION_STATUS event
+    Session started...
+    Processing SERVICE_STATUS event
+    IOIAPI service opened... Sending request...
+    Sending Request: updateIoi = {
+        handle = {
+            value = "-87572550"
+        }
+        ioi = {
+            goodUntil = 2020-01-23T14:43:07.168
+            bid = {
+                price = {
+                    fixed = {
+                        price = 222.630000
+                    }
+                }
+                size = {
+                    quantity = 1500
+                }
+                referencePrice = {
+                    price = 220.630000
+                    currency = "GBp"
+                }
+                notes = "bid notes"
+            }
+            offer = {
+                price = {
+                    fixed = {
+                        price = 222.640000
+                    }
+                }
+                size = {
+                    quantity = 2000
+                }
+                referencePrice = {
+                    price = 220.640000
+                    currency = "GBp"
+                }
+                notes = "offer notes"
+            }
+            targets = {
+                includes[] = {
+                    includes = {
+                        acronym = "BLPA"
+                    }
+                    includes = {
+                        acronym = "BLPB"
+                    }
+                }
+            }
+        }
+    }
+
+    UpdateIOI request sent.
+    Processing RESPONSE event
+    MESSAGE: handle = {
+        value = "-187572559"
+    }
+
+    CORRELATION ID: 3
+    MESSAGE TYPE: handle
+    Response: Value=-187572559
+    Terminating...
+    Processing SESSION_STATUS event
+    SessionConnectionDown = {
+        server = "localhost:8194"
+    }
+
+    Processing SESSION_STATUS event
+    SessionTerminated = {
+    }
+
 
 Description of Elements
 =======================
-
 The following elements are available for equity and options IOI publication.
 
 The sell-side sending IOIs will buy from the buy-side at the bid size/price and sell to the buy-side at the offer size/price.
@@ -467,7 +976,6 @@ The sell-side sending IOIs will buy from the buy-side at the bid size/price and 
 
 Actionable IOI
 ==============
-
 The IOIs published via IOI API Publication service from the sell-side can be actionable by the receiving buy-side firms.
 
 The sell-side using IOI API Publication service can specify the targeting EMSX broker code along with ``customId`` element.
