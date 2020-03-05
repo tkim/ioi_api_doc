@@ -610,22 +610,25 @@ Error Message
 +----------------------------------+--------------------------------------------------------+
 | Error Message                    | Description                                            |
 +==================================+========================================================+
-| Invalid tags in topic            | | There is an unspported tag field or tag values       |
-|                                  | | detected in topic.                                   |
+| Invalid tags in the topic        | | There is an unspported tag field or values detected  |
+|                                  | | in the topic string.                                 |
 +----------------------------------+--------------------------------------------------------+
-| Exceeded subscription limits     | Too many subscriptions from the client                 |
+| Exceeded subscription limits     | There are too many subscription calls from the client. |
 +----------------------------------+--------------------------------------------------------+
-| Could not determine IPER         | The subscribers acronym could not be determined        |
+| | The IPER code acronym could not| | The subscriber's IPER code acronym could not be      |
+| | be determined by Bloomberg.    | | determined.                                          |
 +----------------------------------+--------------------------------------------------------+
-| Could not get acronym from IPER  | The subscribers acronym code is blank                  |
+| | The acronym from the IPER code | The subscriber's acronym code is blank                 |
+| | is blank.                      |                                                        |
 +----------------------------------+--------------------------------------------------------+
-| Could not get side from IPER     | The subscribers side cannot be determined              |
+| | The side from the IPER code    | The subscriber's side cannot be determined             |
+| | cannot be determined.          |                                                        |
 +----------------------------------+--------------------------------------------------------+
-| UUID is not enabled in NNAB      | | The subscribers UUID is not enabled by any broker in |
-|                                  | | NNAB                                                 | 
+| | The UUID is not enabled in     | | The subscriber's UUID is not enabled by any broker in|
+| | ``NNAB<GO>`` terminal function.| | ``NNAB<GO>``                                         | 
 +----------------------------------+--------------------------------------------------------+
-| | Failed ot get user UUID from   | | There wasn't a valid UUID passed or the UUID passed  |
-| | subscription                   | | was set to zero.                                     |
+| | Failed to get the user UUID    | | There wasn't a valid UUID passed or the UUID passed  |
+| | from the subscription call.    | | was set to zero.                                     |
 +----------------------------------+--------------------------------------------------------+
 
 

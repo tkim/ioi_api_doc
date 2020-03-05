@@ -906,14 +906,14 @@ Error Message
 +----------------------------------+--------------------------------------------------------+
 |Error Message                     | Description                                            |
 +==================================+========================================================+
-| | Failed to parse request message| | Failed to translate API request messages to internal |
-|                                  | | request. Please review the schema.                   |
+| | Failed to parse request        | | Failed to translate API request messages to internal |
+| | message, please review the     | | request. Please review the schema.                   |
+| | schema.                        |                                                        |
 +----------------------------------+--------------------------------------------------------+
 | | Inclusion target list must     | | There needs to be at least one valid inclusion target|
 | | include at least one valid UUID| | list included in the request.                        |
 | | acronym, or listId.            |                                                        |
 +----------------------------------+--------------------------------------------------------+
-
 
 
 Description of Elements
