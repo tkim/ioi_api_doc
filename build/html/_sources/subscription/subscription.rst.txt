@@ -604,6 +604,32 @@ Output:-
     }
 
 
+Error Message
+=============
+
++----------------------------------+--------------------------------------------------------+
+| Error Message                    | Description                                            |
++==================================+========================================================+
+| Invalid tags in topic            | | There is an unspported tag field or tag values       |
+|                                  | | detected in topic.                                   |
++----------------------------------+--------------------------------------------------------+
+| Exceeded subscription limits     | Too many subscriptions from the client                 |
++----------------------------------+--------------------------------------------------------+
+| Could not determine IPER         | The subscribers acronym could not be determined        |
++----------------------------------+--------------------------------------------------------+
+| Could not get acronym from IPER  | The subscribers acronym code is blank                  |
++----------------------------------+--------------------------------------------------------+
+| Could not get side from IPER     | The subscribers side cannot be determined              |
++----------------------------------+--------------------------------------------------------+
+| UUID is not enabled in NNAB      | | The subscribers UUID is not enabled by any broker in |
+|                                  | | NNAB                                                 | 
++----------------------------------+--------------------------------------------------------+
+| | Failed ot get user UUID from   | | There wasn't a valid UUID passed or the UUID passed  |
+| | subscription                   | | was set to zero.                                     |
++----------------------------------+--------------------------------------------------------+
+
+
+
 Description of Elements
 =======================
 The following elements are available for equity and options IOI subscription.

@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,29 +24,21 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="IOI API Programmers Guide 1.6.0 documentation" href="../index.html"/>
-        <link rel="up" title="IOI API Subscription" href="index.html"/>
-        <link rel="next" title="FAQ" href="../faq.html"/>
-        <link rel="prev" title="IOI API Subscription" href="index.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FAQ" href="../faq.html" />
+    <link rel="prev" title="IOI API Subscription" href="index.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,7 +79,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publication/index.html">IOI API Publication</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">IOI API Subscription</a><ul class="current">
@@ -94,6 +91,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#api-demo-tool">API Demo Tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#desktop-vs-server-authentication">Desktop vs. Server Authentication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ioi-api-subscription">IOI API Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#error-message">Error Message</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#description-of-elements">Description of Elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#actionable-ioi">Actionable IOI</a></li>
 </ul>
@@ -111,36 +109,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">IOI API Programmers Guide</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IOI API Programmers Guide</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">IOI API Subscription</a> &raquo;</li>
-      
-    <li>Bloomberg API Service for IOI API Subscription</li>
+        
+      <li>Bloomberg API Service for IOI API Subscription</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/subscription/subscription.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -148,15 +166,15 @@
             
   <div class="section" id="bloomberg-api-service-for-ioi-api-subscription">
 <h1>Bloomberg API Service for IOI API Subscription<a class="headerlink" href="#bloomberg-api-service-for-ioi-api-subscription" title="Permalink to this headline">¶</a></h1>
-<p>For IOI subscription, this is accomplished by referencing <code class="docutils literal"><span class="pre">//blp/ioisub-beta</span></code> as the service name in your program. This command will allow your service  to redirect all IOI API subscription to the test environment.</p>
-<p>Once the client has thoroughly tested the custom-built strategies, they can access the production environment by changing the service name from  <code class="docutils literal"><span class="pre">//blp/ioisub-beta</span></code> to <code class="docutils literal"><span class="pre">//blp/ioisub</span></code>.</p>
+<p>For IOI subscription, this is accomplished by referencing <code class="docutils literal notranslate"><span class="pre">//blp/ioisub-beta</span></code> as the service name in your program. This command will allow your service  to redirect all IOI API subscription to the test environment.</p>
+<p>Once the client has thoroughly tested the custom-built strategies, they can access the production environment by changing the service name from  <code class="docutils literal notranslate"><span class="pre">//blp/ioisub-beta</span></code> to <code class="docutils literal notranslate"><span class="pre">//blp/ioisub</span></code>.</p>
 </div>
 <div class="section" id="accessing-the-test-environment">
 <h1>Accessing the Test Environment<a class="headerlink" href="#accessing-the-test-environment" title="Permalink to this headline">¶</a></h1>
 <p>Bloomberg provides a test environment for clients to build and test their strategies using the IOI API.</p>
-<p>Inside the Bloomberg Terminal type <code class="docutils literal"><span class="pre">UAT</span> <span class="pre">ON</span> <span class="pre">&lt;GO&gt;</span></code>.This command allows the particular terminal window and launchpad to log into the beta environment. Please note, when a user is remote into the beta environment it only affects that particular terminal window and the other Bloomberg panels will not be affected by the <code class="docutils literal"><span class="pre">UAT</span> <span class="pre">ON</span> <span class="pre">&lt;GO&gt;</span></code> command.</p>
-<p>To check which environment your current view is in, type <code class="docutils literal"><span class="pre">VSAT</span> <span class="pre">&lt;GO&gt;</span></code> inside the Bloomberg terminal.</p>
-<p>To get back to production type <code class="docutils literal"><span class="pre">UAT</span> <span class="pre">OFF</span> <span class="pre">&lt;GO&gt;</span></code>. Please note that the testing environment in Beta will not
+<p>Inside the Bloomberg Terminal type <code class="docutils literal notranslate"><span class="pre">UAT</span> <span class="pre">ON</span> <span class="pre">&lt;GO&gt;</span></code>.This command allows the particular terminal window and launchpad to log into the beta environment. Please note, when a user is remote into the beta environment it only affects that particular terminal window and the other Bloomberg panels will not be affected by the <code class="docutils literal notranslate"><span class="pre">UAT</span> <span class="pre">ON</span> <span class="pre">&lt;GO&gt;</span></code> command.</p>
+<p>To check which environment your current view is in, type <code class="docutils literal notranslate"><span class="pre">VSAT</span> <span class="pre">&lt;GO&gt;</span></code> inside the Bloomberg terminal.</p>
+<p>To get back to production type <code class="docutils literal notranslate"><span class="pre">UAT</span> <span class="pre">OFF</span> <span class="pre">&lt;GO&gt;</span></code>. Please note that the testing environment in Beta will not
 operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the
 production environment and no one should perform any volume or load testing in the beta environment.</p>
 </div>
@@ -165,18 +183,18 @@ production environment and no one should perform any volume or load testing in t
 <p>API Demo Tool is a handy tool while developing on any Bloomberg API services. The API Demo Tool provides real-time schema viewing tool among other handy tools that can be leveraged during the initial development.</p>
 <p>The API Demo Tool can be downloaded from the Bloomberg terminal along with other generic Bloomberg API code samples.</p>
 <blockquote>
-<div><code class="docutils literal"><span class="pre">WAPI&lt;GO&gt;</span></code> &gt;&gt; <code class="docutils literal"><span class="pre">API</span> <span class="pre">Download</span> <span class="pre">Center</span></code> &gt;&gt; <code class="docutils literal"><span class="pre">Download</span></code></div></blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">WAPI&lt;GO&gt;</span></code> &gt;&gt; <code class="docutils literal notranslate"><span class="pre">API</span> <span class="pre">Download</span> <span class="pre">Center</span></code> &gt;&gt; <code class="docutils literal notranslate"><span class="pre">Download</span></code></div></blockquote>
 </div>
 <div class="section" id="desktop-vs-server-authentication">
 <h1>Desktop vs. Server Authentication<a class="headerlink" href="#desktop-vs-server-authentication" title="Permalink to this headline">¶</a></h1>
 <p>Desktop:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">d_ioi</span> <span class="o">=</span> <span class="s2">&quot;//blp/ioiapi-beta-request&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d_ioi</span> <span class="o">=</span> <span class="s2">&quot;//blp/ioiapi-beta-request&quot;</span>
 <span class="n">d_host</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>
 <span class="n">d_port</span> <span class="o">=</span> <span class="mi">1234</span>
 </pre></div>
 </div>
 <p>Server:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">d_ioi</span> <span class="o">=</span> <span class="s2">&quot;//blp/ioiapi-beta-request&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d_ioi</span> <span class="o">=</span> <span class="s2">&quot;//blp/ioiapi-beta-request&quot;</span>
 <span class="n">d_auth</span> <span class="o">=</span> <span class="s2">&quot;//blp/apiauth&quot;</span>
 <span class="n">d_host</span> <span class="o">=</span> <span class="s2">&quot;abc.com&quot;</span>
 <span class="n">d_port</span> <span class="o">=</span> <span class="mi">1234</span>
@@ -185,7 +203,7 @@ production environment and no one should perform any volume or load testing in t
 </pre></div>
 </div>
 <p>Set authorization request:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendAuthRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendAuthRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 
     <span class="n">authService</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_auth</span><span class="p">)</span>
     <span class="n">authReq</span> <span class="o">=</span> <span class="n">authService</span><span class="o">.</span><span class="n">createAuthorizationRequest</span><span class="p">()</span>
@@ -237,7 +255,7 @@ production environment and no one should perform any volume or load testing in t
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_SubscribeIOI.py">Subscribe IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_SubscribeIOI.java">Subscribe IOI java</a></td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -245,7 +263,7 @@ production environment and no one should perform any volume or load testing in t
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -273,7 +291,7 @@ production environment and no one should perform any volume or load testing in t
 </pre></div>
 </td></tr></table></div>
 <p>Output:-</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_SubscribeIOI.py
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_SubscribeIOI.py
 Bloomberg - IOI API Example - DesktopAPI - SubscribeIOI
 Connecting to localhost:8194
 Processing SESSION_STATUS event
@@ -739,6 +757,59 @@ SessionTerminated = {
 </pre></div>
 </div>
 </div>
+<div class="section" id="error-message">
+<h1>Error Message<a class="headerlink" href="#error-message" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Error Message</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Invalid tags in topic</td>
+<td><div class="first last line-block">
+<div class="line">There is an unspported tag field or tag values</div>
+<div class="line">detected in topic.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>Exceeded subscription limits</td>
+<td>Too many subscriptions from the client</td>
+</tr>
+<tr class="row-even"><td>Could not determine IPER</td>
+<td>The subscribers acronym could not be determined</td>
+</tr>
+<tr class="row-odd"><td>Could not get acronym from IPER</td>
+<td>The subscribers acronym code is blank</td>
+</tr>
+<tr class="row-even"><td>Could not get side from IPER</td>
+<td>The subscribers side cannot be determined</td>
+</tr>
+<tr class="row-odd"><td>UUID is not enabled in NNAB</td>
+<td><div class="first last line-block">
+<div class="line">The subscribers UUID is not enabled by any broker in</div>
+<div class="line">NNAB</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last line-block">
+<div class="line">Failed ot get user UUID from</div>
+<div class="line">subscription</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">There wasn’t a valid UUID passed or the UUID passed</div>
+<div class="line">was set to zero.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="description-of-elements">
 <h1>Description of Elements<a class="headerlink" href="#description-of-elements" title="Permalink to this headline">¶</a></h1>
 <p>The following elements are available for equity and options IOI subscription.</p>
@@ -760,7 +831,7 @@ SessionTerminated = {
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">id_value</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">id_value</span></code></td>
 <td><div class="first last line-block">
 <div class="line">Unique Bloomberg value to</div>
 <div class="line">identify IOI message,</div>
@@ -769,19 +840,19 @@ SessionTerminated = {
 </td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_natural</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_natural</span></code></td>
 <td rowspan="2">Indicate natural IOI</td>
 <td rowspan="2">int32</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_natural</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_natural</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_notes</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_notes</span></code></td>
 <td rowspan="2">Notes section for IOI messages</td>
 <td rowspan="2">string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_notes</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_notes</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_price_fixed_currency</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_fixed_currency</span></code></td>
 <td rowspan="2"><div class="first last line-block">
 <div class="line">Three letter currency acronym</div>
 <div class="line">for the IOI</div>
@@ -789,168 +860,168 @@ SessionTerminated = {
 </td>
 <td rowspan="2">string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_price_fixed_currency</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_fixed_currency</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_price_fixed_price</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_fixed_price</span></code></td>
 <td rowspan="2">IOI fixed price</td>
 <td rowspan="2">float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_price_fixed_price</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_fixed_price</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_price_pegged_limitPrice</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_limitPrice</span></code></td>
 <td rowspan="2">IOI pegged limit price</td>
 <td rowspan="2">float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_price_pegged_limitPrice</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_limitPrice</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_price_pegged_offsetAmount</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_offsetAmount</span></code></td>
 <td rowspan="2">IOI pegged offset amount</td>
 <td rowspan="2">float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_price_pegged_offsetAmount</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_offsetAmount</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_price_pegged_offsetFrom</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_offsetFrom</span></code></td>
 <td rowspan="2">IOI pegged offset from</td>
 <td rowspan="2">string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_price_pegged_offsetFrom</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_offsetFrom</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_price_pegged_offsetType</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_pegged_offsetType</span></code></td>
 <td rowspan="2">IOI pegged offset type</td>
 <td rowspan="2">string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_price_pegged_offsetType</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_pegged_offsetType</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_price_reference</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_reference</span></code></td>
 <td rowspan="2">Bid, Mid, Ask</td>
 <td rowspan="2">string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_price_reference</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_reference</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_price_type</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_price_type</span></code></td>
 <td rowspan="2">Market, limit, or unspecified</td>
 <td rowspan="2">string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_price_type</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_price_type</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_qualifiers_n</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_qualifiers_n</span></code></td>
 <td rowspan="2">IOI bid/offer qualifiers
 (e.g. H, U, V, I) <a class="reference internal" href="#definitions" id="id1">[definitions]</a></td>
 <td rowspan="2">string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_qualifiers_n</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_qualifiers_n</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_qualifiers_count</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_qualifiers_count</span></code></td>
 <td rowspan="2">IOI bid/offer qualifiers count</td>
 <td rowspan="2">int32</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_qualifiers_count</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_qualifiers_count</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_referencePrice_currency</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_referencePrice_currency</span></code></td>
 <td rowspan="2">IOI bid/offer reference currency</td>
 <td rowspan="2">string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_referencePrice_currency</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_referencePrice_currency</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_referencePrice_price</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_referencePrice_price</span></code></td>
 <td rowspan="2">IOI bid/offer reference price</td>
 <td rowspan="2">float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_referencePrice_price</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_referencePrice_price</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_size_quality</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_size_quality</span></code></td>
 <td rowspan="2">Small, Medium, or Large</td>
 <td rowspan="2">string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_size_quality</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_size_quality</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_size_quantity</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_size_quantity</span></code></td>
 <td rowspan="2">Actual quantity of the IOI</td>
 <td rowspan="2">int64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_size_quantity</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_size_quantity</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_size_type</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_size_type</span></code></td>
 <td rowspan="2">IOI bid/offer size type</td>
 <td rowspan="2">string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_size_type</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_size_type</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_bid_volatility</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_bid_volatility</span></code></td>
 <td rowspan="2">Options IOI bid/offer volatility</td>
 <td rowspan="2">float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_offer_volatility</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_offer_volatility</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_clientId</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_clientId</span></code></td>
 <td>IOI Client ID</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_goodUntil</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_goodUntil</span></code></td>
 <td>IOI good until time</td>
 <td>dateTime</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_delta</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_delta</span></code></td>
 <td>Options IOI delta</td>
 <td>float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_exchange</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_exchange</span></code></td>
 <td>Options IOI exchange</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_expiry</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_expiry</span></code></td>
 <td>Options IOI leg expiry</td>
 <td>dateTime</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_futureRefDate</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_futureRefDate</span></code></td>
 <td>Options IOI future reference date</td>
 <td>dateTime</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_listed_figi</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_listed_figi</span></code></td>
 <td>Options IOI FIGI</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_listed_ticker</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_listed_ticker</span></code></td>
 <td>Options IOI ticker</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_listed_type</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_listed_type</span></code></td>
 <td>Options IOI type</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_ratio</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_ratio</span></code></td>
 <td>Options IOI ratio</td>
 <td>float64</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_strike</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_strike</span></code></td>
 <td>Options IOI strike</td>
 <td>float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_style</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_style</span></code></td>
 <td>European, American</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_type</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_type</span></code></td>
 <td>Options IOI leg type</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_underlying_figi</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_underlying_figi</span></code></td>
 <td>Options IOI underlying figi</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_underlying_ticker</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_underlying_ticker</span></code></td>
 <td>Options IOI underlying ticker</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_n_underlying_type</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_n_underlying_type</span></code></td>
 <td>Options IOI underlying type</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_option_legs_count</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_legs_count</span></code></td>
 <td>Options IOI legs count</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td rowspan="13"><code class="docutils literal"><span class="pre">ioi_instrument_option_structure</span></code></td>
+<tr class="row-even"><td rowspan="13"><code class="docutils literal notranslate"><span class="pre">ioi_instrument_option_structure</span></code></td>
 <td>Custom, CallSpread, PutSpread,</td>
 <td rowspan="13">string</td>
 </tr>
@@ -978,71 +1049,71 @@ SessionTerminated = {
 </tr>
 <tr class="row-even"><td>RatioCallSpread, RatioPutSpread</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_stock_security_figi</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_stock_security_figi</span></code></td>
 <td>Equity IOI security figi</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_stock_security_ticker</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_stock_security_ticker</span></code></td>
 <td>Equity IOI security ticker</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_instrument_stock_security_type</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_stock_security_type</span></code></td>
 <td>Equity IOI security type</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_instrument_type</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_instrument_type</span></code></td>
 <td>IOI instrument type</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_routing_benchmark</span></code></td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_benchmark</span></code></td>
+<td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_routing_broker</span></code></td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_broker</span></code></td>
+<td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_routing_customId</span></code></td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_customId</span></code></td>
+<td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_routing_orderType</span></code></td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_orderType</span></code></td>
+<td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_routing_strategy_brief</span></code></td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_strategy_brief</span></code></td>
+<td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_routing_strategy_detailed</span></code></td>
-<td>&nbsp;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_strategy_detailed</span></code></td>
+<td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">ioi_routing_strategy_name</span></code></td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ioi_routing_strategy_name</span></code></td>
+<td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ioi_sentTime</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ioi_sentTime</span></code></td>
 <td>IOI sent time</td>
 <td>dateTime</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">originalId_value</span></code></td>
-<td>&nbsp;</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">originalId_value</span></code></td>
+<td>&#160;</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">state</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">state</span></code></td>
 <td>IOI State: New, Replace and Cancel</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">trader_acronym</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">trader_acronym</span></code></td>
 <td>IPER code</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">trader_username</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">trader_username</span></code></td>
 <td>Trader name</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">trader_uuid</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">trader_uuid</span></code></td>
 <td>Trader UUID</td>
 <td>int64</td>
 </tr>
@@ -1052,8 +1123,8 @@ SessionTerminated = {
 <div class="section" id="actionable-ioi">
 <h1>Actionable IOI<a class="headerlink" href="#actionable-ioi" title="Permalink to this headline">¶</a></h1>
 <p>The IOIs published via IOI API Publication service can be actionable by the receiving buy-side firms.</p>
-<p>The sell-side using IOI API Publication service can specify the targeting EMSX broker code along with <code class="docutils literal"><span class="pre">customId</span></code> element.
-The <code class="docutils literal"><span class="pre">customId</span></code> will allow the order receiving sell-side to tie the order back to the original IOI generated from the sell-side.</p>
+<p>The sell-side using IOI API Publication service can specify the targeting EMSX broker code along with <code class="docutils literal notranslate"><span class="pre">customId</span></code> element.
+The <code class="docutils literal notranslate"><span class="pre">customId</span></code> will allow the order receiving sell-side to tie the order back to the original IOI generated from the sell-side.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="35%" />
@@ -1067,30 +1138,30 @@ The <code class="docutils literal"><span class="pre">customId</span></code> will
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">broker</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">broker</span></code></td>
 <td><div class="first last line-block">
 <div class="line">The broker code used in EMSX to submit the</div>
 <div class="line">order. This is viewable as</div>
-<div class="line"><code class="docutils literal"><span class="pre">ioi_routing_broker</span></code> element in the</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">ioi_routing_broker</span></code> element in the</div>
 <div class="line">IOI API Subscription service.</div>
 </div>
 </td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">customId</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">customId</span></code></td>
 <td><div class="first last line-block">
 <div class="line">Optional, can be created by the sell-side</div>
 <div class="line">to correlate back to an order. This is</div>
-<div class="line">viewable as <code class="docutils literal"><span class="pre">ioi_routing_id</span></code> element in</div>
+<div class="line">viewable as <code class="docutils literal notranslate"><span class="pre">ioi_routing_id</span></code> element in</div>
 <div class="line">the IOI API Subscription service.</div>
 </div>
 </td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">strategy</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">strategy</span></code></td>
 <td><div class="first last line-block">
 <div class="line">Optinal, if specified and the strategy</div>
-<div class="line">exists in <code class="docutils literal"><span class="pre">EQMB&lt;GO&gt;</span></code>, this element will</div>
+<div class="line">exists in <code class="docutils literal notranslate"><span class="pre">EQMB&lt;GO&gt;</span></code>, this element will</div>
 <div class="line">be accepted.</div>
 </div>
 </td>
@@ -1108,15 +1179,16 @@ The <code class="docutils literal"><span class="pre">customId</span></code> will
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="IOI API Subscription" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="IOI API Subscription" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1125,11 +1197,11 @@ The <code class="docutils literal"><span class="pre">customId</span></code> will
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Terrence C. Kim.
+        &copy; Copyright 2017, Terrence C. Kim
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -1144,34 +1216,23 @@ The <code class="docutils literal"><span class="pre">customId</span></code> will
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.6.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

@@ -907,14 +907,13 @@ Error Message
 |Error Message                     | Description                                            |
 +==================================+========================================================+
 | | Failed to parse request message| | Failed to translate API request messages to internal |
-|                                  | | request.                                             |
+|                                  | | request. Please review the schema.                   |
 +----------------------------------+--------------------------------------------------------+
-|                                  |                                                        |
+| | Inclusion target list must     | | There needs to be at least one valid inclusion target|
+| | include at least one valid UUID| | list included in the request.                        |
+| | acronym, or listId.            |                                                        |
 +----------------------------------+--------------------------------------------------------+
-|                                  |                                                        |
-+----------------------------------+--------------------------------------------------------+
-|                                  |                                                        |
-+----------------------------------+--------------------------------------------------------+
+
 
 
 Description of Elements
