@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -24,21 +22,29 @@
 
   
 
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="IOI API Subscription" href="../subscription/index.html" />
-    <link rel="prev" title="IOI API Publication" href="index.html" /> 
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="IOI API Programmers Guide 1.6.0 documentation" href="../index.html"/>
+        <link rel="up" title="IOI API Publication" href="index.html"/>
+        <link rel="next" title="IOI API Subscription" href="../subscription/index.html"/>
+        <link rel="prev" title="IOI API Publication" href="index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -79,10 +85,7 @@
           
             
             
-              
-            
-            
-              <ul class="current">
+                <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">IOI API Publication</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Bloomberg API Service for IOI API Publication</a></li>
@@ -111,56 +114,36 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">IOI API Programmers Guide</a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">IOI API Programmers Guide</a>
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
           <li><a href="index.html">IOI API Publication</a> &raquo;</li>
-        
-      <li>Bloomberg API Service for IOI API Publication</li>
-    
-    
+      
+    <li>Bloomberg API Service for IOI API Publication</li>
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/publication/reqResp.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -168,37 +151,37 @@
             
   <div class="section" id="bloomberg-api-service-for-ioi-api-publication">
 <h1>Bloomberg API Service for IOI API Publication<a class="headerlink" href="#bloomberg-api-service-for-ioi-api-publication" title="Permalink to this headline">¶</a></h1>
-<p>For IOI publication, this is accomplished by referencing <code class="docutils literal notranslate"><span class="pre">//blp/ioiapi-beta-request</span></code> as the service name in your program. This command will allow your service  to redirect all IOI API requests to the test environment.</p>
+<p>For IOI publication, this is accomplished by referencing <code class="docutils literal"><span class="pre">//blp/ioiapi-beta-request</span></code> as the service name in your program. This command will allow your service  to redirect all IOI API requests to the test environment.</p>
 <p>Once the client has thoroughly tested the custom-built strategies, they can access the production
-environment by changing the service name from <code class="docutils literal notranslate"><span class="pre">//blp/ioiapi-beta-request</span></code> to <code class="docutils literal notranslate"><span class="pre">//blp/ioiapi-request</span></code>.</p>
+environment by changing the service name from <code class="docutils literal"><span class="pre">//blp/ioiapi-beta-request</span></code> to <code class="docutils literal"><span class="pre">//blp/ioiapi-request</span></code>.</p>
 </div>
 <div class="section" id="accessing-the-test-environment">
 <h1>Accessing the Test Environment<a class="headerlink" href="#accessing-the-test-environment" title="Permalink to this headline">¶</a></h1>
 <p>Bloomberg provides a test environment for clients to build and test their strategies using the IOI API.</p>
-<p>Inside the Bloomberg Terminal type <code class="docutils literal notranslate"><span class="pre">UAT</span> <span class="pre">ON</span> <span class="pre">&lt;GO&gt;</span></code>.This command allows the particular terminal window and launchpad to log into the beta environment. Please note, when a user is remote into the beta environment it only affects that particular terminal window and the other Bloomberg panels will not be affected by the <code class="docutils literal notranslate"><span class="pre">UAT</span> <span class="pre">ON</span> <span class="pre">&lt;GO&gt;</span></code> command.</p>
-<p>To check which environment your current view is in, type <code class="docutils literal notranslate"><span class="pre">VSAT</span> <span class="pre">&lt;GO&gt;</span></code> inside the Bloomberg terminal.</p>
-<p>To get back to production type <code class="docutils literal notranslate"><span class="pre">UAT</span> <span class="pre">OFF</span> <span class="pre">&lt;GO&gt;</span></code>. Please note that the testing environment in Beta will not
+<p>Inside the Bloomberg Terminal type <code class="docutils literal"><span class="pre">UAT</span> <span class="pre">ON</span> <span class="pre">&lt;GO&gt;</span></code>.This command allows the particular terminal window and launchpad to log into the beta environment. Please note, when a user is remote into the beta environment it only affects that particular terminal window and the other Bloomberg panels will not be affected by the <code class="docutils literal"><span class="pre">UAT</span> <span class="pre">ON</span> <span class="pre">&lt;GO&gt;</span></code> command.</p>
+<p>To check which environment your current view is in, type <code class="docutils literal"><span class="pre">VSAT</span> <span class="pre">&lt;GO&gt;</span></code> inside the Bloomberg terminal.</p>
+<p>To get back to production type <code class="docutils literal"><span class="pre">UAT</span> <span class="pre">OFF</span> <span class="pre">&lt;GO&gt;</span></code>. Please note that the testing environment in Beta will not
 operate in the exact same way as the production environment. Also, please note that the beta environment is a lot slower than the
 production environment and no one should perform any volume or load testing in the beta environment.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">IOI&lt;GO&gt;</span></code> function will show a tab for Options vs. Equities IOIs.</p>
+<p>The <code class="docutils literal"><span class="pre">IOI&lt;GO&gt;</span></code> function will show a tab for Options vs. Equities IOIs.</p>
 </div>
 <div class="section" id="api-demo-tool">
 <h1>API Demo Tool<a class="headerlink" href="#api-demo-tool" title="Permalink to this headline">¶</a></h1>
 <p>API Demo Tool is a handy tool while developing on any Bloomberg API services. The API Demo Tool provides real-time schema viewing tool among other handy tools that can be leveraged during the initial development.</p>
 <p>The API Demo Tool can be downloaded from the Bloomberg terminal along with other generic Bloomberg API code samples.</p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">WAPI&lt;GO&gt;</span></code> &gt;&gt; <code class="docutils literal notranslate"><span class="pre">API</span> <span class="pre">Download</span> <span class="pre">Center</span></code> &gt;&gt; <code class="docutils literal notranslate"><span class="pre">Download</span></code></div></blockquote>
+<div><code class="docutils literal"><span class="pre">WAPI&lt;GO&gt;</span></code> &gt;&gt; <code class="docutils literal"><span class="pre">API</span> <span class="pre">Download</span> <span class="pre">Center</span></code> &gt;&gt; <code class="docutils literal"><span class="pre">Download</span></code></div></blockquote>
 </div>
 <div class="section" id="desktop-vs-server-authentication">
 <h1>Desktop vs. Server Authentication<a class="headerlink" href="#desktop-vs-server-authentication" title="Permalink to this headline">¶</a></h1>
 <p>Desktop:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d_ioi</span> <span class="o">=</span> <span class="s2">&quot;//blp/ioiapi-beta-request&quot;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">d_ioi</span> <span class="o">=</span> <span class="s2">&quot;//blp/ioiapi-beta-request&quot;</span>
 <span class="n">d_host</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>
 <span class="n">d_port</span> <span class="o">=</span> <span class="mi">1234</span>
 </pre></div>
 </div>
 <p>Server:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d_ioi</span> <span class="o">=</span> <span class="s2">&quot;//blp/ioiapi-beta-request&quot;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">d_ioi</span> <span class="o">=</span> <span class="s2">&quot;//blp/ioiapi-beta-request&quot;</span>
 <span class="n">d_auth</span> <span class="o">=</span> <span class="s2">&quot;//blp/apiauth&quot;</span>
 <span class="n">d_host</span> <span class="o">=</span> <span class="s2">&quot;abc.com&quot;</span>
 <span class="n">d_port</span> <span class="o">=</span> <span class="mi">1234</span>
@@ -207,7 +190,7 @@ production environment and no one should perform any volume or load testing in t
 </pre></div>
 </div>
 <p>Set authorization request:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendAuthRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sendAuthRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 
     <span class="n">authService</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">getService</span><span class="p">(</span><span class="n">d_auth</span><span class="p">)</span>
     <span class="n">authReq</span> <span class="o">=</span> <span class="n">authService</span><span class="o">.</span><span class="n">createAuthorizationRequest</span><span class="p">()</span>
@@ -247,7 +230,7 @@ production environment and no one should perform any volume or load testing in t
 </div>
 <div class="section" id="cancel-ioi-message">
 <h1>Cancel IOI Message<a class="headerlink" href="#cancel-ioi-message" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">cancelIoi</span></code> request allows IOI API service to Cancel IOI message.</p>
+<p>The <code class="docutils literal"><span class="pre">cancelIoi</span></code> request allows IOI API service to Cancel IOI message.</p>
 <p>Full code sample (Options IOI):-</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -259,7 +242,7 @@ production environment and no one should perform any volume or load testing in t
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CancelIOI.py">Cancel IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_CancelIOI.java">Cancel IOI java</a></td>
-<td>&#160;</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -274,7 +257,7 @@ production environment and no one should perform any volume or load testing in t
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CancelEquityIOI.py">Cancel E IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/java_dapi_CancelEquityIOI.java">Cancel E IOI java</a></td>
-<td>&#160;</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -282,7 +265,7 @@ production environment and no one should perform any volume or load testing in t
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -308,7 +291,7 @@ production environment and no one should perform any volume or load testing in t
 </pre></div>
 </td></tr></table></div>
 <p>Output (Options IOI):-</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CancelIOI.py
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CancelIOI.py
 Bloomberg - IOI API Example - DesktopAPI - CancelIOI
 Connecting to localhost:8194
 Processing SESSION_STATUS event
@@ -348,7 +331,7 @@ SessionTerminated = {
 </pre></div>
 </div>
 <p>Output (Equity IOI):-</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CancelEquityIOI.py
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CancelEquityIOI.py
 Bloomberg - IOI API Example - DesktopAPI - CancelIOI
 Connecting to localhost:8194
 Processing SESSION_STATUS event
@@ -390,7 +373,7 @@ SessionTerminated = {
 </div>
 <div class="section" id="create-ioi-message">
 <h1>Create IOI Message<a class="headerlink" href="#create-ioi-message" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">createIoi</span></code> request allows IOI API service to Create IOI message.</p>
+<p>The <code class="docutils literal"><span class="pre">createIoi</span></code> request allows IOI API service to Create IOI message.</p>
 <p>Full code sample (Options IOI):-</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -402,7 +385,7 @@ SessionTerminated = {
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CreateIOI.py">Create IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_CreateIOI.java">Create IOI java</a></td>
-<td>&#160;</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -417,7 +400,7 @@ SessionTerminated = {
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_CreateEquityIOI.py">Create E IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/java_dapi_CreateEquityIOI.java">Create E IOI java</a></td>
-<td>&#160;</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -425,7 +408,7 @@ SessionTerminated = {
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -561,7 +544,7 @@ SessionTerminated = {
 </pre></div>
 </td></tr></table></div>
 <p>Output (Options IOI):-</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CreateIOI.py
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CreateIOI.py
 Bloomberg - IOI API Example - DesktopAPI - CreateIOI
 Connecting to localhost:8194
 Processing SESSION_STATUS event
@@ -669,7 +652,7 @@ SessionTerminated = {
 </pre></div>
 </div>
 <p>Output (Equity IOI):-</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CreateEquityIOI.py
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CreateEquityIOI.py
 Bloomberg - IOI API Example - DesktopAPI - CreateIOI
 Connecting to localhost:8194
 Processing SESSION_STATUS event
@@ -760,7 +743,7 @@ SessionTerminated = {
 <p class="first admonition-title">Important</p>
 <p class="last">Always pay attention to the RESPONSE message for error messages on the REQUEST.</p>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CreateIOI.py
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_CreateIOI.py
 Bloomberg - IOI API Example - DesktopAPI - CreateIOI
 Connecting to localhost:8194
 Processing SESSION_STATUS event
@@ -805,7 +788,7 @@ SessionTerminated = {
 </div>
 <div class="section" id="update-ioi-message">
 <h1>Update IOI Message<a class="headerlink" href="#update-ioi-message" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">updateIoi</span></code> request allows IOI API service to Update IOI message.</p>
+<p>The <code class="docutils literal"><span class="pre">updateIoi</span></code> request allows IOI API service to Update IOI message.</p>
 <p>Full code sample (Options IOI):-</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -817,7 +800,7 @@ SessionTerminated = {
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_UpdateIOI.py">Update IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/Java_dapi_UpdateIOI.java">Update IOI java</a></td>
-<td>&#160;</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -832,7 +815,7 @@ SessionTerminated = {
 <td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Python/py_dapi_UpdateEquityIOI.py">Update E IOI py</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/tkim/ioi_api_repository/blob/master/Java/java_dapi_UpdateEquityIOI.java">Update E IOI java</a></td>
-<td>&#160;</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -840,7 +823,7 @@ SessionTerminated = {
 <p class="first admonition-title">Hint</p>
 <p class="last">Please right click on the top code sample link to open in a new tab.</p>
 </div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -982,7 +965,7 @@ SessionTerminated = {
 </pre></div>
 </td></tr></table></div>
 <p>Output (Options IOI):-</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_UpdateIOI.py
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_UpdateIOI.py
 Bloomberg - IOI API Example - DesktopAPI - UpdateIOI
 Connecting to localhost:8194
 Processing SESSION_STATUS event
@@ -1093,7 +1076,7 @@ SessionTerminated = {
 </pre></div>
 </div>
 <p>Output (Equity IOI):-</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_UpdateEquityIOI.py
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\_scripts&gt;py -3 py_dapi_UpdateEquityIOI.py
 Bloomberg - IOI API Example - DesktopAPI - UpdateIOI
 Connecting to localhost:8194
 Processing SESSION_STATUS event
@@ -1237,83 +1220,83 @@ SessionTerminated = {
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">acronym</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">acronym</span></code></td>
 <td>IPER code to target IOIs</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">currency</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">currency</span></code></td>
 <td>Currency of the IOI</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">delta</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">delta</span></code></td>
 <td>Options delta</td>
 <td>float64</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">futureRefDate</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">futureRefDate</span></code></td>
 <td>future reference date</td>
 <td>datetime</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">goodUntil</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">goodUntil</span></code></td>
 <td>good until date/time</td>
 <td>datetime</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">handle</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">handle</span></code></td>
 <td>Unique Bloomberg value to identify IOI message</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">instrument</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">instrument</span></code></td>
 <td>Stock or Options</td>
-<td>&#160;</td>
+<td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">limitPrice</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">limitPrice</span></code></td>
 <td>Limit price</td>
 <td>float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">natural</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">natural</span></code></td>
 <td>Natural IOI indicator</td>
 <td>bool</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">notes</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">notes</span></code></td>
 <td>Free text field</td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">offsetAmount</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">offsetAmount</span></code></td>
 <td>pegged offset amount</td>
 <td>float64</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">offsetFrom</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">offsetFrom</span></code></td>
 <td>pegged offset from Bid, Mid, Ask</td>
 <td>Enum</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">price</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">price</span></code></td>
 <td>IOI price</td>
 <td>float64</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">qualifiers</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">qualifiers</span></code></td>
 <td>IOI qualifiers (e.g. H, U, V, I) <a class="reference internal" href="#definition" id="id1">[definition]</a></td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">quality</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">quality</span></code></td>
 <td>Small, Medium, or Large</td>
 <td>enum</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">quantity</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">quantity</span></code></td>
 <td>Actual quantity of the IOI</td>
 <td>int64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ratio</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ratio</span></code></td>
 <td>Options IOI ratio</td>
 <td>float64</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">strike</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">strike</span></code></td>
 <td>Options IOI strike</td>
 <td>float64</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">style</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">style</span></code></td>
 <td>Options IOI style (e.g. European or American)</td>
 <td>enum</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">structure</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">structure</span></code></td>
 <td><dl class="first last docutils">
 <dt>Options IOI structure</dt>
 <dd><div class="first last line-block">
@@ -1333,15 +1316,15 @@ SessionTerminated = {
 </td>
 <td>enum</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ticker</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ticker</span></code></td>
 <td>IOI ticker</td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">type</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">type</span></code></td>
 <td>Options IOI type  (e.g. Call or Put)</td>
 <td>enum</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">volatility</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">volatility</span></code></td>
 <td>Options IOI volatility</td>
 <td>float64</td>
 </tr>
@@ -1351,8 +1334,8 @@ SessionTerminated = {
 <div class="section" id="actionable-ioi">
 <h1>Actionable IOI<a class="headerlink" href="#actionable-ioi" title="Permalink to this headline">¶</a></h1>
 <p>The IOIs published via IOI API Publication service from the sell-side can be actionable by the receiving buy-side firms.</p>
-<p>The sell-side using IOI API Publication service can specify the targeting EMSX broker code along with <code class="docutils literal notranslate"><span class="pre">customId</span></code> element.
-The <code class="docutils literal notranslate"><span class="pre">customId</span></code> will allow the order receiving sell-side to tie the order back to the original IOI generated from the sell-side.</p>
+<p>The sell-side using IOI API Publication service can specify the targeting EMSX broker code along with <code class="docutils literal"><span class="pre">customId</span></code> element.
+The <code class="docutils literal"><span class="pre">customId</span></code> will allow the order receiving sell-side to tie the order back to the original IOI generated from the sell-side.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="35%" />
@@ -1366,30 +1349,30 @@ The <code class="docutils literal notranslate"><span class="pre">customId</span>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">broker</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">broker</span></code></td>
 <td><div class="first last line-block">
 <div class="line">The broker code used in EMSX to submit the</div>
 <div class="line">order. This is viewable as</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">ioi_routing_broker</span></code> element in the</div>
+<div class="line"><code class="docutils literal"><span class="pre">ioi_routing_broker</span></code> element in the</div>
 <div class="line">IOI API Subscription service.</div>
 </div>
 </td>
 <td>string</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">customId</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">customId</span></code></td>
 <td><div class="first last line-block">
 <div class="line">Optional, can be created by the sell-side</div>
 <div class="line">to correlate back to an order. This is</div>
-<div class="line">viewable as <code class="docutils literal notranslate"><span class="pre">ioi_routing_id</span></code> element in</div>
+<div class="line">viewable as <code class="docutils literal"><span class="pre">ioi_routing_id</span></code> element in</div>
 <div class="line">the IOI API Subscription service.</div>
 </div>
 </td>
 <td>string</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">strategy</span></code></td>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">strategy</span></code></td>
 <td><div class="first last line-block">
 <div class="line">Optinal, if specified and the strategy</div>
-<div class="line">exists in <code class="docutils literal notranslate"><span class="pre">EQMB&lt;GO&gt;</span></code>, this element will</div>
+<div class="line">exists in <code class="docutils literal"><span class="pre">EQMB&lt;GO&gt;</span></code>, this element will</div>
 <div class="line">be accepted.</div>
 </div>
 </td>
@@ -1407,16 +1390,15 @@ The <code class="docutils literal notranslate"><span class="pre">customId</span>
 
 
            </div>
-           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../subscription/index.html" class="btn btn-neutral float-right" title="IOI API Subscription" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../subscription/index.html" class="btn btn-neutral float-right" title="IOI API Subscription" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="IOI API Publication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="IOI API Publication" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1425,11 +1407,11 @@ The <code class="docutils literal notranslate"><span class="pre">customId</span>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Terrence C. Kim
+        &copy; Copyright 2017, Terrence C. Kim.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -1444,23 +1426,34 @@ The <code class="docutils literal notranslate"><span class="pre">customId</span>
 
   
 
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.6.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
 
   
 
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
 
+  
+  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
+          SphinxRtdTheme.StickyNav.enable();
       });
-  </script> 
+  </script>
+   
 
 </body>
 </html>

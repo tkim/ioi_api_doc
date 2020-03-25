@@ -14,6 +14,14 @@ The Bloomberg API interface is thread-safe and thread-aware, giving applications
 The object model for Java, .NET and C++ are identical. The C interface provides a C-style version of the object model.
 
 
+.. important::
+   
+  Due to the trading nature with the various Trading API's  at Bloomberg (e.g. EMSX API, IOI API, etc.) Bloomberg cannot legally assist on the client-side coding other than providing a high-level overview of the service, advice on some of the best practices approach to use the request/response paradigm and asynchronous event-driven nature of the subscription paradigm.  
+  
+  It is highly recommended that the technical resource working on the Trading API has extensive programming experiences and a solid understanding of software application architecture.
+
+
+
 .. warning::
 	
 	Please note that performance/load test should never be performed on any of the API environment as this is a shared environment and we monitor and increase capacity as needed.
