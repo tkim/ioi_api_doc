@@ -1,8 +1,6 @@
 ############
 Introduction
 ############
-
-
 The IOI API Server provides Bloomberg users with the ability to publish IOIs into Bloomberg and 
 subscribe IOIs in Equities and Derivatives using Bloomberg API
 
@@ -25,8 +23,6 @@ To get access to IOI API in UAT and production, please click <Help><Help> on ``E
 
 Support
 =======
-
-
 For all IOI functionality and IOI API techincal inquires please contact the EMSX Trade Desk. They are available 24/6 and please ensure you provide your Bloomberg UUID.
 
 
@@ -53,8 +49,6 @@ Please call your local global customer support number and ask to speak to the EM
 
 How to install serverapi.exe
 ============================
-
-
 Please follow the following steps to install and register the installer with Bloomberg Enterprise Solutions with the assistance from EMSX Implementation team.
 
 The following example is based on the windows environment and thus there will be slight variations when installing from linux or solaris operating system.
@@ -338,8 +332,6 @@ The following example is based on the windows environment and thus there will be
 
 Creating User Identities
 ========================
-
-
 In the server environment, the user identities must be created and cached prior to the making requests.  Therefore, the process would look as follows:-
 
 
@@ -424,8 +416,6 @@ In the above code, you will see that we examine the ‘seatType’ of the identi
 
 Using User Identities
 =====================
-
-
 In the server environment, there is no Bloomberg terminal, and therefore no implied user can be identified.  Moreover, the server is capable of connecting to any number of IOI user identities, simultaneously. Therefore, the application making the call must indicate which user is the intended target. This is done through the creation and use of Identity object.
 
 An Identity object represents a specific Bloomberg UUID.  Once created, an Identity object can be cached for 24hrs, and used with every ``sendRequest()`` and ``subscribe()`` call. 
