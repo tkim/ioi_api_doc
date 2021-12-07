@@ -32,7 +32,6 @@ The object model for Java, .NET and C++ are identical. The C interface provides 
    :maxdepth: 2
 
    introduction
-   publication/index
    subscription/index 
    faq
    glossary

@@ -1,54 +1,57 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>IOI API Programmers Guide &mdash; IOI API Programmers Guide 1.6.0 documentation</title>
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
   
 
   
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="IOI API Programmers Guide 1.6.0 documentation" href="#"/>
-        <link rel="next" title="Introduction" href="introduction.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="introduction.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -79,13 +82,16 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="publication/index.html">IOI API Publication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="subscription/index.html">IOI API Subscription</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
@@ -94,32 +100,52 @@
             
           
         </div>
+        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">IOI API Programmers Guide</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">IOI API Programmers Guide</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="#">Docs</a> &raquo;</li>
-      
-    <li>IOI API Programmers Guide</li>
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>IOI API Programmers Guide</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
           
@@ -127,7 +153,10 @@
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -138,17 +167,17 @@
 <p>This document is for developers who will use the Bloomberg IOI API Server to publish and subscribe to
 IOI (Indication of Interest) messages.</p>
 <p>IOI API allows clients to use Bloomberg API 3.0 to automate the IOI publishing into Bloomberg and to subscribe IOI message from Bloomberg.</p>
-<p>The Bloomberg API uses an event-driven model. The IOI API is an extension of Bloomberg API 3.0 and it lets users integrate streaming real-time and static data into their own custom applications. The user can choose the data they require down to the level of individual fields. The Bloomberg API 3.0 programming interface implementations are extremely lightweight. For details to the Desktop API, please refer to the Desktop API Programmers Guide from <code class="docutils literal"><span class="pre">WAPI&lt;GO&gt;</span></code>.</p>
+<p>The Bloomberg API uses an event-driven model. The IOI API is an extension of Bloomberg API 3.0 and it lets users integrate streaming real-time and static data into their own custom applications. The user can choose the data they require down to the level of individual fields. The Bloomberg API 3.0 programming interface implementations are extremely lightweight. For details to the Desktop API, please refer to the Desktop API Programmers Guide from <code class="docutils literal notranslate"><span class="pre">WAPI&lt;GO&gt;</span></code>.</p>
 <p>The Bloomberg API interface is thread-safe and thread-aware, giving applications the ability to utilize multiple processors efficiently. The Bloomberg API supports run-time downloadable schema for the service it provides, and it provides methods to query these schemas at runtime. This means additional service in Bloomberg API is supported without addition to the interface.</p>
 <p>The object model for Java, .NET and C++ are identical. The C interface provides a C-style version of the object model.</p>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p>Due to the trading nature with the various Trading API&#8217;s  at Bloomberg (e.g. EMSX API, IOI API, etc.) Bloomberg cannot legally assist on the client-side coding other than providing a high-level overview of the service, advice on some of the best practices approach to use the request/response paradigm and asynchronous event-driven nature of the subscription paradigm.</p>
-<p class="last">It is highly recommended that the technical resource working on the Trading API has extensive programming experiences and a solid understanding of software application architecture.</p>
+<p class="admonition-title">Important</p>
+<p>Due to the trading nature with the various Trading API’s  at Bloomberg (e.g. EMSX API, IOI API, etc.) Bloomberg cannot legally assist on the client-side coding other than providing a high-level overview of the service, advice on some of the best practices approach to use the request/response paradigm and asynchronous event-driven nature of the subscription paradigm.</p>
+<p>It is highly recommended that the technical resource working on the Trading API has extensive programming experiences and a solid understanding of software application architecture.</p>
 </div>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Please note that performance/load test should never be performed on any of the API environment as this is a shared environment and we monitor and increase capacity as needed.</p>
+<p class="admonition-title">Warning</p>
+<p>Please note that performance/load test should never be performed on any of the API environment as this is a shared environment and we monitor and increase capacity as needed.</p>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
@@ -158,19 +187,6 @@ IOI (Indication of Interest) messages.</p>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#creating-user-identities">Creating User Identities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#using-user-identities">Using User Identities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#ioi-api-code-samples">IOI API Code Samples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="publication/index.html">IOI API Publication</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="publication/reqResp.html">Bloomberg API Service for IOI API Publication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="publication/reqResp.html#accessing-the-test-environment">Accessing the Test Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="publication/reqResp.html#api-demo-tool">API Demo Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="publication/reqResp.html#desktop-vs-server-authentication">Desktop vs. Server Authentication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="publication/reqResp.html#cancel-ioi-message">Cancel IOI Message</a></li>
-<li class="toctree-l2"><a class="reference internal" href="publication/reqResp.html#create-ioi-message">Create IOI Message</a></li>
-<li class="toctree-l2"><a class="reference internal" href="publication/reqResp.html#update-ioi-message">Update IOI Message</a></li>
-<li class="toctree-l2"><a class="reference internal" href="publication/reqResp.html#error-message">Error Message</a></li>
-<li class="toctree-l2"><a class="reference internal" href="publication/reqResp.html#description-of-elements">Description of Elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="publication/reqResp.html#actionable-ioi">Actionable IOI</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="subscription/index.html">IOI API Subscription</a><ul>
@@ -195,29 +211,31 @@ IOI (Indication of Interest) messages.</p>
 
 
            </div>
+           
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
+        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Terrence C. Kim.
+        &#169; Copyright 2017, Terrence C. Kim.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -226,36 +244,15 @@ IOI (Indication of Interest) messages.</p>
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.6.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

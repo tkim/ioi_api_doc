@@ -1,55 +1,58 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Introduction &mdash; IOI API Programmers Guide 1.6.0 documentation</title>
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
   
 
   
 
   
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="IOI API Programmers Guide 1.6.0 documentation" href="index.html"/>
-        <link rel="next" title="IOI API Publication" href="publication/index.html"/>
-        <link rel="prev" title="IOI API Programmers Guide" href="index.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="IOI API Publication" href="publication/index.html" />
+    <link rel="prev" title="IOI API Programmers Guide" href="index.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -80,11 +83,15 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#support">Support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-install-serverapi-exe">How to install serverapi.exe</a></li>
@@ -102,32 +109,52 @@
             
           
         </div>
+        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">IOI API Programmers Guide</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IOI API Programmers Guide</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Introduction</li>
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
           
@@ -135,7 +162,10 @@
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -148,19 +178,19 @@ subscribe IOIs in Equities and Derivatives using Bloomberg API</p>
 <p>The IOI API Server for subscribing requires separate authorization by the publishing broker on top of
 the Bloomberg authorization.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>IOI API users will need the following steps completed before using the IOI API service.</p>
-<blockquote class="last">
+<blockquote>
 <div><ol class="arabic simple">
-<li>Signed EMSxNET Order Originator Agreement.</li>
-<li>Install serverapi.exe and register with Bloomberg.</li>
-<li>Enable IOI API per UUID by the Global EMSX Trade Desk for Test (Beta) and Production.</li>
-<li>To get access to IOI API in UAT and production, please click &lt;Help&gt;&lt;Help&gt; on <code class="docutils literal"><span class="pre">EMSX&lt;GO&gt;</span></code>.</li>
-<li>Download Bloomberg Desktop API v3 SDK from <code class="docutils literal"><span class="pre">WAPI&lt;GO&gt;</span></code> in Bloomberg terminal.</li>
+<li><p>Signed EMSxNET Order Originator Agreement.</p></li>
+<li><p>Install serverapi.exe and register with Bloomberg.</p></li>
+<li><p>Enable IOI API per UUID by the Global EMSX Trade Desk for Test (Beta) and Production.</p></li>
+<li><p>To get access to IOI API in UAT and production, please click &lt;Help&gt;&lt;Help&gt; on <code class="docutils literal notranslate"><span class="pre">EMSX&lt;GO&gt;</span></code>.</p></li>
+<li><p>Download Bloomberg Desktop API v3 SDK from <code class="docutils literal notranslate"><span class="pre">WAPI&lt;GO&gt;</span></code> in Bloomberg terminal.</p></li>
 </ol>
 </div></blockquote>
 </div>
-<p>To get access to IOI API in UAT and production, please click &lt;Help&gt;&lt;Help&gt; on <code class="docutils literal"><span class="pre">EMSX&lt;GO&gt;</span></code>.</p>
+<p>To get access to IOI API in UAT and production, please click &lt;Help&gt;&lt;Help&gt; on <code class="docutils literal notranslate"><span class="pre">EMSX&lt;GO&gt;</span></code>.</p>
 <div class="section" id="support">
 <h2>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h2>
 <p>For all IOI functionality and IOI API techincal inquires please contact the EMSX Trade Desk. They are available 24/6 and please ensure you provide your Bloomberg UUID.</p>
@@ -171,16 +201,16 @@ HELP 1x (F1 key) on your terminal, to compose an email message to the EMSX Trade
 <p><a class="reference external" href="mailto:emsx&#37;&#52;&#48;bloomberg&#46;net">emsx<span>&#64;</span>bloomberg<span>&#46;</span>net</a></p>
 <p>By Phone:</p>
 <p>Please call your local global customer support number and ask to speak to the EMSX Trade Desk</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="34%" />
-<col width="36%" />
-<col width="30%" />
+<col style="width: 34%" />
+<col style="width: 36%" />
+<col style="width: 30%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>+1-212-617-2000</td>
-<td>+44-20-7330-7500</td>
-<td>+65-6212-1000</td>
+<tbody>
+<tr class="row-odd"><td><p>+1-212-617-2000</p></td>
+<td><p>+44-20-7330-7500</p></td>
+<td><p>+65-6212-1000</p></td>
 </tr>
 </tbody>
 </table>
@@ -190,15 +220,15 @@ HELP 1x (F1 key) on your terminal, to compose an email message to the EMSX Trade
 <p>Please follow the following steps to install and register the installer with Bloomberg Enterprise Solutions with the assistance from EMSX Implementation team.</p>
 <p>The following example is based on the windows environment and thus there will be slight variations when installing from linux or solaris operating system.</p>
 <ul class="simple">
-<li>Run serverapi.exe</li>
+<li><p>Run serverapi.exe</p></li>
 </ul>
-<div class="highlight-none"><div class="highlight"><pre><span></span>C:\temp&gt;serverapiinstaller.exe
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\temp&gt;serverapiinstaller.exe
 </pre></div>
 </div>
 <ul class="simple">
-<li>You will see the following message</li>
+<li><p>You will see the following message</p></li>
 </ul>
-<div class="highlight-none"><div class="highlight"><pre><span></span>C:\temp&gt;serverapiinstaller.exe
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>C:\temp&gt;serverapiinstaller.exe
 logging to C:\temp\install.2016102610.152444.log
 
 Bloomberg ECD Installer for Windows (32-bit)
@@ -229,9 +259,9 @@ Would you like to continue? (Y/N):
 </pre></div>
 </div>
 <ul class="simple">
-<li>Type:- Y</li>
+<li><p>Type:- Y</p></li>
 </ul>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Would you like to continue? (Y/N): y
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Would you like to continue? (Y/N): y
 
 Checking connectivity to Bloomberg ...
 
@@ -278,9 +308,9 @@ Which of the above routes will you use to connect to Bloomberg? (a/b):
 </pre></div>
 </div>
 <ul class="simple">
-<li>Select the appropriate network option (private vs. public/internet)</li>
+<li><p>Select the appropriate network option (private vs. public/internet)</p></li>
 </ul>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Which of the above routes will you use to connect to Bloomberg? (a/b): b
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Which of the above routes will you use to connect to Bloomberg? (a/b): b
 
 Bloomberg Network connectivity unavailable. Connecting via the Internet.
 
@@ -293,9 +323,9 @@ Please enter selection:
 </pre></div>
 </div>
 <ul class="simple">
-<li>Select:- 2 for Server API</li>
+<li><p>Select:- 2 for Server API</p></li>
 </ul>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Please enter selection: 2
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Please enter selection: 2
 
 Installation path:
         &#39;C:\&#39;
@@ -304,9 +334,9 @@ Use this path? (Y/N/Q):
 </pre></div>
 </div>
 <ul class="simple">
-<li>Select:- Y</li>
+<li><p>Select:- Y</p></li>
 </ul>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Use this path? (Y/N/Q): y
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Use this path? (Y/N/Q): y
 
 Downloading latest installer ...
 done.
@@ -317,10 +347,10 @@ Beginning new install ...
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If the default port is already being used by a different service it may show the following message:</p>
+<p class="admonition-title">Note</p>
+<p>If the default port is already being used by a different service it may show the following message:</p>
 </div>
-<div class="highlight-none"><div class="highlight"><pre><span></span>*** WARNING: Port conflict detected with other service.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*** WARNING: Port conflict detected with other service.
 The port of the Desktop will conflict with the ServerApi should installation proceed. If you still want to install
 ServerApi, you will need to specify a different port number.
 
@@ -328,16 +358,16 @@ ServerApi, you will need to specify a different port number.
 </pre></div>
 </div>
 <ul class="simple">
-<li>Select:- Y and enter the port</li>
+<li><p>Select:- Y and enter the port</p></li>
 </ul>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Do you want to continue with the installation? (Y/N) [N]:y
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Do you want to continue with the installation? (Y/N) [N]:y
 Please enter ServerApi listen port: [8294]:8294
 </pre></div>
 </div>
 <ul class="simple">
-<li>Select the version:-</li>
+<li><p>Select the version:-</p></li>
 </ul>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Versions available for ServerApi
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Versions available for ServerApi
 1) 3.46.6.0     Windows     ServerAPI 2014-07
 
 2) 3.48.8.1     Windows     ServerAPI 2014-09
@@ -383,14 +413,14 @@ Please enter version of ServerApi that you want to install:
 </pre></div>
 </div>
 <ul class="simple">
-<li>Select the latest:-</li>
+<li><p>Select the latest:-</p></li>
 </ul>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Please enter version of ServerApi that you want to install: 20
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Please enter version of ServerApi that you want to install: 20
 Downloading ServerApi components ...
 </pre></div>
 </div>
 <ul>
-<li><p class="first">Enter other information:-</p>
+<li><p>Enter other information:-</p>
 <blockquote>
 <div><p>Enter the following information:</p>
 <p>Country (e.g., USA):
@@ -400,10 +430,9 @@ Company Name (e.g., Bloomberg L.P.):
 Department Name (e.g., Equity Trading):</p>
 </div></blockquote>
 </li>
-<li><p class="first">Finished:-</p>
-</li>
+<li><p>Finished:-</p></li>
 </ul>
-<div class="highlight-none"><div class="highlight"><pre><span></span>Enter the following information:
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enter the following information:
 
 Country (e.g., USA): USA
 State (e.g., NY): NY
@@ -440,8 +469,8 @@ Your registration key is:
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Once the registration process is completed. EMSX Implementation team globally will assist with configuring the Server Side EMSX API with various execution destinations per client request.</p>
+<p class="admonition-title">Note</p>
+<p>Once the registration process is completed. EMSX Implementation team globally will assist with configuring the Server Side EMSX API with various execution destinations per client request.</p>
 </div>
 </div>
 <div class="section" id="creating-user-identities">
@@ -449,16 +478,16 @@ Your registration key is:
 <p>In the server environment, the user identities must be created and cached prior to the making requests.  Therefore, the process would look as follows:-</p>
 <img alt="_images/creatingUserIdentity.png" src="_images/creatingUserIdentity.png" />
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Note: The IOI API Server code samples demonstrate how to create identity object.</p>
+<p class="admonition-title">Note</p>
+<p>Note: The IOI API Server code samples demonstrate how to create identity object.</p>
 </div>
 <p>The first new step is to open the authentication service. This is done in the same way as for any other service in the Bloomberg API. For example:-</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>d_authsvc = &quot;//blp/apiauth&quot;;
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>d_authsvc = &quot;//blp/apiauth&quot;;
 session.openServiceAsync(d_authsvc);
 </pre></div>
 </div>
 <p>Once the service is opened, we need to create and send an authorization request. To create an identity for a specific user, you will need the AuthID for the user. This is the name the user is known by in the EMRS system for your server. The values for these names will have been agreed with you as part of the implementation of the server, or subsequently when adding a new user. Also, an IP address is required. The only requirement for this IP address is that it is unique amongst all the identities generated for a session. You can create and send the request as follows:-</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>private Identity userIdentity;
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>private Identity userIdentity;
 
 *
 *
@@ -484,9 +513,9 @@ catch (Exception e)
 }
 </pre></div>
 </div>
-<p>In the above code, you can see that an empty identity object is created using <code class="docutils literal"><span class="pre">session.createIdentity()</span></code>. This is the object that will be populated once successful authentication has been achieved, and it is the object that will need to be cached.</p>
-<p>We will receive a Response event for the Authentication service. In the example below, we use a <code class="docutils literal"><span class="pre">CorrelationID</span></code> to identify messages from the Authentication service, and check for success or failure:-</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>        if(msg.correlationID()==authRequestID) {
+<p>In the above code, you can see that an empty identity object is created using <code class="docutils literal notranslate"><span class="pre">session.createIdentity()</span></code>. This is the object that will be populated once successful authentication has been achieved, and it is the object that will need to be cached.</p>
+<p>We will receive a Response event for the Authentication service. In the example below, we use a <code class="docutils literal notranslate"><span class="pre">CorrelationID</span></code> to identify messages from the Authentication service, and check for success or failure:-</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>        if(msg.correlationID()==authRequestID) {
 
         if(msg.messageType().equals(AUTHORIZATION_SUCCESS)) {
                 System.out.println(&quot;Authorised...Opening IOI service...&quot;);
@@ -511,10 +540,10 @@ catch (Exception e)
 <div class="section" id="using-user-identities">
 <h2>Using User Identities<a class="headerlink" href="#using-user-identities" title="Permalink to this headline">¶</a></h2>
 <p>In the server environment, there is no Bloomberg terminal, and therefore no implied user can be identified.  Moreover, the server is capable of connecting to any number of IOI user identities, simultaneously. Therefore, the application making the call must indicate which user is the intended target. This is done through the creation and use of Identity object.</p>
-<p>An Identity object represents a specific Bloomberg UUID.  Once created, an Identity object can be cached for 24hrs, and used with every <code class="docutils literal"><span class="pre">sendRequest()</span></code> and <code class="docutils literal"><span class="pre">subscribe()</span></code> call.</p>
-<p>Identity objects are live, that is they remain connected to Bloomberg in real-time and are capable of receiving events. We recommend that an identity is recreated every 24hrs, to ensure that it picks up the latest changes to any user settings, including access to <code class="docutils literal"><span class="pre">IOI&lt;GO&gt;</span></code>.</p>
-<p>Migrating the existing desktop application call to a server application simply involves changing all <code class="docutils literal"><span class="pre">sendRequest()</span></code> and <code class="docutils literal"><span class="pre">subscribe()</span></code> calls to include the appropriate identity, as follows:-</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>DAPI:
+<p>An Identity object represents a specific Bloomberg UUID.  Once created, an Identity object can be cached for 24hrs, and used with every <code class="docutils literal notranslate"><span class="pre">sendRequest()</span></code> and <code class="docutils literal notranslate"><span class="pre">subscribe()</span></code> call.</p>
+<p>Identity objects are live, that is they remain connected to Bloomberg in real-time and are capable of receiving events. We recommend that an identity is recreated every 24hrs, to ensure that it picks up the latest changes to any user settings, including access to <code class="docutils literal notranslate"><span class="pre">IOI&lt;GO&gt;</span></code>.</p>
+<p>Migrating the existing desktop application call to a server application simply involves changing all <code class="docutils literal notranslate"><span class="pre">sendRequest()</span></code> and <code class="docutils literal notranslate"><span class="pre">subscribe()</span></code> calls to include the appropriate identity, as follows:-</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>DAPI:
         session.sendRequest(request, requestID);
         session.subscribe(subscriptions);
 
@@ -527,39 +556,40 @@ Server:
 <div class="section" id="ioi-api-code-samples">
 <h2>IOI API Code Samples<a class="headerlink" href="#ioi-api-code-samples" title="Permalink to this headline">¶</a></h2>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">The latest IOI API Code samples can be found <a class="reference external" href="https://github.com/tkim/ioi_api_repository">here</a>.</p>
+<p class="admonition-title">Important</p>
+<p>The latest IOI API Code samples can be found <a class="reference external" href="https://github.com/tkim/ioi_api_repository">here</a>.</p>
 </div>
 </div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="publication/index.html" class="btn btn-neutral float-right" title="IOI API Publication" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral" title="IOI API Programmers Guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="publication/index.html" class="btn btn-neutral float-right" title="IOI API Publication" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="IOI API Programmers Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Terrence C. Kim.
+        &#169; Copyright 2017, Terrence C. Kim.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -568,36 +598,15 @@ Server:
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.6.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>
